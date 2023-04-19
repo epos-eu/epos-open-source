@@ -1,203 +1,64 @@
-<h1 id="-epos-open-source-documentation-"><strong>EPOS OPEN SOURCE Documentation</strong></h1>
-<p><img src="images/Epos_Logo_30.jpg" alt="Epos_Logo_30"></p>
-<h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li><a href="#whatisepos">What is EPOS?</a></li>
-<li><a href="#vision">EPOS Vision</a></li>
-<li><a href="#mission">EPOS Mission</a></li>
-<li><a href="#goals">What Are EPOS&#39; Goals?</a></li>
-<li><a href="#who">Who We Are</a></li>
-<li><a href="#national">National Research Infrastructures</a></li>
-<li><a href="#glossary">Glossary</a></li>
-<li><a href="#requirements">Requirements analysis</a></li>
-<li><a href="#process">Processes definition</a></li>
-<li><a href="#architecture">Architecture</a></li>
-<li><a href="#microservices">Microservices</a></li>
-<li><a href="#libraries">EPOS Libraries</a></li>
-<li><a href="#installers">EPOS Open Source installers</a></li>
-</ol>
-<h1 id="-what-is-epos-a-name-whatisepos-a-"><strong>What is EPOS?</strong>  <a name="whatisepos"></a></h1>
-<p>EPOS, the European Plate Observing System, is a multidisciplinary, distributed research infrastructure that facilitates the integrated use of data, data products, and facilities from the solid Earth science community in Europe.</p>
-<p>EPOS  brings together Earth scientists, national research infrastructures, ICT (Information &amp; Communication Technology) experts, decision makers, and public to develop new concepts and tools for accurate, durable, and sustainable answers to societal questions concerning geo-hazards and those geodynamic phenomena (including geo-resources) relevant to the environment and human welfare.</p>
-<h2 id="-epos-vision-a-name-vision-a-"><strong>EPOS Vision</strong> <a name="vision"></a></h2>
-<p>To ensure sustainable and universal use and re-use of multidisciplinary solid Earth science data and products fostering state-of-the-art research and innovation.</p>
-<h2 id="-epos-mission-a-name-mission-a-"><strong>EPOS Mission</strong> <a name="mission"></a></h2>
-<p>To establish and underpin a sustainable and long-term access to solid Earth science data and services integrating diverse European Research Infrastructures under a common federated framework.</p>
-<h2 id="-what-are-epos-goals-a-name-goals-a-"><strong>What Are EPOS&#39; Goals?</strong> <a name="goals"></a></h2>
-<p>The EPOS overarching goal is to establish a comprehensive multidisciplinary research platform for the Earth sciences in Europe. </p>
-<p>EPOS aims to:</p>
-<ul>
-<li>represent a scientific vision and approach in which innovative multidisciplinary research is made possible for a better understanding of the physical processes controlling earthquakes, volcanic eruptions, unrest episodes and tsunamis as well as those driving tectonics and Earth surface dynamics;</li>
-<li>establish a long-term plan to facilitate the integrated use of data, models and facilities from existing, and new distributed research infrastructures (RIs), for solid Earth science;</li>
-<li>adopt appropriate legal solutions to manage distributed pan European Research Infrastructures, securing on a common and shared data policy, the open access and the transparent use of data and guaranteeing mutual respect of the intellectual property rights.</li>
-</ul>
-<h2 id="-who-we-are-a-name-who-a-"><strong>Who We Are</strong> <a name="who"></a></h2>
-<p>EPOS is composed of a variety of Earth Science stakeholders that are together working towards integrating a set of diverse European Earth Science National Research Infrastructures into one single interoperable platform. The programme will develop implementation plans and use new e-science opportunities to monitor and understand the dynamic and complex solid Earth system.</p>
-<h2 id="-the-four-elements-of-epos-architecture-a-name-elements-a-"><strong>The Four Elements of EPOS Architecture</strong>  <a name="elements"></a></h2>
-<ul>
-<li>National Research Infrastructures</li>
-<li>EPOS ERIC</li>
-<li>Thematic Core Services</li>
-<li>Integrated Core Services: central hub and distributed services.</li>
-</ul>
-<p>These four, key, elements represent the scientific/technical backbone of the whole enterprise.</p>
-<h2 id="-national-research-infrastructures-a-name-national-a-"><strong>National Research Infrastructures</strong> <a name="national"></a></h2>
-<p>The NRIs participating in the EPOS integration plan already exist and are fully operational, providing access to data and services for specific communities at a national level. European countries together own such a mosaic of hundreds of impressive but separated NRIs that includes geophysical networks, observatories, temporary deployments, laboratories and modeling facilities for solid Earth studies.</p>
-<h1 id="-glossary-a-name-glossary-a-"><strong>Glossary</strong> <a name="glossary"></a></h1>
-<blockquote>
-<p><a href="Glossary.md">Glossary</a></p>
-</blockquote>
-<h2 id="-requirements-analysis-a-name-requirements-a-"><strong>Requirements analysis</strong>  <a name="requirements"></a></h2>
-<blockquote>
-<p><a href="requirements-analysis/requirements-analysis.md">Requirements Analysis</a></p>
-<p><a href="requirements-analysis/use-cases.md">Use Cases</a></p>
-</blockquote>
-<h2 id="-processes-definition-a-name-process-a-"><strong>Processes definition</strong> <a name="process"></a></h2>
-<blockquote>
-<p><a href="processes-definitions/search.md">Search</a></p>
-<p><a href="processes-definitions/explore-results.md">Explore Results</a></p>
-<p><a href="processes-definitions/overlay-results.md">Overlay Results</a></p>
-<p><a href="processes-definitions/download.md">Download</a></p>
-<p><a href="processes-definitions/login.md">Login</a></p>
-<p><a href="processes-definitions/download-restricted.md">Download Restricted</a></p>
-<p><a href="processes-definitions/metadata-update.md">Metadata Update</a></p>
-</blockquote>
-<h2 id="architecture-a-name-architecture-a-">Architecture  <a name="architecture"></a></h2>
-<p>The Integrated Core Services (ICS) represents the infrastructure consisting of services that will allow access to multidisciplinary resources provided by the TCS&#39;s. These will include data and data products as well as synthetic data from simulations, processing, and visualization tools.</p>
-<p>The ICS consists of multiple logical areas of functionality, these include Graphical User Interface (GUI), web-API, metadata catalogue, user management etc. A micro-service architecture has been adopted by the ICS-C, where each (micro) service is atomic and dedicated to a specific class of tasks.</p>
-<h3 id="-architectural-concepts-"><strong>Architectural Concepts</strong></h3>
-<blockquote>
-<p><a href="architectural-concepts/Architectural-requirements-definition.md">Architectural requirements definition</a></p>
-<p><a href="architectural-concepts/Architectural-Goals-and-Constraints.md">Architectural Goals and Constraints</a></p>
-</blockquote>
-<h3 id="-architecture-design-"><strong>Architecture design</strong></h3>
-<blockquote>
-<p><a href="architecture-design/Conceptual-design.md">Conceptual design</a></p>
-<p><a href="architecture-design/Technical-design.md">Technical design</a></p>
-<p><a href="architecture-design/Sequence-Diagrams.md">Sequence Diagrams</a></p>
-</blockquote>
-<h3 id="-authentication-authorization-and-accounting-"><strong>Authentication, Authorization and Accounting</strong></h3>
-<blockquote>
-<p><a href="aai/aai.md">AAAI</a></p>
-</blockquote>
-<h2 id="-architecture-elements-"><strong>Architecture elements</strong></h2>
-<blockquote>
-<p><a href="architecture-elements/epos-data-model.md">EPOS Data Model</a></p>
-<p><a href="architecture-elements/epos-geojson.md">EPOS GeoJSON Extension</a></p>
-</blockquote>
-<h2 id="-epos-microservices-a-name-microservices-a-"><strong>EPOS Microservices:</strong> <a name="microservices"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Microservice name</th>
-<th>Docker</th>
-<th>Git Repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EPOS Data Portal</td>
-<td><a href="https://hub.docker.com/r/epos/epos-gui"><img src="https://img.shields.io/docker/v/epos/epos-gui" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/epos-gui"><img src="https://img.shields.io/docker/image-size/epos/epos-gui" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/epos-gui"><img src="https://img.shields.io/docker/pulls/epos/epos-gui" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/epos-gui"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>API Gateway</td>
-<td><a href="https://hub.docker.com/r/epos/epos-api-gateway"><img src="https://img.shields.io/docker/v/epos/epos-api-gateway" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/epos-api-gateway"><img src="https://img.shields.io/docker/image-size/epos/epos-api-gateway" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/epos-api-gateway"><img src="https://img.shields.io/docker/pulls/epos/epos-api-gateway" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/epos-api-gateway"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Resources Service</td>
-<td><a href="https://hub.docker.com/r/epos/resources-service"><img src="https://img.shields.io/docker/v/epos/resources-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/resources-service"><img src="https://img.shields.io/docker/image-size/epos/resources-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/resources-service"><img src="https://img.shields.io/docker/pulls/epos/resources-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/resources-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>External Access Service</td>
-<td><a href="https://hub.docker.com/r/epos/external-access-service"><img src="https://img.shields.io/docker/v/epos/external-access-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/external-access-service"><img src="https://img.shields.io/docker/image-size/epos/external-access-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/external-access-service"><img src="https://img.shields.io/docker/pulls/epos/external-access-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/external-access-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Ingestor Service</td>
-<td><a href="https://hub.docker.com/r/epos/ingestor-service"><img src="https://img.shields.io/docker/v/epos/ingestor-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/ingestor-service"><img src="https://img.shields.io/docker/image-size/epos/ingestor-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/ingestor-service"><img src="https://img.shields.io/docker/pulls/epos/ingestor-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/ingestor-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Converter Service</td>
-<td><a href="https://hub.docker.com/r/epos/converter-service"><img src="https://img.shields.io/docker/v/epos/converter-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/converter-service"><img src="https://img.shields.io/docker/image-size/epos/converter-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/converter-service"><img src="https://img.shields.io/docker/pulls/epos/converter-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/converter-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Backoffice Service</td>
-<td><a href="https://hub.docker.com/r/epos/backoffice-service"><img src="https://img.shields.io/docker/v/epos/backoffice-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/backoffice-service"><img src="https://img.shields.io/docker/image-size/epos/backoffice-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/backoffice-service"><img src="https://img.shields.io/docker/pulls/epos/backoffice-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/backoffice-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Data Metadata Service</td>
-<td><a href="https://hub.docker.com/r/epos/data-metadata-service"><img src="https://img.shields.io/docker/v/epos/data-metadata-service" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/data-metadata-service"><img src="https://img.shields.io/docker/image-size/epos/data-metadata-service" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/data-metadata-service"><img src="https://img.shields.io/docker/pulls/epos/data-metadata-service" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/data-metadata-service"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Metadata Database</td>
-<td><a href="https://hub.docker.com/r/epos/metadata-database-deploy"><img src="https://img.shields.io/docker/v/epos/metadata-database-deploy" alt="Docker Image Version (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/metadata-database-deploy"><img src="https://img.shields.io/docker/image-size/epos/metadata-database-deploy" alt="Docker Image Size (latest by date)"></a><br><a href="https://hub.docker.com/r/epos/metadata-database-deploy"><img src="https://img.shields.io/docker/pulls/epos/metadata-database-deploy" alt="Docker Pulls"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/metadata-database"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="-epos-libraries-a-name-libraries-a-"><strong>EPOS Libraries:</strong> <a name="libraries"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Library name</th>
-<th>Maven</th>
-<th>Git Repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Metadata Database API Library</td>
-<td><a href="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/db-api"><img src="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/db-api/badge.svg" alt="Maven Central"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/db-api"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>Routing Framework</td>
-<td><a href="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/router-framework"><img src="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/router-framework/badge.svg" alt="Maven Central"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/routingframework"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>EPOS Data Model beans</td>
-<td><a href="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-data-model-beans"><img src="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-data-model-beans/badge.svg" alt="Maven Central"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/epos_data_model_beans"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>EPOS GeoJSON Java Library</td>
-<td><a href="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-geojson-java-library"><img src="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-geojson-java-library/badge.svg" alt="Maven Central"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/epos-geojson-java-library"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>EPOS CovJSON Java Library</td>
-<td><a href="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-covjson-java-library"><img src="https://maven-badges.herokuapp.com/maven-central/org.epos-eu.ics-c/epos-covjson-java-library/badge.svg" alt="Maven Central"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/epos-covjson-java-library"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="-open-source-installations-a-name-installers-a-"><strong>Open Source installations</strong> <a name="installers"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Installer name</th>
-<th>Installer download</th>
-<th>Git Repository</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EPOS Open Source Docker</td>
-<td><a href="https://epos-ci.brgm.fr/epos/opensource-docker/-/packages"><img src="https://img.shields.io/badge/Download-Get%20the%20binary-brightgreen" alt="Download"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/opensource-docker"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-<tr>
-<td>EPOS Open Source Kubernetes</td>
-<td><a href="https://epos-ci.brgm.fr/epos/opensource-kubernetes/-/packages"><img src="https://img.shields.io/badge/Download-Get%20the%20binary-brightgreen" alt="Download"></a></td>
-<td><a href="https://epos-ci.brgm.fr/epos/opensource-kubernetes"><img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&amp;style=flat" alt="Git Repository"></a></td>
-</tr>
-</tbody>
-</table>
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EPOS Open Source</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+      <link rel="author" href="humans.txt">
+      <link rel="icon" href="logo.svg">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentation</a></li>
+        <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">EPOS Open Source</h1>
+      <p class="hero__description">------</p>
+    </div>
+    
+    <div class="hero__terminal">
+      <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">user@user ~ $ </code>
+      </pre>
+    </div>
+    
+    <div class="wrapper">
+      <div class="callout">
+        <a href="doc.html" class="button--primary">Documentation</a>
+      </div>
+      <div class="installation">
+        <h3 class="section__title">Installation</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="docker">Docker</li>
+            <li class="tab" data-tab="kubernetes">Kubernetes</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active docker">
+              <a href="#">Download page EPOS Open Source Docker</a>
+            </code>
+            <code class="tab__pane kubernetes">
+              <a href="#">Download page EPOS Open Source Kubernetes</a>
+            </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">EPOS Open Source is powered by <a href="https://www.epos-eu.org/" target="_blank" class="link link--light">EPOS</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
+</html>
