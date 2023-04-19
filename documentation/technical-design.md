@@ -1,8 +1,6 @@
-# **Overview and diagram**
-
 The diagram in this section represents the implementation of the conceptual architecture.
 
-![image](../images/architecture-diagram.png)
+![image](./images/architecture-diagram.png)
 
 The following key aspects need to be taken into account:
 
@@ -44,7 +42,7 @@ In order to implement this, once a request has been made on a service, the follo
 
  
 
-**Message header example, originated by the Resource Service**
+Message header example, originated by the Resource Service
 
 ```
 2023-03-09 14:08:15:314: Message published
@@ -93,21 +91,11 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 
 ```
 
-**Description:** responsibility and rationale (include diagrams as necessary, including what logical unit it contributes to and how)
 
-**Interactions with other elements** (include diagrams as necessary, APIs, data, messages)
+*RESTful API Definition*
 
-**Error conditions and handling**
 
-**Process view**
-
-**Deployment considerations** (how it's deployed, how it's been designed to handle scaling thing like that)
-
-**Implementation detail:** be selective, only include what adds benefit or affects other elements of the system (hopefully this is zero or minimal), or requires investigation/prototyping, or just needs to be documented and "imposed" upon the service implementation for some justifiable reason.
-
-## RESTful API Definition
-
-### Resources Service
+* Resources Service
 
 |  |  | 
 |--|-------------|
@@ -116,7 +104,7 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Interactions (with other parts of the system) | Broker Service, Data Metadata Service, Converter Service |
 | Inputs and outputs (system side) | Message exchange |
 
-### BackOffice Service
+* BackOffice Service
 
 |  |  | 
 |--|-------------|
@@ -125,7 +113,7 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Interactions (with other parts of the system) | Broker Service, Data Metadata Service|
 | Inputs and outputs (system side) | Message exchange, Database Interaction |
 
-### Ingestor Service
+* Ingestor Service
 
 |  |  | 
 |--|-------------|
@@ -134,7 +122,7 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Interactions (with other parts of the system) | Broker Service, Data Metadata Service|
 | Inputs and outputs (system side) | Message exchange, Database Interaction |
 
-### External Access Service
+* External Access Service
 
 |  |  | 
 |--|-------------|
@@ -144,7 +132,7 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Inputs and outputs | Message Exchange, TCS Webservices APIs |
 
 
-### Converter Service
+* Converter Service
 
 |  |  | 
 |--|-------------|
@@ -154,7 +142,7 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Inputs and outputs |  Message Exchange |
 
 
-### Data Metadata Service
+* Data Metadata Service
 
 |  |  | 
 |--|-------------|
@@ -162,6 +150,3 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 | Description | This service handle request received from services that need to be executed on the database |
 | Interactions (with other parts of the system) | Broker Service, Metadata Catalogue |
 | Inputs and outputs |Message Exchange, Database Interaction | 
-
-
-> [Summary](../README.md)

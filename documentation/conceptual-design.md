@@ -1,6 +1,6 @@
 The following diagram describes the conceptual services of the architecture.
 
- ![image](../images/conceptual-design.png)
+ ![image](./images/conceptual-design.png)
 
 The driving concepts can be summarized by the following statements:
 
@@ -36,5 +36,3 @@ The driving concepts can be summarized by the following statements:
   * "GRDB data", this represents the metadata currently stored in the Granularity Database, and partially overlapping with the "metadata" service
   
 * The three data element above represent the data that the ICS-C system is required to manage. Such data that is intrinsically related, and requires referential integrity. For instance, a workspace (system data) is related to a user and to services (metadata) selected by users, and each update to the services needs to be reflected into the workspace for integrity reasons.
-
-> [Summary](../README.md)

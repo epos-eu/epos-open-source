@@ -1,8 +1,8 @@
 This section **describes the software requirements and objectives that have some significant impact on the architecture**; for example, safety, security, privacy, use of an off-the-shelf product, portability, distribution, and reuse.
 
-# **Core Concepts and Patterns**
+*Core Concepts and Patterns*
 
-## **Modular approach.**
+*Modular approach.*
 
 The system should be implemented with a modular architecture so that adding new functionalities and scaling current functionalities does not perturb the entire system. Modules should be decoupled and cohesive (implement one functionality). Microservice Architecture is the reference approach;
 
@@ -10,7 +10,7 @@ The system should be implemented with a modular architecture so that adding new 
 2. Each module should be individually testable (e.g. rabbitmq endpoint should always answer with the same payload format)
 3. Each module can be deployed (i.e. in any order)
 
-## **Interaction between clients (GUI or Agent) and system**
+*Interaction between clients (GUI or Agent) and system*
 
 * Web API should be designed to serve a specific category of consumers (e.g. GUIs clients, software agents harvesting metadata in specific formats, desktop applications etc.);
 * Web API should be decoupled from any specific client logic (e.g. GUI should not force constraints on the WEBAPI as information about the content to be downloadable or visualized);
@@ -47,5 +47,3 @@ The system should be implemented with a modular architecture so that adding new 
   * Should document API
   * Might provide versioning of API message for old clients
   * Should be resilient to invalid payloads
-
-  > [Summary](../README.md)
