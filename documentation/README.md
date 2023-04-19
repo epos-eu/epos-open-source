@@ -1,6 +1,6 @@
 # **EPOS OPEN SOURCE Documentation**
 
-![Epos_Logo_30](images/Epos_Logo_30.jpg)
+![Epos_Logo_30](./documentation/images/Epos_Logo_30.jpg)
 
 # Table of Contents
 1. [What is EPOS?](#whatisepos)
@@ -66,25 +66,25 @@ The NRIs participating in the EPOS integration plan already exist and are fully 
 
 ## **Requirements analysis**  <a name="requirements"></a>
 
->[Requirements Analysis](requirements-analysis/requirements-analysis.md)
+>[Requirements Analysis](./documentation/requirements-analysis/requirements-analysis.md)
 
->[Use Cases](requirements-analysis/use-cases.md)
+>[Use Cases](./documentation/requirements-analysis/use-cases.md)
 
 ## **Processes definition** <a name="process"></a>
 
->[Search](processes-definitions/search.md)
+>[Search](./documentation/processes-definitions/search.md)
 
->[Explore Results](processes-definitions/explore-results.md)
+>[Explore Results](./documentation/processes-definitions/explore-results.md)
 
->[Overlay Results](processes-definitions/overlay-results.md)
+>[Overlay Results](./documentation/processes-definitions/overlay-results.md)
 
->[Download](processes-definitions/download.md)
+>[Download](./documentation/processes-definitions/download.md)
 
->[Login](processes-definitions/login.md)
+>[Login](./documentation/processes-definitions/login.md)
 
->[Download Restricted](processes-definitions/download-restricted.md)
+>[Download Restricted](./documentation/processes-definitions/download-restricted.md)
 
->[Metadata Update](processes-definitions/metadata-update.md)
+>[Metadata Update](./documentation/processes-definitions/metadata-update.md)
 
 ## Architecture  <a name="architecture"></a>
 
@@ -94,27 +94,27 @@ The ICS consists of multiple logical areas of functionality, these include Graph
 
 ### **Architectural Concepts**
 
-> [Architectural requirements definition](architectural-concepts/Architectural-requirements-definition.md)
+> [Architectural requirements definition](./documentation/architectural-concepts/Architectural-requirements-definition.md)
 
-> [Architectural Goals and Constraints](architectural-concepts/Architectural-Goals-and-Constraints.md)
+> [Architectural Goals and Constraints](./documentation/architectural-concepts/Architectural-Goals-and-Constraints.md)
 
 ### **Architecture design**
 
-> [Conceptual design](architecture-design/Conceptual-design.md)
+> [Conceptual design](./documentation/architecture-design/Conceptual-design.md)
 
-> [Technical design](architecture-design/Technical-design.md)
+> [Technical design](./documentation/architecture-design/Technical-design.md)
 
-> [Sequence Diagrams](architecture-design/Sequence-Diagrams.md)
+> [Sequence Diagrams](./documentation/architecture-design/Sequence-Diagrams.md)
 
 ### **Authentication, Authorization and Accounting**
 
-> [AAAI](aai/aai.md)
+> [AAAI](./documentation/aai/aai.md)
 
 ## **Architecture elements**
 
-> [EPOS Data Model](architecture-elements/epos-data-model.md)
+> [EPOS Data Model](./documentation/architecture-elements/epos-data-model.md)
 
-> [EPOS GeoJSON Extension](architecture-elements/epos-geojson.md)
+> [EPOS GeoJSON Extension](./documentation/architecture-elements/epos-geojson.md)
 
 ## **EPOS Microservices:** <a name="microservices"></a>
 
