@@ -8,7 +8,7 @@ Such model is mostly conceptual, and serves for different purposes:
 
  The EPOS data model was discussed and defined in EPOS-IP as of 2018 in the document “Second (Final) Report on EPOS-ICS Architecture” and is here reported for reader’s convenience in the following class diagram.
 
-![image](./images/epos-data-model.png)
+![image](./documentation/images/epos-data-model.png)
 
 The EPOS Data model includes the following concepts:
 
