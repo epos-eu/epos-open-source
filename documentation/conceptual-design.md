@@ -1,6 +1,6 @@
 The following diagram describes the conceptual services of the architecture.
 
- ![image](./images/conceptual-design.png)
+ ![image](./documentation/images/conceptual-design.png)
 
 The driving concepts can be summarized by the following statements:
 

@@ -43,11 +43,11 @@ The styling of map markers and map legends for **GeoJSON points** is defined by 
 
 In the example below there is a `feature` with an  `@epos_type` = `station`, this matches the attribute `station` within the the `@epos_style` object, hence in this case stations would be rendered on the map as pins with an 's'.
 
-![1562841807572](../images/1562841807572.png)
+![1562841807572](./documentation/images/1562841807572.png)
 
 A corresponding legend would be generated, looking something like:
 
-![1562842126236](../images/1562842126236.png)
+![1562842126236](./documentation/images/1562842126236.png)
 
 *feature:
 
@@ -86,8 +86,8 @@ Each `@epos_type` defined in the  `@epos_style` object defines the following:
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `label`             | If provided, this is used as the text to associate with the map marker in the legend, else the `@epos_type` is used as the legend text |
-| `marker` (object)   | If provided, attributes of this object define the marker for the `@epos_style`, else a default point marker will be used, e.g. ![1562842809217](../images/1562842809217.png) |
-| `marker.pin`        | Defaults to `true` if absent, if true the map symbol will be drawn with in a pin, e.g. ![1562842713389](../images/1562842713389.png) |
+| `marker` (object)   | If provided, attributes of this object define the marker for the `@epos_style`, else a default point marker will be used, e.g. ![1562842809217](./documentation/images/1562842809217.png) |
+| `marker.pin`        | Defaults to `true` if absent, if true the map symbol will be drawn with in a pin, e.g. ![1562842713389](./documentation/images/1562842713389.png) |
 | `marker.clustering` | Defaults to `true` if absent, if true map markers in close proximity to each other will be "clustered" |
 | `marker.anchor`     | If`pin` = `false` the anchor point for the symbol can be defined using the eight points of the compass  (N,NE,E,SE,S,SW,W,NW,C), or C for centre. If `pin` = `true` the anchor point will always be assumed to be S (the tip of the pin). |
 
@@ -97,9 +97,9 @@ There are three types of symbol that can be used (only one should be used), thes
 
 | Type                       | Example | `pin` = `false` | `pin` = `true`                     |
 | -------------------------- | ------- | --------------- | ---------------------------------- |
-| `marker.href`              | `"www.thing.com/thing.png"` | ![1562843584966](../images/1562843584966.png) | ![1562843563562](../images/1562843563562.png) |
-| `marker.fontawesome_class` | `"fas fa-star"` | ![1562843684005](../images/1562843684005.png) | ![1562843500758](../images/1562843500758.png) |
-| `marker.character`         | `"S"` | ![1562843284469](../images/1562843284469.png) | ![1562842713389](../images/1562842713389.png) |
+| `marker.href`              | `"www.thing.com/thing.png"` | ![1562843584966](./documentation/images/1562843584966.png) | ![1562843563562](./documentation/images/1562843563562.png) |
+| `marker.fontawesome_class` | `"fas fa-star"` | ![1562843684005](./documentation/images/1562843684005.png) | ![1562843500758](./documentation/images/1562843500758.png) |
+| `marker.character`         | `"S"` | ![1562843284469](./documentation/images/1562843284469.png) | ![1562842713389](./documentation/images/1562842713389.png) |
 
 *Image Example
 
@@ -145,7 +145,7 @@ There are three types of symbol that can be used (only one should be used), thes
 
 *Symbol Logic*
 
-![marker flow](../images/marker-flow.png)
+![marker flow](./documentation/images/marker-flow.png)
 
 *Colour*
 
@@ -155,11 +155,11 @@ A note on colour, to prevent accidental reuse of the same colour by multiple map
 
 Legends are constructed by combining the map `marker` and `label` from the  corresponding `@epos_type` within the the `@epos_style` object.
 
- ![1562842126236](../images/1562842126236.png)
+ ![1562842126236](./documentation/images/1562842126236.png)
 
 *Legend Logic*
 
-![legend flow](../images/legend-flow.png)
+![legend flow](./documentation/images/legend-flow.png)
 
 *Image Overlays*
 
