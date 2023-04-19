@@ -1,5 +1,3 @@
-## **EPOS Data Model**
-
 In order to guarantee that the concepts of interest in EPOS are well dealt with within the architecture, and in order to ensure that appropriate communication occurs among different modules, it was necessary to define an EPOS data model.
 
 Such model is mostly conceptual, and serves for different purposes:
