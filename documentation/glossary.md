@@ -31,5 +31,3 @@
 | **WMS** | Web Map Service |
 | **WP** | Work Package |
 | **Data Provider** | An organisation which produces data or metadata. |
-
-> [Summary](../README.md)
