@@ -10,7 +10,7 @@ Such model is mostly conceptual, and serves for different purposes:
 
  The EPOS data model was discussed and defined in EPOS-IP as of 2018 in the document “Second (Final) Report on EPOS-ICS Architecture” and is here reported for reader’s convenience in the following class diagram.
 
-![image](../images/epos-data-model.png)
+![image](./images/epos-data-model.png)
 
 The EPOS Data model includes the following concepts:
 
@@ -19,5 +19,3 @@ Person, Equipment, Facility, Service, Web service, Organization, Data, Software 
  The data model defines the objects that the user will have to deal with in the EPOS ecosystem. This has consequences, for instance, in the definition of the User experience and associated functionalities implemented by the System modules.
 
 > [EPOS Data Model PDF Description](EPOS_DATA_MODEL.pdf)
-
-> [Summary](../README.md)
