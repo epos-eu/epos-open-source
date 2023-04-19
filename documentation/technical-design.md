@@ -1,6 +1,6 @@
 The diagram in this section represents the implementation of the conceptual architecture.
 
-![image](./images/architecture-diagram.png)
+![image](./documentation/images/architecture-diagram.png)
 
 The following key aspects need to be taken into account:
 
