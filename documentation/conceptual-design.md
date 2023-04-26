@@ -23,7 +23,6 @@ The driving concepts can be summarized by the following statements:
 | Resources Service | /api/resources-service/v1/ | Service for accessing assets stored in the ICS-C catalogue |
 | External Access Service | /api/external-access-service/v1/ | Service for executing external services (from TCS) |
 | Backoffice Service | /api/backoffice-service/v1/ | Service for managing metadata from the backoffice application |
-| Processing Access Service | /api/processing-access-service/v1/ | Service or interacting with potential processing services |
 
 *  Services in the red squares implement "support" functionalities, that is to say functionalities needed by the system, internally. Although the c converter is supposed to be an internal "support" service, this may implement Web-APIs to provide an additional service to end users.
 

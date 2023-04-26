@@ -13,7 +13,6 @@ The following key aspects need to be taken into account:
 | Resources Service | /api/resources-service/v1/ | Service for accessing assets stored in the ICS-C catalogue |
 | External Access Service | /api/external-access-service/v1/ | Service for executing external services (from TCS) |
 | Backoffice Service | /api/backoffice-service/v1/ | Service for managing metadata from the backoffice application |
-| Processing Access Service | /api/processing-access-service/v1/ | Service or interacting with potential processing services |
 
 * In addition, the following services have been supplied with RESTful APIs:
 
