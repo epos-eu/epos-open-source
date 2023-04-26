@@ -11,5 +11,5 @@
 
 | Databases | Image | Version |
 |--|--|--|
-| Redis Database | redis | 7.0.11 |
+| Redis | redis | 7.0.11 |
 | Metadata Catalogue | metadata-database-deploy | 2.2.0 |
