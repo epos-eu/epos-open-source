@@ -1,6 +1,6 @@
 | User Interface name | DockerHub | Git Repository |
 |--|--|--|
-| EPOS Data Portal | [![Git Repository]( https://img.shields.io/badge/Git-Available%20Soon-red)]() | [![Git Repository]( https://img.shields.io/badge/Git-Available%20Soon-red)]() |
+| EPOS Data Portal | [![Docker Image Version (latest by date)](https://img.shields.io/docker/v/epos/data-portal)](https://hub.docker.com/r/epos/data-portal)<br>[![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/epos/data-portal)](https://hub.docker.com/r/epos/data-portal)<br>[![Docker Pulls](https://img.shields.io/docker/pulls/epos/data-portal)](https://hub.docker.com/r/epos/data-portal) | [![Git Repository](https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat)](https://github.com/epos-eu/data-portal) |
 | EPOS Backoffice | [![Git Repository]( https://img.shields.io/badge/Git-Available%20Soon-red)]() | [![Git Repository]( https://img.shields.io/badge/Git-Available%20Soon-red)]() |
 
 
