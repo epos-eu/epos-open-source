@@ -100,8 +100,8 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 |--|-------------|
 | Role | Discovery |
 | Description | Discovery resources on metadata catalogue. It requires no authentication. It is used to provide a list of all available resources (services, software, organization etc.). |
-| Interactions (with other parts of the system) | Broker Service, Data Metadata Service, Converter Service |
-| Inputs and outputs (system side) | Message exchange |
+| Interactions (with other parts of the system) | Metadata Catalogue |
+| Inputs and outputs (system side) | Database Interaction|
 
 * BackOffice Service
 
@@ -109,8 +109,8 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 |--|-------------|
 | Role | Metadata Management |
 | Description | Manage metadata information into metadata catalogue |
-| Interactions (with other parts of the system) | Broker Service, Data Metadata Service|
-| Inputs and outputs (system side) | Message exchange, Database Interaction |
+| Interactions (with other parts of the system) | Metadata Catalogue|
+| Inputs and outputs (system side) | Database Interaction |
 
 * Ingestor Service
 
@@ -118,8 +118,8 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 |--|-------------|
 | Role | Metadata Management |
 | Description | Insert metadata information into metadata catalogue |
-| Interactions (with other parts of the system) | Broker Service, Data Metadata Service|
-| Inputs and outputs (system side) | Message exchange, Database Interaction |
+| Interactions (with other parts of the system) |Metadata Catalogue|
+| Inputs and outputs (system side) | Database Interaction |
 
 * External Access Service
 
@@ -127,8 +127,8 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 |--|-------------|
 | Role | Access external metadata and data |
 | Description | Access to external services from ICS-C in order to gather data and metadata to be used by clients |
-| Interactions (with other parts of the system) |  Broker Service, Data Metadata Service, Converter Service |
-| Inputs and outputs | Message Exchange, TCS Webservices APIs |
+| Interactions (with other parts of the system) |  Broker Service, Metadata Catalogue, Converter Service |
+| Inputs and outputs | Message Exchange, Database Interaction, TCS Webservices APIs |
 
 
 * Converter Service
@@ -137,15 +137,5 @@ Properties:   [{<<"timestamp">>,signedint,1678370895},
 |--|-------------|
 | Role | Conversions of payloads |
 | Description | It provides a service which enable the conversion of metadata/data payloads, based on a plugin system |
-| Interactions (with other parts of the system) |  Broker Service, Data Metadata Service |
-| Inputs and outputs |  Message Exchange |
-
-
-* Data Metadata Service
-
-|  |  | 
-|--|-------------|
-| Role | Handling Database Requests |
-| Description | This service handle request received from services that need to be executed on the database |
-| Interactions (with other parts of the system) | Broker Service, Metadata Catalogue |
-| Inputs and outputs |Message Exchange, Database Interaction | 
+| Interactions (with other parts of the system) |  Broker Service, Metadata Catalogue|
+| Inputs and outputs |  Message Exchange, Database Interaction |
