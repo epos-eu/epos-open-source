@@ -52,7 +52,10 @@ const Footer = ({ t }: { t: TFunction }) => {
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+              <Para>Email : epos-italia@ingv.it</Para>
+              <Para>Phone: (+39) 06 518601</Para>
+              <Para>Vat: IT15152381008</Para>
+              <p></p>
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
@@ -61,30 +64,25 @@ const Footer = ({ t }: { t: TFunction }) => {
               </a>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Policy")}</Title>
-              <Large to="/">{t("Application Security")}</Large>
-              <Large to="/">{t("Software Principles")}</Large>
+              <Title>{t("EPOS ERIC Privacy ")}</Title>
+              <Large as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Policy")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Large to="/">{t("Support Center")}</Large>
-              <Large to="/">{t("Customer Support")}</Large>
+            <Title>{("Useful Links ")}</Title>
+              <Large as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Large>
             </Col>
           </Row>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
               <Language>{t("Address")}</Language>
-              <Para>Il sito EPOS ITALIA è gestito da:</Para>
-              <Para>INGV | Via di Vigna Murata 605</Para>
+              <Para>Via di Vigna Murata 605</Para>
               <Para>00143 Roma, Italia</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large to="/">{t("About")}</Large>
-              <Large to="/">{t("Blog")}</Large>
-              <Large to="/">{t("Press")}</Large>
-              <Large to="/">{t("Careers & Culture")}</Large>
+              <Title>{("EPOS ERIC")}</Title>
+              <Large as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Large>
+              <Large as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Label htmlFor="select-lang">{t("Language")}</Label>
@@ -129,20 +127,24 @@ const Footer = ({ t }: { t: TFunction }) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+                href="https://www.facebook.com/EPOSeu"
+                src="facebook.png"
               />
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
+                href="https://x.com/i/flow/login?redirect_after_login=%2FEPOSeu"
+                src="x.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
+                href="https://www.linkedin.com/company/eposeu"
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
+                href="https://www.youtube.com/c/EposProjectEu"
+                src="youtube.svg"
+              />
+              <SocialLink
+                href="https://www.flickr.com/photos/eposeu"
+                src="flickr.svg"
               />
      
             </FooterContainer>
