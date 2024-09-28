@@ -18,6 +18,7 @@ import {
   Span,
   LanguageSwitch,
   LanguageSwitchContainer,
+  DropdownMenuWrapper
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -39,6 +40,7 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const learnMenu = (
+    <DropdownMenuWrapper>
     <AntMenu>
       <AntMenu.Item>
         <Link to="/introduction">{t("Introduction")}</Link> {/* Navigate to Introduction page */}
@@ -56,8 +58,10 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/references">{t("References")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
+    </DropdownMenuWrapper>
   );
   const installMenu = (
+    <DropdownMenuWrapper>
     <AntMenu>
       <AntMenu.Item>
         <Link to="/install">{t("Install")}</Link> {/* Navigate to Introduction page */}
@@ -69,6 +73,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/Libraries">{t("Libraries")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
+    </DropdownMenuWrapper>
   );
   const designMenu = (
     <AntMenu>

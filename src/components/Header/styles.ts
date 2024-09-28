@@ -111,3 +111,24 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+export const DropdownMenuWrapper = styled.div`
+  .ant-dropdown-menu {
+    position: relative;
+    padding: 0;
+    
+    /* Arrow Styles */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff; /* Adjust color based on your dropdown menu */
+      z-index: 1000;
+    }
+  }
+`;
