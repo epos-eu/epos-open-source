@@ -1,4 +1,4 @@
-import React from 'react';
+import {lazy} from 'react';
 import {
   Table,
   TableHeader,
@@ -6,6 +6,8 @@ import {
   DownloadLink,
   RepoLink,
 } from './styles'; // Adjust the path as needed
+
+const Container = lazy(() => import("../../common/Container"));
 
 const installers = [
   {
@@ -27,6 +29,7 @@ const installers = [
 
 const Installation: React.FC = () => {
   return (
+    <Container>
     <Table>
       <thead>
         <tr>
@@ -59,6 +62,7 @@ const Installation: React.FC = () => {
         ))}
       </tbody>
     </Table>
+    </Container>
   );
 };
 

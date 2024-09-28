@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
+import SearchBar from "../Search";
+import { DownOutlined } from '@ant-design/icons';
 import {
   HeaderSection,
   LogoContainer,
@@ -110,7 +112,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <AntMenu.Item key="es">
           <LanguageSwitch onClick={() => handleChange("es")}>
             <SvgIcon
-              src="spain.svg"
+              src="italy.png"
               aria-label="Switch to Spanish"
               width="30px"
               height="30px"
@@ -121,36 +123,100 @@ const Header = ({ t }: { t: TFunction }) => {
     </LanguageSwitchContainer>
   );
   
+  const homeMenu = (
+    <AntMenu>
+      <AntMenu.Item  style={{ width: "180px" }}
+          onClick={() => scrollTo("intro")}>{t("EPOS Data Portal")}
+      </AntMenu.Item>
+      <AntMenu.Item  style={{ width: "180px" }}
+          onClick={() => scrollTo("contribute")}>{t("Contributation")}
+      </AntMenu.Item>
+      <AntMenu.Item  style={{ width: "180px" }}
+          onClick={() => scrollTo("goals")}>{t("EPOS Goals")}
+      </AntMenu.Item>
+      <AntMenu.Item  style={{ width: "180px" }}
+          onClick={() => scrollTo("whoWeAre")}>{t("Who We Are")}
+      </AntMenu.Item>
+      <AntMenu.Item  style={{ width: "180px" }}
+          onClick={() => scrollTo("contact")}>{t("Contact us")}
+      </AntMenu.Item>
+    </AntMenu>
+  );
+  
   const MenuItem = () => {
+    const [openKeys, setOpenKeys] = useState<string[]>([]); // State to manage dropdown visibility
+  
+    const handleDropdownVisibleChange = (visible: boolean, menuKey: string) => {
+      if (visible) {
+        setOpenKeys([menuKey]); // Set the opened dropdown key
+      } else {
+        setOpenKeys(openKeys.filter((key) => key !== menuKey)); // Remove the closed dropdown key
+      }
+    };
+  
     return (
       <>
-        <Dropdown overlay={installMenu} trigger={['click']}>
-          <CustomNavLinkSmall>
-            <Span>{t("Installation")}</Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <Dropdown overlay={learnMenu} trigger={['click']}>
-          <CustomNavLinkSmall>
-            <Span>{t("Learn")}</Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <Dropdown overlay={designMenu} trigger={['click']}>
-          <CustomNavLinkSmall>
-            <Span>{t("Documentaion")}</Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <Dropdown overlay={languageMenu} trigger={['click']}>
-          <CustomNavLinkSmall>
-            <Span>{t("Languages")}</Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+        <Dropdown
+          overlay={homeMenu}
+          trigger={['hover']}
+          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'home')}
         >
-          <Span>
-            <Button>{t("Contact us")}</Button>
-          </Span>
+          <CustomNavLinkSmall>
+            <Span>
+              {t("Home")}
+            </Span>
+          </CustomNavLinkSmall>
+        </Dropdown>
+        <Dropdown
+          overlay={installMenu}
+          trigger={['hover']}
+          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'install')}
+        >
+          <CustomNavLinkSmall>
+            <Span>
+              {t("Installation")}
+              <DownOutlined className={openKeys.includes('install') ? 'arrow-active' : ''} />
+            </Span>
+          </CustomNavLinkSmall>
+        </Dropdown>
+        <Dropdown
+          overlay={learnMenu}
+          trigger={['hover']}
+          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
+        >
+          <CustomNavLinkSmall>
+            <Span>
+              {t("Learn")}
+              <DownOutlined className={openKeys.includes('learn') ? 'arrow-active' : ''} />
+            </Span>
+          </CustomNavLinkSmall>
+        </Dropdown>
+        <Dropdown
+          overlay={designMenu}
+          trigger={['hover']}
+          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
+        >
+          <CustomNavLinkSmall>
+            <Span>
+              {t("Documentaion")}
+              <DownOutlined className={openKeys.includes('design') ? 'arrow-active' : ''} />
+            </Span>
+          </CustomNavLinkSmall>
+        </Dropdown>
+        <Dropdown
+          overlay={languageMenu}
+          trigger={['hover']}
+          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'language')}
+        >
+          <CustomNavLinkSmall>
+            <Span>
+              {t("Languages")}
+              <DownOutlined className={openKeys.includes('language') ? 'arrow-active' : ''} />
+            </Span>
+          </CustomNavLinkSmall>
+        </Dropdown>
+        <CustomNavLinkSmall>
+          <SearchBar />
         </CustomNavLinkSmall>
       </>
     );
@@ -158,7 +224,6 @@ const Header = ({ t }: { t: TFunction }) => {
 
   return (
     <HeaderSection>
-      <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
@@ -183,7 +248,6 @@ const Header = ({ t }: { t: TFunction }) => {
           </Col>
           <MenuItem />
         </Drawer>
-      </Container>
     </HeaderSection>
   );
 };

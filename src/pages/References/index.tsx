@@ -1,10 +1,13 @@
-import React from 'react';
+import {lazy} from 'react';
 import {
   ReferencesContainer,
   ReferenceItem,
   Citation,
   Link,
 } from './styles'; // Adjust the path as needed
+
+
+const Container = lazy(() => import("../../common/Container"));
 
 const references = [
   {
@@ -40,6 +43,7 @@ const references = [
 
 const References: React.FC = () => {
   return (
+    <Container>
     <ReferencesContainer>
         <h1>References</h1>
       {references.map((ref, index) => (
@@ -65,6 +69,7 @@ const References: React.FC = () => {
         </ReferenceItem>
       ))}
     </ReferencesContainer>
+    </Container>
   );
 };
 

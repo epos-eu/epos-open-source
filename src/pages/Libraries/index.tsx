@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import {
   Table,
   TableHeader,
@@ -5,6 +6,8 @@ import {
   MavenLink,
   RepoLink,
 } from './styles'; // Adjust the path as needed
+
+const Container = lazy(() => import("../../common/Container"));
 
 const librariesTable = [
   {
@@ -36,6 +39,7 @@ const librariesTable = [
 
 const Libraries: React.FC = () => {
   return (
+    <Container>
     <Table>
       <thead>
         <tr>
@@ -65,6 +69,7 @@ const Libraries: React.FC = () => {
         ))}
       </tbody>
     </Table>
+    </Container>
   );
 };
 

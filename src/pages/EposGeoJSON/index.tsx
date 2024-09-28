@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { lazy } from 'react';
+
 import {
-    Container,
     Title,
     Section,
     List,
@@ -11,6 +11,8 @@ import {
     TableCell,
     Image,
 } from './styles'; // Adjust according to your actual styles.ts exports
+
+const Container = lazy(() => import("../../common/Container"));
 
 const EposGeoJSON: React.FC = () => {
     return (

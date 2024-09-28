@@ -2,12 +2,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
+// Existing styles...
+
 export const HeaderSection = styled("header")`
   padding: 1rem 0.5rem;
 
   .ant-row-space-between {
     align-items: center;
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 `;
 
@@ -90,9 +94,9 @@ export const Span = styled("span")`
   &:focus {
     color: rgb(255, 130, 92);
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
+
 export const LanguageSwitch = styled("div")`
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -111,11 +115,12 @@ export const LanguageSwitchContainer = styled("div")`
   justify-content: space-between;
   width: 85px;
 `;
+
 export const DropdownMenuWrapper = styled.div`
   .ant-dropdown-menu {
     position: relative;
     padding: 0;
-    
+
     /* Arrow Styles */
     &:before {
       content: "";
@@ -130,5 +135,14 @@ export const DropdownMenuWrapper = styled.div`
       border-bottom: 6px solid #fff; /* Adjust color based on your dropdown menu */
       z-index: 1000;
     }
+  }
+
+  .arrow-active {
+    transform: rotate(180deg); /* Rotate arrow 180 degrees when active */
+    transition: transform 0.3s; /* Smooth transition for the rotation */
+  }
+
+  .anticon {
+    margin-left: 8px; /* Add some space between the text and the arrow */
   }
 `;
