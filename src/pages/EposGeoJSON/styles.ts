@@ -7,11 +7,6 @@ export const Containers = styled.div`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
-export const Title = styled.h1`
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-`;
 
 export const Section = styled.section`
     margin-bottom: 20px;
@@ -58,6 +53,24 @@ export const TableRow = styled.tr``;
 export const TableCell = styled.td``;
 
 export const Image = styled.img`
-    max-width: 100px;
-    height: auto;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const Title = styled.h2`
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+`;
+export const Description = styled.p`
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+`;
+export const SubTitle = styled.h3`
+  margin: 20px 0;
+  font-size: 18px;
+  color: #333;
 `;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const SectionContainer = styled.div`
-  max-width: 800px;
+   padding: 20px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
   font-family: Arial, sans-serif;
 `;
 
@@ -14,9 +14,10 @@ export const Title = styled.h2`
 `;
 
 export const RequirementTable = styled.table`
+  display: table;
   width: 100%;
+  border-spacing: 0;
   border-collapse: collapse;
-  margin-bottom: 40px;
 `;
 
 export const TableHeader = styled.th`
@@ -28,7 +29,10 @@ export const TableHeader = styled.th`
 `;
 
 export const TableRow = styled.tr`
-  &:nth-child(even) {
+  display: table-row;
+  border-bottom: 1px solid #ddd;
+
+  &:nth-child(odd) {
     background-color: #f9f9f9;
   }
 `;
@@ -39,8 +43,14 @@ export const TableCell = styled.td`
 `;
 
 export const TableDescription = styled.td`
-  padding: 12px;
-  border: 1px solid #ddd;
-  vertical-align: top;
-  text-align: left;
+ font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: center;
+`;
+
+export const RequirementsDescription = styled.p`
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
 `;

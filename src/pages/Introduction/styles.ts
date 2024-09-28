@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Header = styled.h1`
   color: #333;
   font-size: 32px;
-  text-align: center;
   margin-bottom: 20px;
 `;
 
@@ -27,4 +26,14 @@ export const Paragraph = styled.p`
   line-height: 1.6;
   margin-bottom: 15px;
   text-align: justify;
+`;
+export const Title = styled.h2`
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+`;
+export const Description = styled.p`
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
 `;

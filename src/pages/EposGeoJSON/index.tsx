@@ -10,6 +10,8 @@ import {
     TableRow,
     TableCell,
     Image,
+    Description,
+    SubTitle
 } from './styles'; // Adjust according to your actual styles.ts exports
 
 const Container = lazy(() => import("../../common/Container"));
@@ -20,14 +22,14 @@ const EposGeoJSON: React.FC = () => {
             <Title>EPOS GeoJSON Extensions</Title>
 
             <Section>
-                <h2>Purpose</h2>
-                <p>
+                <SubTitle>Purpose</SubTitle>
+                <Description>
                     A number of work packages have requested additional features to be supported by the GUI. Currently, the GUI supports GeoJSON, but GeoJSON doesn't support the desired features. At this late stage, it has been deemed too risky to introduce another format and associated development effort; therefore, an alternative solution is to propose EPOS-specific extensions to the GeoJSON format.
-                </p>
+                </Description>
             </Section>
 
             <Section>
-                <h2>Requirements</h2>
+            <SubTitle>Requirements</SubTitle>
                 <Table>
                     <thead>
                         <tr>
@@ -65,10 +67,10 @@ const EposGeoJSON: React.FC = () => {
             </Section>
 
             <Section>
-                <h2>@epos JSON Objects</h2>
-                <p>
+                <SubTitle>@epos JSON Objects</SubTitle>
+                <Description>
                     All new root JSON objects introduced to support EPOS functionality will be accessible via attribute names that start with <code>@epos_</code>. This is to avoid name clashes and false positives parsing the GeoJSON for EPOS specific information. All EPOS specific JSON objects are optional; if any are missing, sensible default behaviour will be followed, ensuring the raw GeoJSON can still be rendered.
-                </p>
+                </Description>
                 <CodeBlock>
                     {`{
     "type": "FeatureCollection",
@@ -81,14 +83,16 @@ const EposGeoJSON: React.FC = () => {
             </Section>
 
             <Section>
-                <h2>Styling</h2>
-                <p>
+                <SubTitle>Styling</SubTitle>
+                <Description>
                     The styling of map markers and map legends for GeoJSON points is defined by the <code>@epos_style</code> object. The object contains attributes named such that they correspond to the value(s) of the <code>@epos_type</code> attribute defined within the <code>properties</code> objects of GeoJSON features.
-                </p>
-                <h2>Example</h2>
-                <p>In the example below there is a feature with an @epos_type = station, this matches the attribute station within the the @epos_style object, hence in this case stations would be rendered on the map as pins with an 's'</p>
+                </Description>
+                <SubTitle>Example</SubTitle>
+                <Description>In the example below there is a feature with an @epos_type = station, 
+                    this matches the attribute station within the the @epos_style object, hence in
+                     this case stations would be rendered on the map as pins with an 's'</Description>
                 <Image src="./img/graphs/1562841807572.png" alt="Font Awesome marker with pin"/>
-                <p>A corresponding legend would be generated, looking something like:</p>
+                <Description>A corresponding legend would be generated, looking something like:</Description>
                 <Image src="./img/graphs//1562842126236.png" alt="Font Awesome marker with pin"/> 
                 <p>feature:</p>
                 <CodeBlock>
@@ -102,7 +106,7 @@ const EposGeoJSON: React.FC = () => {
     }
 ]`}
                 </CodeBlock>
-                <p>style:</p>
+                <SubTitle>style:</SubTitle>
 
                 <CodeBlock>
                 {
@@ -124,8 +128,8 @@ const EposGeoJSON: React.FC = () => {
             </Section>
 
             <Section>
-                <h2>Style Attributes</h2>
-                <p>Each @epos_type defined in the @epos_style object defines the following:</p>
+                <SubTitle>Style Attributes</SubTitle>
+                <Description>Each @epos_type defined in the @epos_style object defines the following:</Description>
                 <Table>
                     <thead>
                         <tr>
@@ -159,10 +163,10 @@ const EposGeoJSON: React.FC = () => {
             </Section>
 
             <Section>
-                <h2>Symbols</h2>
-                <p>
+                <SubTitle>Symbols</SubTitle>
+                <Description>
                     There are three types of symbol that can be used (only one should be used), these are defined by setting the appropriately named attribute within the <code>marker</code> object:
-                </p>
+                </Description>
                 <Table>
                     <thead>
                         <tr>
@@ -206,7 +210,7 @@ const EposGeoJSON: React.FC = () => {
                     </tbody>
                 </Table>
             </Section>
-            <p>Image Example</p>
+            <SubTitle>Image Example</SubTitle>
             <CodeBlock>
                 {
                    ` "thing": {
@@ -220,7 +224,7 @@ const EposGeoJSON: React.FC = () => {
         }
                ` }
             </CodeBlock>
-            <p>Font Awesome Example</p>
+            <SubTitle>Font Awesome Example</SubTitle>
         <CodeBlock>
             {
                 `
@@ -237,7 +241,7 @@ const EposGeoJSON: React.FC = () => {
                 `
             }
         </CodeBlock>
-        <p>Character Example</p>
+        <SubTitle>Character Example</SubTitle>
         <CodeBlock>
             {
                 `
@@ -253,22 +257,25 @@ const EposGeoJSON: React.FC = () => {
                  `
             }
         </CodeBlock>
-        <p> Symbol Logic</p>
+        <SubTitle> Symbol Logic</SubTitle>
         <Image src="./img/graphs/marker%20flow.png" alt="Font Awesome marker with pin"/>
-        <p>Colour</p>
-        <p>A note on colour, to prevent accidental reuse of the same colour by multiple map layers in the EPOS GUI, colours will be automatically assigned.</p>
-        <p>Legends</p>
-        <p>Legends are constructed by combining the map marker and label from the corresponding @epos_type within the the @epos_style object.</p>
+        <SubTitle>Colour</SubTitle>
+        <Description>A note on colour, to prevent accidental reuse of the same colour
+         by multiple map layers in the EPOS GUI, colours will be automatically assigned.
+         </Description>
+        <SubTitle>Legends</SubTitle>
+        <Description>Legends are constructed by combining the map marker and label from the corresponding
+             @epos_type within the the @epos_style object.</Description>
         <Image src="./img/graphs/1562842126236.png" alt="Character marker without pin"/>
-        <p>Legend Logic </p>
+        <SubTitle>Legend Logic </SubTitle>
         <Image src="./img/graphs/legend%20flow.png" alt="Character marker without pin"/>
       <Section>
-                <p>Image Overlays</p>
+                <SubTitle>Image Overlays</SubTitle>
               
-                <p>
+                <Description>
                     Image overlays (geo-referenced images) are supported by adding an <code>@epos_image_overlay</code> object to a GeoJSON feature. There is a 1:1 mapping between the feature and the overlay - that way, the <code>properties</code> for the feature can be used for the image overlay.
-                </p>
-                <p>Example</p>
+                </Description>
+                <SubTitle>Example</SubTitle>
                 <CodeBlock>
                     {`{
     "type": "Feature",
@@ -291,8 +298,8 @@ const EposGeoJSON: React.FC = () => {
     "geometry": null //NO GEOMETRY FOR OVERLA
 }`}
     <Section>
-                <p>Image Overlay Attributes</p>
-                <p>Each @epos_image_overlay object defined should have the following:</p>
+                <SubTitle>Image Overlay Attributes</SubTitle>
+                <SubTitle>Each @epos_image_overlay object defined should have the following:</SubTitle>
                 <Table>
                     <thead>
                         <tr>
@@ -322,24 +329,34 @@ const EposGeoJSON: React.FC = () => {
             </Section>
                 </CodeBlock>
     </Section>
-        <p>Image Types</p>
-        <p>A conscious decision has been made to not support GeoTIFF in this iteration of development of the EPOS GUI, hence it assumed that Leaflet https://leafletjs.com/ will support the same image types as commonly supported by browsers.</p>
-        <p>Geometry</p>
-        <p>The geometry for the feature containing the @epos_image_overlay object will be ignored, therefore should ideally be set to null. The reason for this is that it is essential the image overlay has rectangular geographic bounds, hence a bbox has been defined in the @epos_image_overlay object.</p>
-        <p>bbox</p>
-        <p>The spatial reference for the bbox is assumed to match the spatial reference for the containing GeoJSON object(s).</p>
-        <p>The order of the values is [lat1, lon1, lat2, lon2].</p>
-        <p>Caution: if the area crosses the antimeridian (often confused with the International Date Line), you must specify corners outside the [-180, 180] degrees longitude range.</p>
-        <p>https://leafletjs.com/reference-1.5.0.html#latlngbounds</p> 
-        <p>Feature Properties</p>
-        <p>In GeoJSON a feature can define a properties object, this object contains metadata about the feature.</p>
-        <p>The EPOS GeoJSON extension adds three ways in which the data-author can express some control over how those properties are used within the EPOS GUI. The approach taken is to introduce @epos_xxx attributes that reference other true properties of the feature, the reason for this are to:</p>
+        <SubTitle>Image Types</SubTitle>
+        <Description>A conscious decision has been made to not support GeoTIFF in this iteration of 
+            development of the EPOS GUI, hence it assumed that Leaflet https://leafletjs.com/ will support 
+            the same image types as commonly supported by browsers.</Description>
+        <SubTitle>Geometry</SubTitle>
+        <Description>The geometry for the feature containing the 
+            @epos_image_overlay object will be ignored, 
+            therefore should ideally be set to null. 
+            The reason for this is that it is essential
+             the image overlay has rectangular geographic bounds,
+              hence a bbox has been defined in the @epos_image_overlay object.</Description>
+        <SubTitle>bbox</SubTitle>
+        <Description>The spatial reference for the bbox is assumed to match the spatial reference for the containing GeoJSON object(s).</Description>
+        <Description>The order of the values is [lat1, lon1, lat2, lon2].</Description>
+        <Description>Caution: if the area crosses the antimeridian (often confused with the International Date Line), you must specify corners outside the [-180, 180] degrees longitude range.</Description>
+        <a href=""><SubTitle>https://leafletjs.com/reference-1.5.0.html#latlngbounds</SubTitle></a>
+        <SubTitle>Feature Properties</SubTitle>
+        <Description>In GeoJSON a feature can define a properties object, this object contains metadata about the feature.</Description>
+        <Description>The EPOS GeoJSON extension adds three ways in which the data-author can express some control over how 
+            those properties are used within the EPOS GUI. The approach taken is to introduce @epos_xxx attributes that
+             reference other true properties of the feature, the reason for this are to:</Description>
            <ul>
             <li>prevent duplication of metadata just to satisfy the EPOS GUI.</li>
             <li>maintain the true GeoJSON properties that may be needed in other contexts.</li>
            </ul>
-        <p>@epos_label_key</p>
-        <p>The value for the @epos_label_key attribute should be the name of one true attribute of theproperties object that is to be used when ever a label, title, tool-tip etc. is needed within the EPOS GUI.</p>
+        <SubTitle>@epos_label_key</SubTitle>
+        <Description>The value for the @epos_label_key attribute should be the name of one true attribute of theproperties object that is 
+            to be used when ever a label, title, tool-tip etc. is needed within the EPOS GUI.</Description>
             <CodeBlock>
                 {
                   `
@@ -356,7 +373,9 @@ const EposGeoJSON: React.FC = () => {
                 }
             </CodeBlock>
             <p>@epos_map_keys</p>
-            <p>The value for the @epos_map_keys attribute should be the ordered names of one or more true attributes of the properties object that are to be used in the map context within the EPOS GUI, for example to define the properties display in the map popup.</p>
+            <Description>The value for the @epos_map_keys attribute should be the ordered names of one or more true 
+                attributes of the properties object that are to be used in the map context within the EPOS GUI, for 
+                example to define the properties display in the map popup.</Description>
             <CodeBlock>
                 {
                   `
@@ -380,8 +399,10 @@ const EposGeoJSON: React.FC = () => {
                   `  
                 }
             </CodeBlock>
-            <p>@epos_data_keys</p>
-            <p>The value for the @epos_data_keys attribute should be the ordered names of one or more true attributes of the properties object that are to be used in the data-visualisation context within the EPOS GUI, for example to define the columns to display in the data table.</p>
+            <SubTitle>@epos_data_keys</SubTitle>
+            <Description>The value for the @epos_data_keys attribute should be the ordered names of one or more true 
+                attributes of the properties object that are to be used in the data-visualisation context within the EPOS GUI,
+                 for example to define the columns to display in the data table.</Description>
             <CodeBlock>
                 {
                   `
@@ -404,8 +425,8 @@ const EposGeoJSON: React.FC = () => {
             </CodeBlock>
       
             <Section>
-                <p>Default Behaviour</p>
-                <p>If the relevant @epos_ attribute for the context is missing or empty the EPOS GUI will revert to a default behaviour:</p>
+                <SubTitle>Default Behaviour</SubTitle>
+                <Description>If the relevant @epos_ attribute for the context is missing or empty the EPOS GUI will revert to a default behaviour:</Description>
                 <Table>
                     <thead>
                         <tr>
@@ -433,12 +454,15 @@ const EposGeoJSON: React.FC = () => {
                     </tbody>
                 </Table>
             </Section>
-            <p>Types of Properties</p>
-            <p>As mentioned above, in general the only properties that the EPOS GUI will support are those with primitive (numbers, strings, booleans, primitive-arrays) values</p>
+            <SubTitle>Types of Properties</SubTitle>
+            <Description>As mentioned above, in general the only properties that the EPOS GUI will support are those with primitive 
+                (numbers, strings, booleans, primitive-arrays) values</Description>
                 
-            <p>Links</p>
-            <p>@epos_links is a special type of property introduced to support the addition of (hyper)links that require an individual object per link to capture the href, label, type and authenticatedDownload (whether the link should be called with authentication headers set, including the EPOS authentication token)</p>
-            <p>properties:</p>
+            <SubTitle>Links</SubTitle>
+            <Description>@epos_links is a special type of property introduced to support the addition of (hyper)links that require an 
+                individual object per link to capture the href, label, type and authenticatedDownload (whether the link should be called
+                 with authentication headers set, including the EPOS authentication token)</Description>
+            <SubTitle>properties:</SubTitle>
              <CodeBlock>
                     {`
 "features": [
@@ -480,7 +504,7 @@ const EposGeoJSON: React.FC = () => {
                     </CodeBlock>
 
          <Section>
-         <p>Summary</p>
+         <SubTitle>Summary</SubTitle>
                 <Table>
                     <thead>
                         <tr>
@@ -530,7 +554,7 @@ const EposGeoJSON: React.FC = () => {
             </Section>
 
             <Section>
-                <p>Full Sample</p>
+                <SubTitle>Full Sample</SubTitle>
                 <CodeBlock>
                     { `
                     { 

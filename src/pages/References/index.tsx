@@ -4,6 +4,8 @@ import {
   ReferenceItem,
   Citation,
   Link,
+  RefrenceeDescription,
+  Title
 } from './styles'; // Adjust the path as needed
 
 
@@ -45,10 +47,10 @@ const References: React.FC = () => {
   return (
     <Container>
     <ReferencesContainer>
-        <h1>References</h1>
+        <Title>References</Title>
       {references.map((ref, index) => (
         <ReferenceItem key={index}>
-          <Citation>
+          <RefrenceeDescription>
             {ref.authors}. {ref.title}
             {ref.journal && ` ${ref.journal},`} 
             {ref.year && ` ${ref.year},`} 
@@ -65,7 +67,7 @@ const References: React.FC = () => {
             <Link href={ref.doi} target="_blank" rel="noopener noreferrer">
               [DOI]
             </Link>
-          </Citation>
+            </RefrenceeDescription>
         </ReferenceItem>
       ))}
     </ReferencesContainer>

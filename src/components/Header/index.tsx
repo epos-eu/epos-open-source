@@ -123,25 +123,25 @@ const Header = ({ t }: { t: TFunction }) => {
     </LanguageSwitchContainer>
   );
   
-  const homeMenu = (
-    <AntMenu>
-      <AntMenu.Item  style={{ width: "180px" }}
-          onClick={() => scrollTo("intro")}>{t("EPOS Data Portal")}
-      </AntMenu.Item>
-      <AntMenu.Item  style={{ width: "180px" }}
-          onClick={() => scrollTo("contribute")}>{t("Contributation")}
-      </AntMenu.Item>
-      <AntMenu.Item  style={{ width: "180px" }}
-          onClick={() => scrollTo("goals")}>{t("EPOS Goals")}
-      </AntMenu.Item>
-      <AntMenu.Item  style={{ width: "180px" }}
-          onClick={() => scrollTo("whoWeAre")}>{t("Who We Are")}
-      </AntMenu.Item>
-      <AntMenu.Item  style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}>{t("Contact us")}
-      </AntMenu.Item>
-    </AntMenu>
-  );
+  // const homeMenu = (
+  //   <AntMenu >
+  //     <AntMenu.Item  style={{ width: "180px" }}
+  //         onClick={() => scrollTo("intro")}>{t("EPOS Data Portal")}
+  //     </AntMenu.Item>
+  //     <AntMenu.Item  style={{ width: "180px" }}
+  //         onClick={() => scrollTo("contribute")}>{t("Contributation")}
+  //     </AntMenu.Item>
+  //     <AntMenu.Item  style={{ width: "180px" }}
+  //         onClick={() => scrollTo("goals")}>{t("EPOS Goals")}
+  //     </AntMenu.Item>
+  //     <AntMenu.Item  style={{ width: "180px" }}
+  //         onClick={() => scrollTo("whoWeAre")}>{t("Who We Are")}
+  //     </AntMenu.Item>
+  //     <AntMenu.Item  style={{ width: "180px" }}
+  //         onClick={() => scrollTo("contact")}>{t("Contact us")}
+  //     </AntMenu.Item>
+  //   </AntMenu>
+  // );
   
   const MenuItem = () => {
     const [openKeys, setOpenKeys] = useState<string[]>([]); // State to manage dropdown visibility
@@ -156,7 +156,7 @@ const Header = ({ t }: { t: TFunction }) => {
   
     return (
       <>
-        <Dropdown
+        {/* <Dropdown 
           overlay={homeMenu}
           trigger={['hover']}
           onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'home')}
@@ -166,7 +166,14 @@ const Header = ({ t }: { t: TFunction }) => {
               {t("Home")}
             </Span>
           </CustomNavLinkSmall>
-        </Dropdown>
+        </Dropdown> */}
+        <Link to="/">
+         <CustomNavLinkSmall>
+            <Span>
+              {t("Home")}
+            </Span>
+          </CustomNavLinkSmall>
+        </Link>
         <Dropdown
           overlay={installMenu}
           trigger={['hover']}

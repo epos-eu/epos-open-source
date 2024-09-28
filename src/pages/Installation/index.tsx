@@ -5,6 +5,8 @@ import {
   TableCell,
   DownloadLink,
   RepoLink,
+  Description,
+  Title
 } from './styles'; // Adjust the path as needed
 
 const Container = lazy(() => import("../../common/Container"));
@@ -30,6 +32,7 @@ const installers = [
 const Installation: React.FC = () => {
   return (
     <Container>
+      <Title>Install EPOS Open Source</Title>
     <Table>
       <thead>
         <tr>
@@ -60,6 +63,7 @@ const Installation: React.FC = () => {
             </TableCell>
           </tr>
         ))}
+        <p></p>
       </tbody>
     </Table>
     </Container>

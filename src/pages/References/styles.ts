@@ -20,3 +20,13 @@ export const Link = styled.a`
     text-decoration: underline;
   }
 `;
+export const Title = styled.h2`
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+`;
+export const RefrenceeDescription = styled.p`
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+`;

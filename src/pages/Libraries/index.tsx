@@ -5,6 +5,8 @@ import {
   TableCell,
   MavenLink,
   RepoLink,
+  Title,
+  Description
 } from './styles'; // Adjust the path as needed
 
 const Container = lazy(() => import("../../common/Container"));
@@ -40,6 +42,7 @@ const librariesTable = [
 const Libraries: React.FC = () => {
   return (
     <Container>
+      <Title>Available Libraries</Title>
     <Table>
       <thead>
         <tr>
@@ -67,6 +70,7 @@ const Libraries: React.FC = () => {
             </TableCell>
           </tr>
         ))}
+        <p></p>
       </tbody>
     </Table>
     </Container>

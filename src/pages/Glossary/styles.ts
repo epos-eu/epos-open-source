@@ -42,7 +42,6 @@ export const GlossaryCellDefinition = styled.div`
 export const GlossaryHeader = styled.h1`
   font-size: 32px;
   color: #333;
-  text-align: center;
   margin-bottom: 20px;
 `;
 
@@ -50,5 +49,4 @@ export const GlossaryDescription = styled.p`
   font-size: 18px;
   color: #555;
   margin-bottom: 30px;
-  text-align: center;
 `;

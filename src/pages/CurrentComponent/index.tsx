@@ -5,12 +5,13 @@ import {
   TableRow,
   TableCell,
   BadgeLink,
+  Title
 } from './styles';
 
 const CurrentComponent = () => {
   return (
     <TableContainer>
-      <h6>User Interfaces</h6>
+      <Title>User Interfaces</Title>
       <Table>
         <thead>
           <TableRow>
@@ -51,7 +52,7 @@ const CurrentComponent = () => {
         </tbody>
       </Table>
 
-      <h6>Microservices</h6>
+      <Title>Microservices</Title>
       <Table>
         <thead>
           <TableRow>
@@ -190,7 +191,7 @@ const CurrentComponent = () => {
 
       </Table>
 
-      <h6>Databases</h6>
+      <Title>Databases</Title>
       <Table>
         <thead>
           <TableRow>
