@@ -82,6 +82,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{("EPOS ERIC")}</Title>
               <Large as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Large>
+              <Large as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Data Portal</Large>
               <Large as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
