@@ -1,23 +1,33 @@
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { Button } from "../../common/Button";
+import { Button as CommonButton } from "../../common/Button"; // Rename to avoid confusion
+import { useHistory } from "react-router-dom"; 
 import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
+
+export interface ButtonProps {
+  title: string;
+  color?: string; // Optional color
+  link?: string; // Optional link for navigation
+}
 
 interface MiddleBlockProps {
   title: string;
   content: string;
-  button?: string;
+  button?: ButtonProps[]; // Accepting an array of button props
   t: TFunction;
 }
 
 const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
+  const history = useHistory();
+
+  // Handle button click for individual button links
+  const handleButtonClick = (link?: string) => {
+    if (link) {
+      history.push(link); // Navigate to the provided link
+    }
   };
+
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
@@ -26,10 +36,18 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
             <Col lg={24} md={24} sm={24} xs={24}>
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
-              {button && (
-                <Button>
-                  {t(button)}
-                </Button>
+              {button && button.length > 0 && (
+                <div>
+                  {button.map((btn, index) => (
+                    <CommonButton
+                      key={index} // Use index as key for buttons
+                      onClick={() => handleButtonClick(btn.link)} // Call with specific button link
+                      color={btn.color} // Pass color if provided
+                    >
+                      {t(btn.title)}
+                    </CommonButton>
+                  ))}
+                </div>
               )}
             </Col>
           </ContentWrapper>

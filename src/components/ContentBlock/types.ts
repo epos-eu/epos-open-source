@@ -12,10 +12,12 @@ export interface ContentBlockProps {
     | {
         title: string;
         color?: undefined;
+        link?:string;
       }
     | {
         title: string;
         color: string;
+        link?:string;
       }
   )[];
   t: TFunction;

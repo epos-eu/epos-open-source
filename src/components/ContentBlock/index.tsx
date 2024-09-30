@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
-import { withTranslation } from "react-i18next";
-
+import { withTranslation, TFunction } from "react-i18next";
+import { useHistory } from "react-router-dom"; 
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -26,11 +26,12 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
+  const history = useHistory();
+
+  const handleButtonClick = (link?: string) => {
+    if (link) {
+      history.push(link); 
+    }
   };
 
   return (
@@ -51,20 +52,14 @@ const ContentBlock = ({
               <Content>{t(content)}</Content>
               {direction === "right" ? (
                 <ButtonWrapper>
-                  {typeof button === "object" &&
+                  {Array.isArray(button) && 
                     button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                        },
-                        id: number
-                      ) => {
+                      (item, index) => {
                         return (
                           <Button
-                            key={id}
+                            key={index} // Use index as a key here
                             color={item.color}
-                            onClick={() => scrollTo("about")}
+                            onClick={() => handleButtonClick(item.link)} // Call the function with the link
                           >
                             {t(item.title)}
                           </Button>
@@ -75,18 +70,11 @@ const ContentBlock = ({
               ) : (
                 <ServiceWrapper>
                   <Row justify="space-between">
-                    {typeof section === "object" &&
+                    {Array.isArray(section) && 
                       section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
+                        (item, index) => {
                           return (
-                            <Col key={id} span={11}>
+                            <Col key={index} span={11}>
                               <SvgIcon
                                 src={item.icon}
                                 width="60px"
