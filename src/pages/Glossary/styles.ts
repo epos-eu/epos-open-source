@@ -12,6 +12,7 @@ export const GlossaryTable = styled.div`
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
+  border: 1px solid black; 
 `;
 
 export const GlossaryRow = styled.div`
@@ -26,10 +27,13 @@ export const GlossaryRow = styled.div`
 export const GlossaryCellTerm = styled.div`
   display: table-cell;
   padding: 15px;
-  font-weight: bold;
-  width: 200px;
+  margin: 1rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  text-align: left;
   vertical-align: top;
-  background-color: #f2f2f2;
+  font-size:16px;
+  border: 1px solid black;
 `;
 
 export const GlossaryCellDefinition = styled.div`
@@ -37,16 +41,27 @@ export const GlossaryCellDefinition = styled.div`
   padding: 15px;
   vertical-align: top;
   text-align: justify;
-  color: #555;
+  margin: 1rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  text-align: left;
+  font-size:16px;
+  border: 1px solid black;
 `;
 export const GlossaryHeader = styled.h1`
   font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
 `;
 
 export const GlossaryDescription = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+  margin: 1rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+ color: black;
+ font-size:16px;
 `;
+
+
+
+

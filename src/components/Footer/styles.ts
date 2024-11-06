@@ -8,8 +8,9 @@ export const FooterSection = styled("footer")`
 
 export const Title = styled("h4")`
   font-size: 22px;
-  text-transform: capitalize;
-  color: #18216d;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: black;
+  cursor: pointer;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -44,13 +45,21 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
-  font-size: 14px;
-  width: 70%;
+ font-family: "OpenSans", sans-serif;
+ color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: capitalize;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 0.625rem;
+  transition: all 0.3s ease-in-out;
+  max-width: max-content;
 `;
 
 export const Large = styled(Link)`
-  font-size: 16px;
+  font-size: 20px;
   color: #18216d;
   cursor: pointer;
   transition: all 0.2s ease-in-out;

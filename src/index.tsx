@@ -9,11 +9,11 @@ import Router from "./router";
 import i18n from "./translation";
 
 const App: React.FC = () => {
-  const [isFakeDark, setIsFakeDark] = useState<boolean>(false);
+  // const [isFakeDark, setIsFakeDark] = useState<boolean>(false);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("fake-dark-mode", isFakeDark);
-  }, [isFakeDark]);
+  // useEffect(() => {
+  //   document.documentElement.classList.toggle("fake-dark-mode", isFakeDark);
+  // }, [isFakeDark]);
 
   return (
     <div>
@@ -23,12 +23,12 @@ const App: React.FC = () => {
         </I18nextProvider>
       </BrowserRouter>
 
-      <button
+      {/* <button
         onClick={() => setIsFakeDark((prev) => !prev)}
         className="btn-fake-dark-mode"
       >
         {isFakeDark ? "☀️" : "🌙"}
-      </button>
+      </button> */}
     </div>
   );
 };

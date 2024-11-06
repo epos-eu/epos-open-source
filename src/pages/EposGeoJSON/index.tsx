@@ -11,7 +11,9 @@ import {
     TableCell,
     Image,
     Description,
-    SubTitle
+    SubTitle,
+    Maintitle,
+    TableHeader
 } from './styles'; // Adjust according to your actual styles.ts exports
 
 const Container = lazy(() => import("../../common/Container"));
@@ -19,8 +21,7 @@ const Container = lazy(() => import("../../common/Container"));
 const EposGeoJSON: React.FC = () => {
     return (
         <Container>
-            <Title>EPOS GeoJSON Extensions</Title>
-
+            <Maintitle>EPOS GeoJSON Extensions</Maintitle>
             <Section>
                 <SubTitle>Purpose</SubTitle>
                 <Description>
@@ -33,8 +34,8 @@ const EposGeoJSON: React.FC = () => {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Requirement</th>
-                            <th>Description</th>
+                            <TableHeader>Requirement</TableHeader>
+                            <TableHeader>Description</TableHeader>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,8 +134,8 @@ const EposGeoJSON: React.FC = () => {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Attribute</th>
-                            <th>Description</th>
+                            <TableHeader>Attribute</TableHeader>
+                            <TableHeader>Description</TableHeader>
                         </tr>
                     </thead>
                     <tbody>
@@ -170,10 +171,10 @@ const EposGeoJSON: React.FC = () => {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Type</th>
-                            <th>Example</th>
-                            <th>pin = false</th>
-                            <th>pin = true</th>
+                            <TableHeader>Type</TableHeader>
+                            <TableHeader>Example</TableHeader>
+                            <TableHeader>pin = false</TableHeader>
+                            <TableHeader>pin = true</TableHeader>
                         </tr>
                     </thead>
                     <tbody>
@@ -351,8 +352,8 @@ const EposGeoJSON: React.FC = () => {
             those properties are used within the EPOS GUI. The approach taken is to introduce @epos_xxx attributes that
              reference other true properties of the feature, the reason for this are to:</Description>
            <ul>
-            <li>prevent duplication of metadata just to satisfy the EPOS GUI.</li>
-            <li>maintain the true GeoJSON properties that may be needed in other contexts.</li>
+            <ListItem>prevent duplication of metadata just to satisfy the EPOS GUI.</ListItem>
+            <ListItem>maintain the true GeoJSON properties that may be needed in other contexts.</ListItem>
            </ul>
         <SubTitle>@epos_label_key</SubTitle>
         <Description>The value for the @epos_label_key attribute should be the name of one true attribute of theproperties object that is 
@@ -372,7 +373,7 @@ const EposGeoJSON: React.FC = () => {
                   `  
                 }
             </CodeBlock>
-            <p>@epos_map_keys</p>
+            <SubTitle>@epos_map_keys</SubTitle>
             <Description>The value for the @epos_map_keys attribute should be the ordered names of one or more true 
                 attributes of the properties object that are to be used in the map context within the EPOS GUI, for 
                 example to define the properties display in the map popup.</Description>
@@ -430,9 +431,9 @@ const EposGeoJSON: React.FC = () => {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Context</th>
-                            <th>Missing/Empty</th>
-                            <th>Default Behaviour</th>
+                            <TableHeader>Context</TableHeader>
+                            <TableHeader>Missing/Empty</TableHeader>
+                            <TableHeader>Default Behaviour</TableHeader>
                         </tr>
                     </thead>
                     <tbody>
@@ -508,9 +509,9 @@ const EposGeoJSON: React.FC = () => {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Type</th>
-                            <th>Context</th>
-                            <th>Example</th>
+                            <TableHeader>Type</TableHeader>
+                            <TableHeader>Context</TableHeader>
+                            <TableHeader>Example</TableHeader>
                         </tr>
                     </thead>
                     <tbody>

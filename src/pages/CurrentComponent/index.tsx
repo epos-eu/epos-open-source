@@ -22,7 +22,7 @@ const CurrentComponent = () => {
         </thead>
         <tbody>
           <TableRow>
-            <TableCell>EPOS Data Portal</TableCell>
+            <TableCell>EPOS Platform</TableCell>
             <TableCell>
               <BadgeLink href="https://hub.docker.com/r/epos/data-portal">
                 <img src="https://img.shields.io/docker/v/epos/data-portal" alt="Docker Version" />

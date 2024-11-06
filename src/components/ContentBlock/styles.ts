@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const ContentSection = styled("section")`
   position: relative;
   padding: 10rem 0 8rem;
+  color: green ;
 
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 4rem;
@@ -12,7 +13,21 @@ export const ContentSection = styled("section")`
 
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:16px;
 `;
+
+export const Title = styled("h1")`
+  margin: 1.5rem 0 2rem 0;
+  font-size:32px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: black;
+  &:hover, &:focus {
+    color: green;
+  }
+`;
+
 
 export const StyledRow = styled(Row)`
   flex-direction: ${({ direction }: { direction: string }) =>
@@ -22,6 +37,7 @@ export const StyledRow = styled(Row)`
 export const ContentWrapper = styled("div")`
   position: relative;
   max-width: 540px;
+  color: green ;
 
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
@@ -32,6 +48,7 @@ export const ServiceWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+  
 `;
 
 export const MinTitle = styled("h6")`
@@ -39,12 +56,13 @@ export const MinTitle = styled("h6")`
   line-height: 1rem;
   padding: 0.5rem 0;
   text-transform: uppercase;
-  color: #000;
+  color: red;
   font-family: "Motiva Sans Light", sans-serif;
 `;
 
 export const MinPara = styled("p")`
   font-size: 13px;
+  color: green;
 `;
 
 export const ButtonWrapper = styled("div")`

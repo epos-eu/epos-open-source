@@ -31,7 +31,7 @@ const systemRequirements = [
 const Requirements: React.FC = () => {
   return (
     <SectionContainer>
-      <Title>Requirements Definition</Title>
+      <Title>Our requirements</Title>
      <RequirementsDescription>
         The goal of this section is to establish the basis for a clear and detailed system architecture design by defining the core concepts and constraints derived from the requirements.
       </RequirementsDescription>

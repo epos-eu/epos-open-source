@@ -7,16 +7,18 @@ export const SectionContainer = styled.div`
   font-family: Arial, sans-serif;
 `;
 
-export const Title = styled.h2`
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+export const Title = styled.h1`
+ margin: 1.5rem 0 2rem 0;
+ font-size: 32px;
+font-family: "Lato", "OpenSans", sans-serif;
+color: green;
 `;
 
 export const Description = styled.p`
-  margin: 10px 0;
+  margin: 1.5rem 0 2rem 0;
   font-size: 16px;
-  color: #555;
+ font-family: "OpenSans", sans-serif;
+ color: black;
 `;
 
 export const List = styled.ul`
@@ -25,10 +27,18 @@ export const List = styled.ul`
   list-style-type: disc;
 
   li {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
+      margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
   }
 `;
 
-export const ListItem = styled.li``; // Individual list items will inherit styles from List
+export const ListItem = styled.li`
+      margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+`;

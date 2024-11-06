@@ -7,16 +7,17 @@ import {
   ListItem,
   SubList,
   SubListItem,
+  MainHeader
 } from "./styles";
 
 const Goals = () => {
   return (
     <Container>
       <Section>
-        <SectionHeader>Goals and Constraints</SectionHeader>
+        <MainHeader>Architectural design</MainHeader>
         <Paragraph>
-          This section describes the software requirements and objectives that
-          have some significant impact on the architecture; for example, safety,
+          This section describes the software requirements and objectives we considered while designing the EPOS platform architecture
+          ; for example, safety,
           security, privacy, use of an off-the-shelf product, portability,
           distribution, and reuse.
         </Paragraph>

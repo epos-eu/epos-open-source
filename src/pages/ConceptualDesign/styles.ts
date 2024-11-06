@@ -7,16 +7,20 @@ export const SectionContainer = styled.div`
   font-family: Arial, sans-serif;
 `;
 
-export const Title = styled.h2`
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+export const Title = styled.h1`
+   margin: 1.5rem 0 2rem 0;
+  font-size:32px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
 `;
 
 export const Description = styled.p`
-  margin: 10px 0;
-  font-size: 16px;
-  color: #555;
+ padding: 10px;
+  text-align: left;
+  margin: 1.5rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:16px;
 `;
 
 export const ServiceTable = styled.table`
@@ -26,11 +30,14 @@ export const ServiceTable = styled.table`
 `;
 
 export const TableHeader = styled.th`
-  padding: 12px;
+ padding: 10px;
   text-align: left;
-  background-color: #444;
-  color: white;
   border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:18px;
 `;
 
 export const TableRow = styled.tr`
@@ -40,8 +47,13 @@ export const TableRow = styled.tr`
 `;
 
 export const TableCell = styled.td`
-  padding: 12px;
+  padding: 10px;
+  text-align: left;
   border: 1px solid #ddd;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:16px;
 `;
 
 export const BulletList = styled.ul`
@@ -50,8 +62,10 @@ export const BulletList = styled.ul`
   list-style-type: disc;
 
   li {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
   }
 `;

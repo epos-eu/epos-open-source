@@ -12,8 +12,6 @@ export const Section = styled.section`
     margin-bottom: 20px;
     padding: 10px;
     background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 `;
 
 export const List = styled.ul`
@@ -21,7 +19,11 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-    margin-bottom: 10px;
+      margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
 `;
 
 export const CodeBlock = styled.pre`
@@ -50,7 +52,27 @@ export const Table = styled.table`
 
 export const TableRow = styled.tr``;
 
-export const TableCell = styled.td``;
+export const TableHeader = styled.th`
+   padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:18px;
+`;
+
+export const TableCell = styled.td`
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:16px;
+
+`;
 
 export const Image = styled.img`
   height: auto;
@@ -60,17 +82,43 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h2`
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+
 `;
 export const Description = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+  margin: 1.5rem 0 2rem 0;
+  font-size:16px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: black;
 `;
 export const SubTitle = styled.h3`
-  margin: 20px 0;
-  font-size: 18px;
-  color: #333;
+  margin: 1.5rem 0 2rem 0;
+  font-size:18px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
 `;
+
+
+export const Maintitle = styled.h1`
+  margin: 1.5rem 0 2rem 0;
+  font-size:32px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
+`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

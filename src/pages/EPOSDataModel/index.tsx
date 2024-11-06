@@ -19,9 +19,9 @@ const EPOSDataModel = () => {
         Such model is mostly conceptual and serves for different purposes:
       </Description>
       <List>
-        <ListItem>1. To define the structure of the information that the system provides to the end users by means of appropriate interfaces (e.g. web APIs).</ListItem>
-        <ListItem>2. To define the components of the system, that have the role of implementing specific functionalities.</ListItem>
-        <ListItem>3. As a guideline to define inputs and outputs of the different system components.</ListItem>
+        <ListItem>To define the structure of the information that the system provides to the end users by means of appropriate interfaces (e.g. web APIs).</ListItem>
+        <ListItem>To define the components of the system, that have the role of implementing specific functionalities.</ListItem>
+        <ListItem>As a guideline to define inputs and outputs of the different system components.</ListItem>
       </List>
 
       <Description>
@@ -48,9 +48,9 @@ const EPOSDataModel = () => {
         The data model defines the objects that the user will have to deal with in the EPOS ecosystem. This has consequences, for instance, in the definition of the User experience and associated functionalities implemented by the System modules.
       </Description>
 
-      <Description>
+      {/* <Description>
         <strong><a href="EPOS_DATA_MODEL.pdf" target="_blank" rel="noopener noreferrer">EPOS Data Model PDF Description</a></strong>
-      </Description>
+      </Description> */}
     </SectionContainer>
   );
 };

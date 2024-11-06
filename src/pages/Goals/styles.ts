@@ -11,17 +11,24 @@ export const Section = styled.div`
   margin-bottom: 30px;
 `;
 
-export const SectionHeader = styled.h2`
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 15px;
+export const MainHeader = styled.h1`
+  font-size: 32px;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
+`;
+export const SectionHeader = styled.h1`
+  font-size: 18px;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
 `;
 
 export const Paragraph = styled.p`
-  color: #555;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 10px;
+ font-size:16px;
+ margin: 1rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+ color: black;
 `;
 
 export const List = styled.ul`
@@ -30,9 +37,11 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  color: #555;
-  font-size: 18px;
-  margin-bottom: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
 `;
 
 export const SubList = styled.ul`
@@ -40,7 +49,9 @@ export const SubList = styled.ul`
 `;
 
 export const SubListItem = styled.li`
-  color: #666;
+  margin: 5px 0;
   font-size: 16px;
-  margin-bottom: 5px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
 `;

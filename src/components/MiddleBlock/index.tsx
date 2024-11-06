@@ -3,7 +3,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { Button as CommonButton } from "../../common/Button"; // Rename to avoid confusion
 import { useHistory } from "react-router-dom"; 
-import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
+import { MiddleBlockSection, Content, ContentWrapper ,Title } from "./styles";
 
 export interface ButtonProps {
   title: string;
@@ -34,7 +34,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
+              <Title  className="title">{t(title)}</Title>
               <Content>{t(content)}</Content>
               {button && button.length > 0 && (
                 <div>

@@ -3,6 +3,8 @@ import i18n from "i18next";
 import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
@@ -20,7 +22,8 @@ import {
   Span,
   LanguageSwitch,
   LanguageSwitchContainer,
-  DropdownMenuWrapper
+  DropdownMenuWrapper,
+  CustomHeaderLink
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -48,16 +51,16 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/introduction">{t("Introduction")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/glossary">{t("Glossary")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/goals">{t("Architectural design")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/goals">{t("Goals & Constrains")}</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
-      <AntMenu.Item > 
-        <Link to="/requirements-section">{t("Requirements Section")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/requirements-section">{t("Our requirements")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/references">{t("References")}</Link> {/* Navigate to Introduction page */}
+      </AntMenu.Item>
+      <AntMenu.Item > 
+        <Link to="/glossary">{t("Glossary")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
     </DropdownMenuWrapper>
@@ -69,7 +72,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/install">{t("Install")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/current-component">{t("Current component")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/current-component">{t("Current components")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/Libraries">{t("Libraries")}</Link> {/* Navigate to Introduction page */}
@@ -96,37 +99,37 @@ const Header = ({ t }: { t: TFunction }) => {
       </AntMenu.Item>
     </AntMenu>
   );
-  const languageMenu = (
-    <LanguageSwitchContainer>
-      <AntMenu>
-        <AntMenu.Item key="en">
-          <LanguageSwitch onClick={() => handleChange("en")}>
-            <SvgIcon
-              src="united-states.svg"
-              aria-label="Switch to English"
-              width="30px"
-              height="30px"
-            />
-          </LanguageSwitch>
-        </AntMenu.Item>
-        <AntMenu.Item key="es">
-          <LanguageSwitch onClick={() => handleChange("es")}>
-            <SvgIcon
-              src="italy.png"
-              aria-label="Switch to Spanish"
-              width="30px"
-              height="30px"
-            />
-          </LanguageSwitch>
-        </AntMenu.Item>
-      </AntMenu>
-    </LanguageSwitchContainer>
-  );
+  // const languageMenu = (
+  //   <LanguageSwitchContainer>
+  //     <AntMenu>
+  //       <AntMenu.Item key="en">
+  //         <LanguageSwitch onClick={() => handleChange("en")}>
+  //           <SvgIcon
+  //             src="united-states.svg"
+  //             aria-label="Switch to English"
+  //             width="30px"
+  //             height="30px"
+  //           />
+  //         </LanguageSwitch>
+  //       </AntMenu.Item>
+  //       <AntMenu.Item key="es">
+  //         <LanguageSwitch onClick={() => handleChange("es")}>
+  //           <SvgIcon
+  //             src="italy.png"
+  //             aria-label="Switch to Spanish"
+  //             width="30px"
+  //             height="30px"
+  //           />
+  //         </LanguageSwitch>
+  //       </AntMenu.Item>
+  //     </AntMenu>
+  //   </LanguageSwitchContainer>
+  // );
   
   // const homeMenu = (
   //   <AntMenu >
   //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("intro")}>{t("EPOS Data Portal")}
+  //         onClick={() => scrollTo("intro")}>{t("EPOS Platform)}
   //     </AntMenu.Item>
   //     <AntMenu.Item  style={{ width: "180px" }}
   //         onClick={() => scrollTo("contribute")}>{t("Contributation")}
@@ -156,61 +159,44 @@ const Header = ({ t }: { t: TFunction }) => {
   
     return (
       <>
-        {/* <Dropdown 
-          overlay={homeMenu}
-          trigger={['hover']}
-          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'home')}
-        >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Home")}
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown> */}
         <Link to="/">
-         <CustomNavLinkSmall>
-            <Span>
-              {t("Home")}
-            </Span>
-          </CustomNavLinkSmall>
-        </Link>
-        <Dropdown
-          overlay={installMenu}
-          trigger={['hover']}
-          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'install')}
-        >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Installation")}
-              <DownOutlined className={openKeys.includes('install') ? 'arrow-active' : ''} />
-            </Span>
-          </CustomNavLinkSmall>
+        <CustomNavLinkSmall>
+          <Span>{t("Home")}</Span>
+        </CustomNavLinkSmall>
+      </Link>
+      
+      <Dropdown
+        overlay={installMenu}
+        trigger={['hover']}
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'install')}
+      >
+        <CustomNavLinkSmall>
+            {t("Download")} 
+              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('install') ? 'arrow-active' : ''}`} />
+        </CustomNavLinkSmall>
+      </Dropdown>
+      <Dropdown
+        overlay={learnMenu}
+        trigger={['hover']}
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
+      >
+        <CustomNavLinkSmall>
+            {t("Learn")}
+              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('learn') ? 'arrow-active' : ''}`} />
+        </CustomNavLinkSmall>
+      </Dropdown>
+
+      <Dropdown
+        overlay={designMenu}
+        trigger={['hover']}
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
+      >
+        <CustomNavLinkSmall>
+            {t("Design")}
+              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`} />
+        </CustomNavLinkSmall>
         </Dropdown>
-        <Dropdown
-          overlay={learnMenu}
-          trigger={['hover']}
-          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
-        >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Learn")}
-              <DownOutlined className={openKeys.includes('learn') ? 'arrow-active' : ''} />
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <Dropdown
-          overlay={designMenu}
-          trigger={['hover']}
-          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
-        >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Documentaion")}
-              <DownOutlined className={openKeys.includes('design') ? 'arrow-active' : ''} />
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
-        <Dropdown
+        {/* <Dropdown
           overlay={languageMenu}
           trigger={['hover']}
           onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'language')}
@@ -221,7 +207,7 @@ const Header = ({ t }: { t: TFunction }) => {
               <DownOutlined className={openKeys.includes('language') ? 'arrow-active' : ''} />
             </Span>
           </CustomNavLinkSmall>
-        </Dropdown>
+        </Dropdown> */}
         <CustomNavLinkSmall>
           <SearchBar />
         </CustomNavLinkSmall>

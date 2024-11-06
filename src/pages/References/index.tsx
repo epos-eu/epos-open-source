@@ -64,7 +64,7 @@ const References: React.FC = () => {
             {ref.location && ` ${ref.location},`} 
             {ref.date && ` ${ref.date}.`} 
             {ref.reference && ` ${ref.reference}. `}
-            <Link href={ref.doi} target="_blank" rel="noopener noreferrer">
+            <Link href={ref.doi} target="_blank" rel="noopener noreferrer" style={{ color: 'orange', textDecoration: 'none' }}>
               [DOI]
             </Link>
             </RefrenceeDescription>

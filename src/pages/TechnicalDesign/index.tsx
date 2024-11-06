@@ -11,13 +11,14 @@ import {
   TableDescription,
   MessageHeader,
   CodeBlock,
+  Description
 } from './styles';
 
 const TechnicalDesign = () => {
   return (
     <SectionContainer>
       <Title>Architecture Implementation</Title>
-      <p>The diagram in this section represents the implementation of the conceptual architecture.</p>
+      <Description>The diagram in this section represents the implementation of the conceptual architecture.</Description>
       <Image src="./img/graphs/architecture-diagram.png" alt="Architecture Diagram" />
 
       <AspectList>

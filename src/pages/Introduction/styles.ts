@@ -27,13 +27,18 @@ export const Paragraph = styled.p`
   margin-bottom: 15px;
   text-align: justify;
 `;
-export const Title = styled.h2`
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+export const Title = styled.h1`
+ margin: 1.5rem 0 2rem 0;
+ font-size: 32px;
+font-family: "Lato", "OpenSans", sans-serif;
+color: green;
 `;
 export const Description = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+  margin: 1.5rem 0 2rem 0;
+  font-size: 16px;
+ font-family: "OpenSans", sans-serif;
+ color: black;
 `;
+
+
+

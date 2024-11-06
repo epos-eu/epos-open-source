@@ -7,12 +7,13 @@ import {
   TableRow,
   TableCell,
   TableDescription,
+  Maintitle
 } from './styles';
 
 const RestApiDefinition = () => {
   return (
     <SectionContainer>
-      <Title>RESTful API Definition</Title>
+      <Maintitle>RESTful API Definition</Maintitle>
 
       <Title>Resources Service</Title>
       <ServiceTable>

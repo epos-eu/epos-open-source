@@ -14,6 +14,7 @@ import {
   MinPara,
   StyledRow,
   ButtonWrapper,
+  Title,
 } from "./styles";
 
 const ContentBlock = ({
@@ -48,7 +49,7 @@ const ContentBlock = ({
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
+              <Title>{t(title)}</Title>
               <Content>{t(content)}</Content>
               {direction === "right" ? (
                 <ButtonWrapper>

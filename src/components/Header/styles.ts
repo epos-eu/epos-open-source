@@ -25,7 +25,7 @@ export const NavLink = styled("div")`
 `;
 
 export const CustomNavLink = styled("div")`
-  width: 203px;
+  width: 100px;
   display: inline-block;
 
   @media only screen and (max-width: 411px) {
@@ -62,10 +62,31 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1.2rem;
-  color: #18216d;
+  font-size: 1.4rem;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+  margin: 0.5rem 2rem;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
+  &:hover, &:focus {
+    color: orange;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 1.25rem 2rem;
+  }
+`;
+
+export const CustomHeaderLink = styled(NavLink)`
+  font-size: 1.5rem;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
+  display: flex;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
+  &:hover, &:focus {
+    color: orange;
+  }
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
@@ -116,33 +137,14 @@ export const LanguageSwitchContainer = styled("div")`
   width: 85px;
 `;
 
+
+
+
 export const DropdownMenuWrapper = styled.div`
-  .ant-dropdown-menu {
-    position: relative;
-    padding: 0;
+ 
 
-    /* Arrow Styles */
-    &:before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-bottom: 6px solid #fff; /* Adjust color based on your dropdown menu */
-      z-index: 1000;
-    }
-  }
-
-  .arrow-active {
-    transform: rotate(180deg); /* Rotate arrow 180 degrees when active */
-    transition: transform 0.3s; /* Smooth transition for the rotation */
-  }
-
-  .anticon {
-    margin-left: 8px; /* Add some space between the text and the arrow */
-  }
 `;
+
+
+
+

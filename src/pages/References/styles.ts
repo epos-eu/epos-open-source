@@ -20,13 +20,16 @@ export const Link = styled.a`
     text-decoration: underline;
   }
 `;
-export const Title = styled.h2`
-  margin: 20px 0;
-  font-size: 24px;
-  color: #333;
+export const Title = styled.h1`
+  font-size: 32px;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: green;
 `;
 export const RefrenceeDescription = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+ margin: 1rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+ color: black;
+ font-size:16px;
 `;
+

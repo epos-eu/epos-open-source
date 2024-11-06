@@ -51,42 +51,42 @@ const Footer = ({ t }: { t: TFunction }) => {
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
+              <Title>{t("Contact")}</Title>
               <Para>Email : epos-italia@ingv.it</Para>
               <Para>Phone: (+39) 06 518601</Para>
               <Para>Vat: IT15152381008</Para>
               <p></p>
-              <Para>
+              {/* <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
-              </Para>
-              <a href="mailto:epos-italia@ingv.it">
-                <Chat>{t(`Let's Chat`)}</Chat>
-              </a>
+              </Para> */}
+              {/* <a href="mailto:epos-italia@ingv.it">
+                <Para>{t(`Let's Chat`)}</Para>
+              </a> */}
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("EPOS ERIC Privacy ")}</Title>
-              <Large as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Policy")}</Large>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Policy")}</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
             <Title>{("Useful Links ")}</Title>
-              <Large as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Large>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Para>
             </Col>
           </Row>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
-              <Language>{t("Address")}</Language>
+              <Title>{t("Address")}</Title>
               <Para>Via di Vigna Murata 605</Para>
               <Para>00143 Roma, Italia</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{("EPOS ERIC")}</Title>
-              <Large as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Large>
-              <Large as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Data Portal</Large>
-              <Large as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Large>
+              <Para as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Para>
+              <Para as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Platform</Para>
+              <Para as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
+              {/* <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
@@ -104,7 +104,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                     height="30px"
                   />
                 </LanguageSwitch>
-              </LanguageSwitchContainer>
+              </LanguageSwitchContainer> */}
             </Col>
           </Row>
         </Container>
