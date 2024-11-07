@@ -24,7 +24,7 @@ export const Title = styled.h1`
   font-size: 32px;
   margin: 1.5rem 0 2rem 0;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color: #152c15;
 `;
 export const RefrenceeDescription = styled.p`
  margin: 1rem 0 2rem 0;

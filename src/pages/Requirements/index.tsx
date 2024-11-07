@@ -31,7 +31,7 @@ const systemRequirements = [
 const Requirements: React.FC = () => {
   return (
     <SectionContainer>
-      <Title>Our requirements</Title>
+      <Title>Architectural requirements</Title>
      <RequirementsDescription>
         The goal of this section is to establish the basis for a clear and detailed system architecture design by defining the core concepts and constraints derived from the requirements.
       </RequirementsDescription>
@@ -77,7 +77,7 @@ const Requirements: React.FC = () => {
       </RequirementTable>
          
       <RequirementsDescription>
-        The above requirements are the result of years of study, discussion, and considerations, as documented in key deliverables like the “Second (Final) Report on EPOS-ICS Architecture” (10.5281/zenodo.1470257)[1].
+        The above requirements are the result of years of study, discussion, and considerations, as documented in key deliverables like the “Second (Final) Report on EPOS-ICS Architecture” <a href='' target='_blank'><u><strong>(10.5281/zenodo.1470257)[1]</strong></u></a>.
         </RequirementsDescription>
         <RequirementsDescription>
         As a consequence of these Architectural Requirements, we can define goals and constraints to be considered in the architectural design.

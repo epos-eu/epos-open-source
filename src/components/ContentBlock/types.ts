@@ -3,6 +3,7 @@ export interface ContentBlockProps {
   icon: string;
   title: string;
   content: string;
+  link?:string;
   section?: {
     title: string;
     content: string;
@@ -11,13 +12,14 @@ export interface ContentBlockProps {
   button?: (
     | {
         title: string;
-        color?: undefined;
-        link?:string;
+        color?: string;
+        link:string;
       }
     | {
         title: string;
         color: string;
-        link?:string;
+        link:string;
+        useWindowLocation?: boolean;
       }
   )[];
   t: TFunction;

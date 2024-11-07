@@ -67,7 +67,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   cursor: pointer;
   margin: 0.5rem 2rem;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color:  #457945 ;
   &:hover, &:focus {
     color: orange;
   }
@@ -83,7 +83,7 @@ export const CustomHeaderLink = styled(NavLink)`
   margin: 0.5rem 2rem;
   display: flex;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color:  #152c15 ;
   &:hover, &:focus {
     color: orange;
   }

@@ -11,13 +11,13 @@ export const Title = styled.h1`
   margin: 1.5rem 0 2rem 0;
   font-size:18px;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color: #152c15;
 `;
 export const Maintitle = styled.h1`
   margin: 1.5rem 0 2rem 0;
   font-size:32px;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color: #152c15;
 `;
 
 export const ServiceTable = styled.table`

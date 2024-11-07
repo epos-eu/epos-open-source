@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { Button as CommonButton } from "../../common/Button"; // Rename to avoid confusion
+import { Button as CommonButton } from "../../common/Button"; 
 import { useHistory } from "react-router-dom"; 
 import { MiddleBlockSection, Content, ContentWrapper ,Title } from "./styles";
 
@@ -39,13 +39,15 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
               {button && button.length > 0 && (
                 <div>
                   {button.map((btn, index) => (
-                    <CommonButton
-                      key={index} // Use index as key for buttons
-                      onClick={() => handleButtonClick(btn.link)} // Call with specific button link
-                      color={btn.color} // Pass color if provided
-                    >
-                      {t(btn.title)}
-                    </CommonButton>
+                 <CommonButton
+                 key={index}
+                 onClick={() => window.open('https://www.epos-eu.org/about-epos', '_blank')}
+                 color={btn.color}
+                 style={{ backgroundColor: 'red' }} // Simple test style
+               >
+                 {t(btn.title)}
+               </CommonButton>
+               
                   ))}
                 </div>
               )}

@@ -10,11 +10,6 @@ const routes = [
     component: "Installation",
   },
   {
-    path: ["/introduction"],
-    exact: true,
-    component: "Introduction",
-  },
-  {
     path: ["/glossary"],
     exact: true,
     component: "Glossary",

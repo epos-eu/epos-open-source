@@ -52,7 +52,7 @@ export const Title = styled.h2`
    margin: 1.5rem 0 2rem 0;
   font-size:32px;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color:  #152c15 ;
 `;
 export const Description = styled.p`
   font-size: 18px;

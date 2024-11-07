@@ -47,14 +47,11 @@ const Header = ({ t }: { t: TFunction }) => {
   const learnMenu = (
     <DropdownMenuWrapper>
     <AntMenu>
-      <AntMenu.Item>
-        <Link to="/introduction">{t("Introduction")}</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/goals">{t("Architectural design")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/requirements-section">{t("Our requirements")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/requirements-section">{t("Architectural requirements")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/references">{t("References")}</Link> {/* Navigate to Introduction page */}
@@ -72,7 +69,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/install">{t("Install")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/current-component">{t("Current components")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/current-component">{t("Components")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/Libraries">{t("Libraries")}</Link> {/* Navigate to Introduction page */}
@@ -92,10 +89,10 @@ const Header = ({ t }: { t: TFunction }) => {
         <Link to="/rest-api-definition">{t("RESTful API Definitions")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/epos-geo-json">{t("EPOS GeoJSON")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/epos-data-model">{t("EPOS Data Model")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/epos-data-model">{t("EPOS Data Model")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/epos-geo-json">{t("EPOS GeoJSON")}</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
   );
@@ -181,7 +178,7 @@ const Header = ({ t }: { t: TFunction }) => {
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
       >
         <CustomNavLinkSmall>
-            {t("Learn")}
+            {t("Approach")}
               <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('learn') ? 'arrow-active' : ''}`} />
         </CustomNavLinkSmall>
       </Dropdown>
@@ -192,7 +189,7 @@ const Header = ({ t }: { t: TFunction }) => {
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
       >
         <CustomNavLinkSmall>
-            {t("Design")}
+            {t("Documentation")}
               <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`} />
         </CustomNavLinkSmall>
         </Dropdown>
@@ -208,9 +205,9 @@ const Header = ({ t }: { t: TFunction }) => {
             </Span>
           </CustomNavLinkSmall>
         </Dropdown> */}
-        <CustomNavLinkSmall>
+        {/* <CustomNavLinkSmall>
           <SearchBar />
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
       </>
     );
   };

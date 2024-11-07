@@ -4,11 +4,19 @@ export interface ContainerProps {
   children: React.ReactNode;
 }
 
+interface ItemProps {
+  title: string;
+  color?: string;
+  link: string; // Ensure `link` is always defined as a string
+  useWindowLocation?: boolean; // Optional property to control navigation method
+}
+
 export interface ButtonProps {
   color?: string;
   name?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: () => void;
+  style?: React.CSSProperties;
 }
 
 export interface SvgIconProps {

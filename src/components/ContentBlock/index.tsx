@@ -1,27 +1,23 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation, TFunction } from "react-i18next";
-import { useHistory } from "react-router-dom"; 
+import { useHistory } from "react-router-dom";
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
 import {
   ContentSection,
-  Content,
   ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
   StyledRow,
   ButtonWrapper,
   Title,
+  Content
 } from "./styles";
 
 const ContentBlock = ({
   icon,
   title,
   content,
-  section,
   button,
   t,
   id,
@@ -31,7 +27,7 @@ const ContentBlock = ({
 
   const handleButtonClick = (link?: string) => {
     if (link) {
-      history.push(link); 
+      history.push(link);
     }
   };
 
@@ -50,46 +46,31 @@ const ContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <Title>{t(title)}</Title>
-              <Content>{t(content)}</Content>
-              {direction === "right" ? (
-                <ButtonWrapper>
-                  {Array.isArray(button) && 
-                    button.map(
-                      (item, index) => {
-                        return (
-                          <Button
-                            key={index} // Use index as a key here
-                            color={item.color}
-                            onClick={() => handleButtonClick(item.link)} // Call the function with the link
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
-              ) : (
-                <ServiceWrapper>
-                  <Row justify="space-between">
-                    {Array.isArray(section) && 
-                      section.map(
-                        (item, index) => {
-                          return (
-                            <Col key={index} span={11}>
-                              <SvgIcon
-                                src={item.icon}
-                                width="60px"
-                                height="60px"
-                              />
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
-                </ServiceWrapper>
-              )}
+              <Content 
+                dangerouslySetInnerHTML={{ __html: t(content) }}
+              ></Content>
+              <ButtonWrapper>
+                {Array.isArray(button) &&
+                  button.map((item, index) => {
+                    return (
+                      <Button
+                        key={index} // Use index as a key here
+                        color={item.color}
+                        onClick={() => {
+                          if (item.link.startsWith("http")) {
+                            // If item.link is a full URL (e.g., "http://www.example.com"), use window.location
+                            window.open(item.link, '_blank')
+                          } else {
+                            // Otherwise, use your routing function for internal paths (e.g., '/')
+                            handleButtonClick(item.link);
+                          }
+                        }}
+                      >
+                        {t(item.title)}
+                      </Button>
+                    );
+                  })}
+              </ButtonWrapper>
             </ContentWrapper>
           </Col>
         </StyledRow>

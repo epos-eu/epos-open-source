@@ -15,13 +15,13 @@ export const MainHeader = styled.h1`
   font-size: 32px;
   margin: 1.5rem 0 2rem 0;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color:  #152c15 ;
 `;
 export const SectionHeader = styled.h1`
   font-size: 18px;
   margin: 1.5rem 0 2rem 0;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: green;
+  color:  #152c15 ;
 `;
 
 export const Paragraph = styled.p`

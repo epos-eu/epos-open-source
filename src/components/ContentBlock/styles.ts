@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const ContentSection = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
-  color: green ;
+  padding: 5rem 0 8rem;
+  color:  #152c15  ;
 
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 4rem;
@@ -24,7 +24,7 @@ export const Title = styled("h1")`
   font-family: "Lato", "OpenSans", sans-serif;
   color: black;
   &:hover, &:focus {
-    color: green;
+    color:  #152c15 ;
   }
 `;
 
@@ -37,7 +37,7 @@ export const StyledRow = styled(Row)`
 export const ContentWrapper = styled("div")`
   position: relative;
   max-width: 540px;
-  color: green ;
+  color:  #152c15  ;
 
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
@@ -62,7 +62,7 @@ export const MinTitle = styled("h6")`
 
 export const MinPara = styled("p")`
   font-size: 13px;
-  color: green;
+  color:  #152c15 ;
 `;
 
 export const ButtonWrapper = styled("div")`

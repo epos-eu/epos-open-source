@@ -16,7 +16,7 @@ const Goals = () => {
       <Section>
         <MainHeader>Architectural design</MainHeader>
         <Paragraph>
-          This section describes the software requirements and objectives we considered while designing the EPOS platform architecture
+          This section describes the software requirements and objectives we considered while designing the EPOS Platform architecture
           ; for example, safety,
           security, privacy, use of an off-the-shelf product, portability,
           distribution, and reuse.
