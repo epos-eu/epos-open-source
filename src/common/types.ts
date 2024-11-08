@@ -17,6 +17,7 @@ export interface ButtonProps {
   children?: React.ReactNode;
   onClick?: () => void;
   style?: React.CSSProperties;
+  useWindowLocation?: boolean;
 }
 
 export interface SvgIconProps {

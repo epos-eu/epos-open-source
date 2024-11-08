@@ -21,7 +21,7 @@ const Code = lazy(()=> import("../../components/Code-block"));
 const Home = () => {
   return (
     <>
-    {/* <Code/> */}
+    <Code/>
     <Container>
       <ScrollToTop />
       <ContentBlock 
@@ -29,20 +29,23 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="developer.svg"
+        icon="developer.png"
         id="intro"
       />
-      <MiddleBlock
+      <ContentBlock 
+      direction="left"
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
+        icon="benefit.png"
+        id="intro"
       />
       <ContentBlock
-        direction="left"
+        direction="right"
         title={AboutContent.title}
         content={AboutContent.text}
         button={AboutContent.button}
-        icon="graphs.svg"
+        icon="contribute.png"
         id="contribute"
       />
       {/* <Contact

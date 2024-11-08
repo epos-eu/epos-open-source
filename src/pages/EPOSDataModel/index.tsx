@@ -48,9 +48,9 @@ const EPOSDataModel = () => {
         The data model defines the objects that the user will have to deal with in the EPOS ecosystem. This has consequences, for instance, in the definition of the User experience and associated functionalities implemented by the System modules.
       </Description>
 
-      {/* <Description>
-        <strong><a href="EPOS_DATA_MODEL.pdf" target="_blank" rel="noopener noreferrer">EPOS Data Model PDF Description</a></strong>
-      </Description> */}
+      <Description>
+        <a href="" target="_blank" rel="noopener noreferrer"><strong>EPOS Data Model PDF Description</strong></a>
+      </Description>
     </SectionContainer>
   );
 };

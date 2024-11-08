@@ -50,7 +50,20 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
+            <Col lg={6} md={6} sm={12} xs={12}>
+              <Title>{("EPOS ERIC")}</Title>
+              <Para as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Para>
+              <Para as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Platform</Para>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Privacy & Policy")}</Para>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Para>
+            </Col>
+            <Col lg={6} md={6} sm={12} xs={12}>
+            <Title>{("Useful Links ")}</Title>
+            <Para as="a" href="https://github.com/epos-eu/epos-open-source" target="_blank" rel="noopener noreferrer">{t("Github repository")}</Para>
+            <Para as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Para>
+    
+            </Col>
+            <Col lg={6} md={6} sm={12} xs={12}>
               <Title>{t("Contact")}</Title>
               <Para>Via di Vigna Murata 605</Para>
               <Para>00143 Roma, Italia</Para>
@@ -64,19 +77,6 @@ const Footer = ({ t }: { t: TFunction }) => {
               {/* <a href="mailto:epos-italia@ingv.it">
                 <Para>{t(`Let's Chat`)}</Para>
               </a> */}
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{("EPOS ERIC")}</Title>
-              <Para as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Para>
-              <Para as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Platform</Para>
-              <Para as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Privacy & Policy")}</Para>
-              <Para as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Para>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-            <Title>{("Useful Links ")}</Title>
-            <Para as="a" href="https://github.com/epos-eu/epos-open-source" target="_blank" rel="noopener noreferrer">{t("Github repository")}</Para>
-            <Para as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Para>
-    
             </Col>
           </Row>
           <Row justify="space-between">
