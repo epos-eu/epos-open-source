@@ -6,7 +6,7 @@ export const Demo = styled.div`
   background-color: black; /* Terminal background color */
   color: white; /* Terminal text color */
   padding: 10px; /* Padding around the text */
-  border: 10px solid #ccc; /* Optional border */
+  border: 5px solid #457945; /* Optional border */
   margin: 40px;
   font-size: 13px;
   border-radius: 5px; /* Optional rounded corners */

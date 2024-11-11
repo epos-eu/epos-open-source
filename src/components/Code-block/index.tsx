@@ -30,7 +30,7 @@ const Code: React.FC = () => {
     e() { return Objects.hash(OPEN, conce  ntration, need                                        Coffee, numberOfBugFixed, numberOfCoffe                es); } public static void m
     ain(String[] args) { Developer hackat  honDeveloper =                                             new Developer(); hackathonDevelo                            per.start
                                                                                                         HackathonRoutine(); } }
-    Copyright (C) 2023  EPOS ERIC
+    Copyright (C) 2024  EPOS ERIC
   `;
   
   const speed: number = 1; // Speed for typing effect
