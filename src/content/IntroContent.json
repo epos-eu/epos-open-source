@@ -1,0 +1,16 @@
+{
+  "title": "EPOS Platform Open Source",
+  "text": "The EPOS Platform is an open-source, service-based data integration and visualization system built on a microservices architecture. This website provides general information about EPOS, technical documentation on the platform's architecture, and source code for each microservice. EPOS Platform Open Source is released under the <a href='//github.com/epos-eu/epos-open-source/blob/main/LICENSE' target='_blank'><strong><u>GPLv3 license</u></strong></a>. You can download the installer to start using the platform right away or selectively download specific components in the Download area.",
+  "button": [
+    {
+      "title": "Install",
+      "link": "/install"
+    },
+    {
+      "title": "Documentation",
+      "link": "/conceptual-design",
+      "color": "#fff"
+    }
+  ]
+}
+
