@@ -168,7 +168,7 @@ const Header = ({ t }: { t: TFunction }) => {
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'install')}
       >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.5rem' }}>{t("Download")}</span>
+        <span style={{ marginRight: '0.2rem' }}>{t("Download")}</span>
               <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('install') ? 'arrow-active' : ''}`} />
         </CustomNavLinkSmall>
       </Dropdown>
@@ -178,7 +178,7 @@ const Header = ({ t }: { t: TFunction }) => {
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
       >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.5rem' }}>{t("Approach")}</span>
+        <span style={{ marginRight: '0.2rem' }}>{t("Approach")}</span>
               <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('learn') ? 'arrow-active' : ''}`} />
         </CustomNavLinkSmall>
       </Dropdown>
@@ -189,7 +189,7 @@ const Header = ({ t }: { t: TFunction }) => {
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
       >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.5rem' }}>{t("Documentation")}</span>
+        <span style={{ marginRight: '0.2rem' }}>{t("Documentation")}</span>
               <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`} />
         </CustomNavLinkSmall>
         </Dropdown>

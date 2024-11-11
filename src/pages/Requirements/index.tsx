@@ -76,9 +76,9 @@ const Requirements: React.FC = () => {
         <p></p>
       </RequirementTable>
          
-      <RequirementsDescription>
+      {/* <RequirementsDescription>
         The above requirements are the result of years of study, discussion, and considerations, as documented in key deliverables like the “Second (Final) Report on EPOS-ICS Architecture” <a href='' target='_blank'><u><strong>(10.5281/zenodo.1470257)[1]</strong></u></a>.
-        </RequirementsDescription>
+        </RequirementsDescription> */}
         <RequirementsDescription>
         As a consequence of these Architectural Requirements, we can define goals and constraints to be considered in the architectural design.
         </RequirementsDescription>
