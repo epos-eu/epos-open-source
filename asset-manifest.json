@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/epos-open-source/static/css/main.79d2b055.css",
-    "main.js": "/epos-open-source/static/js/main.90f8c10a.js",
+    "main.js": "/epos-open-source/static/js/main.f733fdaa.js",
     "static/js/82.bfc4aa27.chunk.js": "/epos-open-source/static/js/82.bfc4aa27.chunk.js",
     "static/js/761.fa58ae6f.chunk.js": "/epos-open-source/static/js/761.fa58ae6f.chunk.js",
     "static/js/407.aea54c61.chunk.js": "/epos-open-source/static/js/407.aea54c61.chunk.js",
@@ -37,7 +37,7 @@
     "static/js/599.c84ce4cb.chunk.js": "/epos-open-source/static/js/599.c84ce4cb.chunk.js",
     "index.html": "/epos-open-source/index.html",
     "main.79d2b055.css.map": "/epos-open-source/static/css/main.79d2b055.css.map",
-    "main.90f8c10a.js.map": "/epos-open-source/static/js/main.90f8c10a.js.map",
+    "main.f733fdaa.js.map": "/epos-open-source/static/js/main.f733fdaa.js.map",
     "82.bfc4aa27.chunk.js.map": "/epos-open-source/static/js/82.bfc4aa27.chunk.js.map",
     "761.fa58ae6f.chunk.js.map": "/epos-open-source/static/js/761.fa58ae6f.chunk.js.map",
     "407.aea54c61.chunk.js.map": "/epos-open-source/static/js/407.aea54c61.chunk.js.map",
@@ -74,6 +74,6 @@
   },
   "entrypoints": [
     "static/css/main.79d2b055.css",
-    "static/js/main.90f8c10a.js"
+    "static/js/main.f733fdaa.js"
   ]
 }
