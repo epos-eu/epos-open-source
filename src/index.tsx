@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter  basename='/epos-open-source'>
         <I18nextProvider i18n={i18n}>
           <Router />
         </I18nextProvider>
