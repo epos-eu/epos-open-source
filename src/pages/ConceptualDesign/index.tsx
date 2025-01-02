@@ -1,6 +1,5 @@
-import React from 'react';
+import { lazy } from 'react';
 import {
-  SectionContainer,
   Title,
   Description,
   ServiceTable,
@@ -10,9 +9,11 @@ import {
   BulletList,
 } from './styles';
 
+const Container = lazy(() => import("../../common/Container"));
+
 const ConceptualDesign = () => {
   return (
-    <SectionContainer>
+    <Container>
       <Title>Conceptual Services of the Architecture</Title>
       <img src="./img/graphs/conceptual-design.png" alt="Conceptual Design" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
 
@@ -72,7 +73,7 @@ const ConceptualDesign = () => {
       <Description>
         The three data elements above represent the data that the ICS-C system is required to manage. Such data is intrinsically related and requires referential integrity.
       </Description>
-    </SectionContainer>
+    </Container>
   );
 };
 

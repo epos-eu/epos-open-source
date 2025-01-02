@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import {
-  SectionContainer,
   Title,
   ServiceTable,
-  TableHeader,
   TableRow,
   TableCell,
-  TableDescription,
   Maintitle
 } from './styles';
 
+const Container = lazy(() => import("../../common/Container"));
 const RestApiDefinition = () => {
   return (
-    <SectionContainer>
+    <Container>
       <Maintitle>RESTful API Definition</Maintitle>
 
       <Title>Resources Service</Title>
@@ -124,7 +122,7 @@ const RestApiDefinition = () => {
           </TableRow>
         </tbody>
       </ServiceTable>
-    </SectionContainer>
+    </Container>
   );
 };
 

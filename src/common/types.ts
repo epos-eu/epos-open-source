@@ -1,4 +1,3 @@
-import { TFunction } from "react-i18next";
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
@@ -28,8 +27,7 @@ export interface SvgIconProps {
 
 export interface InputProps {
   name: string;
-  placeholder: string;
-  t: TFunction;
+  placeholder?: string;
   type?: string;
   value?: string;
   onChange: (

@@ -1,9 +1,7 @@
 import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
 import {
   FooterSection,
   Title,
@@ -11,14 +9,7 @@ import {
   Extra,
   LogoContainer,
   Para,
-  Large,
-  Chat,
-  Empty,
   FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -26,10 +17,7 @@ interface SocialLinkProps {
   src: string;
 }
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+const Footer = () => {
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
@@ -52,55 +40,30 @@ const Footer = ({ t }: { t: TFunction }) => {
           <Row justify="space-between">
             <Col lg={6} md={6} sm={12} xs={12}>
               <Title>{("EPOS ERIC")}</Title>
-              <Para as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer"> {t("About")}</Para>
+              <Para as="a" href="https://www.epos-eu.org/about-epos" target="_blank" rel="noopener noreferrer">About</Para>
               <Para as="a" href="https://www.epos-eu.org/dataportal" target="_blank" rel="noopener noreferrer">EPOS Platform</Para>
-              <Para as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer"> {("Privacy & Policy")}</Para>
-              <Para as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">{t("Careers & Culture")}</Para>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy & Policy</Para>
+              <Para as="a" href="https://www.epos-eu.org/epos-eric/careers" target="_blank" rel="noopener noreferrer">Careers & Culture</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
             <Title>{("Useful Links ")}</Title>
-            <Para as="a" href="https://github.com/epos-eu/epos-open-source" target="_blank" rel="noopener noreferrer">{t("Github repository")}</Para>
-            <Para as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> {("Issue Tracker")}</Para>
+            <Para as="a" href="https://github.com/epos-eu/epos-open-source" target="_blank" rel="noopener noreferrer">Github repository</Para>
+            <Para as="a" href="https://epos-ci.brgm.fr/epos-public/issuetracker/-/issues" target="_blank" rel="noopener noreferrer"> Issue Tracker</Para>
     
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Title>{t("Contact")}</Title>
+              <Title>Contact</Title>
               <Para>Via di Vigna Murata 605</Para>
               <Para>00143 Roma, Italia</Para>
               <Para>Email : info@epos-eric.eu</Para>
               <Para>Phone: (+39) 06 518601</Para>
               <Para>Vat: IT15152381008</Para>
               <p></p>
-              {/* <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
-              </Para> */}
-              {/* <a href="mailto:epos-italia@ingv.it">
-                <Para>{t(`Let's Chat`)}</Para>
-              </a> */}
             </Col>
           </Row>
           <Row justify="space-between">
            
             <Col lg={6} md={6} sm={12} xs={12}>
-              {/* <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="italy.png"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer> */}
             </Col>
           </Row>
         </Container>
@@ -152,4 +115,4 @@ const Footer = ({ t }: { t: TFunction }) => {
   );
 };
 
-export default withTranslation()(Footer);
+export default Footer;

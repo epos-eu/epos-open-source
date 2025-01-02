@@ -6,6 +6,7 @@ export const FooterSection = styled("footer")`
   padding: 2.5rem 0;
 `;
 
+
 export const Title = styled("h4")`
   font-size: 22px;
   font-family: "Lato", "OpenSans", sans-serif;
@@ -36,7 +37,7 @@ export const Extra = styled("section")`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1.7rem;
 `;
 
 export const LogoContainer = styled("div")`

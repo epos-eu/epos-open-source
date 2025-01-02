@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const SectionContainer = styled.div`
-   padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-`;
-
 export const Title = styled.h1`
   font-size: 32px;
   margin: 1.5rem 0 2rem 0;

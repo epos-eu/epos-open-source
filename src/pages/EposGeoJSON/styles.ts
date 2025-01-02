@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const Containers = styled.div`
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
 
 export const Section = styled.section`
     margin-bottom: 20px;
@@ -81,9 +74,6 @@ export const Image = styled.img`
   margin-right: auto;
 `;
 
-export const Title = styled.h2`
-
-`;
 export const Description = styled.p`
   margin: 1.5rem 0 2rem 0;
   font-size:16px;

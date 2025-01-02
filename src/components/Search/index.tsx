@@ -1,48 +1,64 @@
 // SearchBar.tsx
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { SearchBarContainer, SearchInput, SearchButton, SearchIcon, DropdownContainer } from './styles'; // Adjust import as necessary
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import React, { useState ,useEffect } from 'react';
+import { SearchBarContainer, SearchIcon, DropdownContainer } from './styles'; // Adjust import as necessary
+import SearchResults from '../SearchResults';
+import SearchInput from '../../common/InputSearch';
+import { SearchResultsApi } from '../../hooks';
 
 const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState<string>('');
-  const [isOpen, setIsOpen] = useState<boolean>(false); // State to control input visibility
-  const history = useHistory();
+  const [searchItem, setSearchItem] = useState<string>('');
+  const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
+  const {users, loading, error} = SearchResultsApi()
 
-  const handleSearch = (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent the default form submission
-    if (query.trim()) {
-      history.push(`/search?query=${encodeURIComponent(query)}`); // Navigate to search results page
-      setQuery(''); // Clear input after search
-      setIsOpen(false); // Close input after search
+  useEffect(() => {
+    // Update filtered users when users are fetched or searchItem changes
+    if (searchItem === '') {
+      setFilteredUsers([]);  // Clear results if no search term is provided
+    } else {
+      const filteredItems = users.filter((user) =>
+        user.firstName.toLowerCase().includes(searchItem.toLowerCase())
+      );
+      setFilteredUsers(filteredItems);  // Set filtered users based on search term
     }
-  };
+  }, [users, searchItem]);  
 
-  const toggleSearchInput = () => {
-    setIsOpen((prev) => !prev); // Toggle the input visibility
+   // Filter items based on search term
+   const filterItems = (searchTerm: string) => {
+    setSearchItem(searchTerm); // Update the search term
+
+    // If search term is empty, show all users, else filter by first name
+    if (searchTerm.trim() === '') {
+      setFilteredUsers(users);
+    } else {
+      const filtered = users.filter((user) =>
+        user.firstName.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredUsers(filtered); // Update filtered users
+    }
   };
 
   return (
     <DropdownContainer>
         <SearchBarContainer>
-         <SearchIcon onClick={toggleSearchInput}>
-        <FontAwesomeIcon icon={faSearch} />
+         <SearchIcon>
          </SearchIcon>
-         {isOpen && (
-          <form onSubmit={handleSearch}>
-            <SearchInput
-              type="text"
-              value={query}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuery(e.target.value)}
-              placeholder="Search..."
-              required
-            />
-          </form>
-          )}
+            <SearchInput onChangeCallback={filterItems} />
         </SearchBarContainer>
+        {searchItem && filteredUsers.length === 0 && (
+        <p>No users found</p>
+      )}
+        {loading && <p>Loading...</p>}
+        {error && <p>There was an error loading the users</p>}
+       { !loading && !error && (<SearchResults items={filteredUsers} />)}
+
     </DropdownContainer>
   );
 };
 
 export default SearchBar;
+
+
+type User = {
+  firstName: string;
+  id:number
+};

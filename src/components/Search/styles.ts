@@ -2,20 +2,19 @@ import styled from 'styled-components';
 
 export const DropdownContainer = styled.div`
   position: relative; /* Positioning context for the dropdown */
-  margin-top: 10px; /* Space between the header and the search bar */
 `;
 
 export const SearchBarContainer = styled.div`
   display: flex; /* Align input and button in a row */
   align-items: center; /* Center items vertically */
-  margin-top: 10px; /* Space below the icon if needed */
+  margin-top: 10px; /* Space below the icon if needed */ 
 `;
 
 export const SearchInput = styled.input`
   padding: 8px; /* Adds padding for better aesthetics */
   border: 1px solid #ccc; /* Light border */
   border-radius: 4px; /* Rounded corners */
-  font-size: 14px; /* Font size */
+  font-size: 10px; /* Font size */
   width: 200px; /* Set width of the input */
   background-color: white; /* White background */
 

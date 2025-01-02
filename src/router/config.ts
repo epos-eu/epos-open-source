@@ -7,7 +7,7 @@ const routes = [
   {
     path: ["/install"],
     exact: true,
-    component: "Installation",
+    component: "Install",
   },
   {
     path: ["/glossary"],

@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
-export const GlossaryContainer = styled.div`
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-`;
-
 export const GlossaryTable = styled.div`
   display: table;
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   border: 1px solid black; 
+  margin-bottom: 25px;
 `;
 
 export const GlossaryRow = styled.div`
