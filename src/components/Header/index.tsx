@@ -16,9 +16,11 @@ import {
   QuickLink
 } from "./styles";
 import SearchBar from "../Search";
+import Popup from "../../common/pop-up";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
+  const [popUp , setPopUp] = useState(false);
  
   const toggleButton = () => {
     setVisibility(!visible);
@@ -139,10 +141,11 @@ const Header = () => {
       </ul>
       <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">Data Access</QuickLink>
     </div>
-    <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'100px' , alignItems: 'center'  , display:'flex'} }>
-   
+      <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex'} }>
       <SearchBar />
     </div>
+  
+  
 </>
 
     );

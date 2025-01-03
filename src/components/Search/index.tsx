@@ -1,64 +1,56 @@
-// SearchBar.tsx
-import React, { useState ,useEffect } from 'react';
-import { SearchBarContainer, SearchIcon, DropdownContainer } from './styles'; // Adjust import as necessary
-import SearchResults from '../SearchResults';
-import SearchInput from '../../common/InputSearch';
-import { SearchResultsApi } from '../../hooks';
+import React, { useState, useEffect } from "react";
+import { SearchBarContainer, SearchIcon, DropdownContainer } from "./styles"; // Adjust import as necessary
+import SearchResults from "../SearchResults";
+import SearchInput from "../../common/InputSearch";
+import { SearchResultsApi } from "../../hooks";
+import Popup from "../../common/pop-up";
+
+type User = {
+  firstName: string;
+  id: number;
+};
 
 const SearchBar: React.FC = () => {
-  const [searchItem, setSearchItem] = useState<string>('');
+  const [searchItem, setSearchItem] = useState<string>("");
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
-  const {users, loading, error} = SearchResultsApi()
+  const { users, loading, error } = SearchResultsApi();
+  const [popUp, setPopUp] = useState(false);
 
   useEffect(() => {
-    // Update filtered users when users are fetched or searchItem changes
-    if (searchItem === '') {
-      setFilteredUsers([]);  // Clear results if no search term is provided
-    } else {
-      const filteredItems = users.filter((user) =>
-        user.firstName.toLowerCase().includes(searchItem.toLowerCase())
-      );
-      setFilteredUsers(filteredItems);  // Set filtered users based on search term
-    }
-  }, [users, searchItem]);  
-
-   // Filter items based on search term
-   const filterItems = (searchTerm: string) => {
-    setSearchItem(searchTerm); // Update the search term
-
-    // If search term is empty, show all users, else filter by first name
-    if (searchTerm.trim() === '') {
-      setFilteredUsers(users);
+    if (searchItem.trim() === "") {
+      setFilteredUsers([]);
     } else {
       const filtered = users.filter((user) =>
-        user.firstName.toLowerCase().includes(searchTerm.toLowerCase())
+        user.firstName.toLowerCase().includes(searchItem.toLowerCase())
       );
-      setFilteredUsers(filtered); // Update filtered users
+      setFilteredUsers(filtered);
     }
+  }, [users, searchItem]);
+
+  const filterItems = (searchTerm: string) => {
+    setSearchItem(searchTerm);
   };
 
   return (
     <DropdownContainer>
+      <button
+        onClick={() => setPopUp(true)}
+        aria-label="Open search popup"
+        style={{ all: "unset", cursor: "pointer" }}
+      >
         <SearchBarContainer>
-         <SearchIcon>
-         </SearchIcon>
-            <SearchInput onChangeCallback={filterItems} />
+          <SearchIcon />
+          <SearchInput onChangeCallback={filterItems} />
         </SearchBarContainer>
-        {searchItem && filteredUsers.length === 0 && (
-        <p>No users found</p>
-      )}
+      </button>
+      {searchItem && filteredUsers.length === 0 && <p>No users found</p>}
+      <Popup trigger={popUp} setTrigger={setPopUp}>
         {loading && <p>Loading...</p>}
         {error && <p>There was an error loading the users</p>}
-       { !loading && !error && (<SearchResults items={filteredUsers} />)}
-
+        {!loading && !error && <SearchResults items={filteredUsers} />}
+      </Popup>
     </DropdownContainer>
   );
 };
 
 export default SearchBar;
-
-
-type User = {
-  firstName: string;
-  id:number
-};

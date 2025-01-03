@@ -11,11 +11,11 @@ type User = {
   const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
     return (
       <>
-          <SearchResult>
+          <ul>
             {items.map((item) => (
               <li key={item.id}>{item.firstName}</li>
             ))}
-          </SearchResult>
+          </ul>
       </>
     );
   };

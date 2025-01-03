@@ -141,7 +141,7 @@ export const QuickLink = styled.a`
   background: white;
   font-family: "Lato", "OpenSans", sans-serif;
   color: black;
-  margin-left:515px;
+  margin-left:580px;
   margin-bottom:12.5px;
    &:hover{
     color: white;
