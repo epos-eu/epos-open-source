@@ -1,4 +1,4 @@
-import { Container, TextWrapper, Content } from "./styles";
+import { Container, TextWrapper, Content , Title } from "./styles";
 
 interface Props {
   title: string;
@@ -8,9 +8,12 @@ interface Props {
 const Block = ({ title, content}: Props) => {
   return (
     <Container>
-      <h6>title</h6>
+      <Title>Contact Us</Title>
       <TextWrapper>
-        <Content>content</Content>
+        <Content>
+        Have questions, feedback, or suggestions? We're here to help!
+        Reach out to the team behind EPOS open-source project!
+        </Content>
       </TextWrapper>
     </Container>
   );

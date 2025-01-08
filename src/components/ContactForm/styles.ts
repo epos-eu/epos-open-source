@@ -11,6 +11,8 @@ export const ContactContainer = styled("div")`
 export const FormGroup = styled("form")`
   width: 100%;
   max-width: 520px;
+  border: 0.1px solid black;
+  padding: 30px;
 
   @media only screen and (max-width: 1045px) {
     max-width: 100%;
@@ -27,10 +29,18 @@ export const Span = styled("span")`
 `;
 
 export const ButtonContainer = styled("div")`
-  text-align: end;
+  text-align: center;
   position: relative;
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
   }
 `;
+
+export const FormInput = styled("input")`
+border: 0.1px solid black;
+border-radius: 10px;
+`;
+
+
+
