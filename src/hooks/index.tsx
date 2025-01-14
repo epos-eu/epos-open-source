@@ -1,41 +1,32 @@
 import { useState, useEffect } from 'react';
+import { SearchContents } from './SearchContent';
 
-// Define the User type based on the API response structure
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  email: string;
-  // Add other properties from the API response if needed
-}
-
-// Define the return type of the hook
-interface UseGetUsersResult {
-  users: User[];
+// Define the return type of the hook for search content
+interface UseSearchContentsResult {
+  pages: typeof SearchContents;  // Use the type of SearchContents directly
   loading: boolean;
   error: Error | null;
 }
 
-export const SearchResultsApi = (): UseGetUsersResult => {
-  const [users, setUsers] = useState<User[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+// Define the SearchResultsApi hook
+export const SearchResultsApi = (): UseSearchContentsResult => {
+  const [pages, setPages] = useState<typeof SearchContents>(SearchContents);
+  const [loading, setLoading] = useState<boolean>(false); // No loading since it's static
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/users')
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data.users);
-      })
-      .catch((err) => {
-        console.error(err);
-        setError(err instanceof Error ? err : new Error('Unknown error occurred'));
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // Set loading state to true when we start
+    setLoading(true);
+
+    try {
+      // Simulate an API call or process if needed
+      setPages(SearchContents);
+      setLoading(false);
+    } catch (err) {
+      setError(err instanceof Error ? err : new Error('Unknown error occurred'));
+      setLoading(false);
+    }
   }, []);
 
-  return { users, loading, error };
+  return { pages, loading, error };
 };

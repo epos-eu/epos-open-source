@@ -141,7 +141,7 @@ const Header = () => {
       </ul>
       <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">Data Access</QuickLink>
     </div>
-      <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex'} }>
+      <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex' , zIndex: 9999} }>
       <SearchBar />
     </div>
   

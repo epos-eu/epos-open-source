@@ -1,24 +1,29 @@
-import { SearchResult } from './styles';
-type User = {
-    firstName: string;
-    id: number;
-    // Add other properties if needed
-  };
-  
-  interface ItemsListProps {
-    items: User[]; // `items` should be an array of `User`
-  }
-  const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
-    return (
-      <>
-          <ul>
-            {items.map((item) => (
-              <li key={item.id}>{item.firstName}</li>
-            ))}
-          </ul>
-      </>
-    );
-  };
-  
-  export default SearchResults;
-  
+import { SearchResult } from './styles';  // Assuming you're using styled-components or similar
+type Page = {
+  id: number;
+  title: string;
+  content: string;
+  path: string;
+};
+
+interface ItemsListProps {
+  items: Page[];  // `items` should be an array of `Page`
+}
+
+const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
+  return (
+    <div>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <a href={item.path}>
+              <strong>{item.title}</strong>: {item.content}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default SearchResults;

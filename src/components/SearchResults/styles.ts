@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SearchResult = styled.ul`
-background-color: white;
+background-color: green;
 margin-bottom:10px;
  z-index: 1000000; 
 `;

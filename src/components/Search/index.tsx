@@ -2,30 +2,33 @@ import React, { useState, useEffect } from "react";
 import { SearchBarContainer, SearchIcon, DropdownContainer } from "./styles"; // Adjust import as necessary
 import SearchResults from "../SearchResults";
 import SearchInput from "../../common/InputSearch";
-import { SearchResultsApi } from "../../hooks";
 import Popup from "../../common/pop-up";
+import { SearchContents } from "../../hooks/SearchContent";
 
-type User = {
-  firstName: string;
+// Type for the static search content (pages)
+type Page = {
   id: number;
+  title: string;
+  content: string;
+  path: string;
 };
 
 const SearchBar: React.FC = () => {
   const [searchItem, setSearchItem] = useState<string>("");
-  const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
-  const { users, loading, error } = SearchResultsApi();
+  const [filteredPages, setFilteredPages] = useState<Page[]>([]);
   const [popUp, setPopUp] = useState(false);
 
   useEffect(() => {
     if (searchItem.trim() === "") {
-      setFilteredUsers([]);
+      setFilteredPages([]);
     } else {
-      const filtered = users.filter((user) =>
-        user.firstName.toLowerCase().includes(searchItem.toLowerCase())
+      const filtered = SearchContents.filter((page) =>
+        page.title.toLowerCase().includes(searchItem.toLowerCase()) ||
+        page.content.toLowerCase().includes(searchItem.toLowerCase())
       );
-      setFilteredUsers(filtered);
+      setFilteredPages(filtered);
     }
-  }, [users, searchItem]);
+  }, [searchItem]);
 
   const filterItems = (searchTerm: string) => {
     setSearchItem(searchTerm);
@@ -43,11 +46,9 @@ const SearchBar: React.FC = () => {
           <SearchInput onChangeCallback={filterItems} />
         </SearchBarContainer>
       </button>
-      {searchItem && filteredUsers.length === 0 && <p>No users found</p>}
+      {searchItem && filteredPages.length === 0 && <p>No pages found</p>}
       <Popup trigger={popUp} setTrigger={setPopUp}>
-        {loading && <p>Loading...</p>}
-        {error && <p>There was an error loading the users</p>}
-        {!loading && !error && <SearchResults items={filteredUsers} />}
+        {filteredPages.length > 0 && <SearchResults items={filteredPages} />}
       </Popup>
     </DropdownContainer>
   );
