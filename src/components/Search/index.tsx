@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { SearchBarContainer, SearchIcon, DropdownContainer } from "./styles"; // Adjust import as necessary
+import { SearchBarContainer, IconWrapper, DropdownContainer , PopSerachInput , SerachButtonInput} from "./styles"; // Adjust import as necessary
 import SearchResults from "../SearchResults";
 import SearchInput from "../../common/InputSearch";
 import Popup from "../../common/pop-up";
 import { SearchContents } from "../../hooks/SearchContent";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 // Type for the static search content (pages)
 type Page = {
   id: number;
-  title: string;
   content: string;
   path: string;
 };
@@ -23,7 +23,6 @@ const SearchBar: React.FC = () => {
       setFilteredPages([]);
     } else {
       const filtered = SearchContents.filter((page) =>
-        page.title.toLowerCase().includes(searchItem.toLowerCase()) ||
         page.content.toLowerCase().includes(searchItem.toLowerCase())
       );
       setFilteredPages(filtered);
@@ -42,13 +41,18 @@ const SearchBar: React.FC = () => {
         style={{ all: "unset", cursor: "pointer" }}
       >
         <SearchBarContainer>
-          <SearchIcon />
-          <SearchInput onChangeCallback={filterItems} />
+          <SerachButtonInput placeholder="Type to search"/>
+           <IconWrapper>
+            <FontAwesomeIcon icon={faSearch} />
+            </IconWrapper>
         </SearchBarContainer>
       </button>
-      {searchItem && filteredPages.length === 0 && <p>No pages found</p>}
+      {searchItem && filteredPages.length === 0 && <p>No results found</p>}
       <Popup trigger={popUp} setTrigger={setPopUp}>
+        <PopSerachInput>
+        <SearchInput onChangeCallback={filterItems} />
         {filteredPages.length > 0 && <SearchResults items={filteredPages} />}
+        </PopSerachInput>
       </Popup>
     </DropdownContainer>
   );

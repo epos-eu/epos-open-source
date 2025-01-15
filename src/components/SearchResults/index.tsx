@@ -1,7 +1,6 @@
-import { SearchResult } from './styles';  // Assuming you're using styled-components or similar
+import { SearchResult , ResultItems , LinkItems} from './styles';  // Assuming you're using styled-components or similar
 type Page = {
   id: number;
-  title: string;
   content: string;
   path: string;
 };
@@ -13,15 +12,15 @@ interface ItemsListProps {
 const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
   return (
     <div>
-      <ul>
+      <SearchResult>
         {items.map((item) => (
-          <li key={item.id}>
-            <a href={item.path}>
-              <strong>{item.title}</strong>: {item.content}
-            </a>
-          </li>
+          <ResultItems key={item.id}>
+            <LinkItems href={item.path}>
+               {item.content}
+            </LinkItems>
+          </ResultItems>
         ))}
-      </ul>
+      </SearchResult>
     </div>
   );
 };

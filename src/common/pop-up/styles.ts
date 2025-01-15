@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const PopupContainer = styled("div")`
   position: fixed;
-  top: 0;
-  left:0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width:100%;
   height:100vh;
-  background-color: rgba(0,0,0,0.2);
+  background-color: #656C85CC;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +16,12 @@ export const PopupContainer = styled("div")`
 export const PopupInnerContainer = styled("div")`
   position: relative;
   padding:32px;
-  width:100%;
-  max-width:100%;
+  width:1000px;
   background-color: #FFF;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #F5F6F7;
 `;
 
 export const PopupCloseBtn = styled("div")`
@@ -25,3 +29,4 @@ export const PopupCloseBtn = styled("div")`
   top: 16px;
  right:16px;
 `;
+
