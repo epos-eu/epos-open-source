@@ -69,6 +69,11 @@ const routes = [
     exact: true,
     component: "EposGeoJSON",
   },
+  {
+    path: ["/contributors"],
+    exact: true,
+    component: "Contributors",
+  },
 ];
 
 

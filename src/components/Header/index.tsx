@@ -95,11 +95,16 @@ const Header = () => {
           <SvgIcon src="logo.svg" width="90px" height="50px" />
         </CustomNavLinkSmall>
       </Link>
-      </div>
+    </div>
       <ul>
       <Link to="/">
         <CustomNavLinkSmall>
           Home
+        </CustomNavLinkSmall>
+      </Link>
+      <Link to="/contributors">
+        <CustomNavLinkSmall>
+        Contributors
         </CustomNavLinkSmall>
       </Link>
       <Dropdown
