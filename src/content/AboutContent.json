@@ -5,6 +5,10 @@
     {
       "title": "Go to Github",
       "link": "https://github.com/epos-eu/epos-open-source"
+    },
+    {
+      "title": "Contributers",
+      "link": "/contributors"
     }
   ]
 }
