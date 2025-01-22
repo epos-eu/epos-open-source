@@ -39,7 +39,7 @@ const Code: React.FC = () => {
     ${copyrightText}
   `;
   
-  const speed: number = 1; // Speed for typing effect
+  const speed: number = 0.1; // Speed for typing effect
   let i: number = 0; // Index for the current character being displayed
 
   useEffect(() => {

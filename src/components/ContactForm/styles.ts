@@ -28,6 +28,12 @@ export const Span = styled("span")`
   padding: 0 0.675rem;
 `;
 
+export const Label = styled("label")`
+  font-size:16px;
+  font-weight:bold;
+  margin-top : 10px;
+`;
+
 export const ButtonContainer = styled("div")`
   text-align: center;
   position: relative;
@@ -40,6 +46,21 @@ export const ButtonContainer = styled("div")`
 export const FormInput = styled("input")`
 border: 0.1px solid black;
 border-radius: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+`;
+
+export const SubmitInput = styled("input")`
+border: 0.1px solid black;
+margin-top: 20px;
+cursor: pointer;
+border-radius: 30px;
+ &:hover{
+    color: white;
+    text-underline-position: under;
+    background:   #457945;
+}
+
 `;
 
 
