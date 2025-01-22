@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef , useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Row, Col } from "antd";
 import { useForm } from "../../common/utils/useForm";
@@ -6,6 +6,7 @@ import { FormGroup  , ContactContainer , SubmitInput , FormInput , Label} from '
 import Block from "../Block";
 import { Slide } from "react-awesome-reveal";
 import validate from "../../common/utils/validationRules";
+import Popup from "../../common/pop-up";
 
 export interface ContactProps {
   title: string;
@@ -16,6 +17,7 @@ export interface ContactProps {
 const Contact:React.FC<ContactProps> = () => {
   const form = useRef<HTMLFormElement>(null);
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const [popupVisible, setPopupVisible] = useState(false);
 
   const sendEmail = async () => {
     if (form.current) {
@@ -29,6 +31,7 @@ const Contact:React.FC<ContactProps> = () => {
         console.log("SUCCESS!");
         // Reset form and state after successful submission
         form.current.reset();
+        setPopupVisible(true); // Show the popup
       } catch (error: any) {
         console.error("FAILED...", error.text);
       }
@@ -84,6 +87,10 @@ const Contact:React.FC<ContactProps> = () => {
       </div>
     </FormGroup>
     </Row>
+    <Popup trigger={popupVisible} setTrigger={setPopupVisible}>
+        <h3>Thank you!</h3>
+        <p>Your message has been sent successfully.</p>
+      </Popup>
     </ContactContainer>
   );
 };
