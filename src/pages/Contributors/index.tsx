@@ -2,23 +2,12 @@ import React from 'react';
 import { lazy } from "react";
 import {
   Section,
-  SectionHeader,
   Paragraph,
-  List,
-  ListItem,
-  SubList,
-  SubListItem,
   Header,
   MainHeader
 } from "./styles";
 import Card from "../../components/ContributorCard";
 const Container = lazy(() => import("../../common/Container"));
-interface Person {
-    name: string;
-    surname: string;
-    image?: string; // Optional image property
-    role: string;
-  }
 // Utility function to chunk the array
 const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
     const chunks: T[][] = [];
@@ -28,10 +17,6 @@ const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
     return chunks;
   };
   
-  // Props type for the CardGrid component
-  interface CardGridProps {
-    people: Person[];
-  }
 
 const Contributors = () => {
     const people = [
@@ -47,8 +32,8 @@ const Contributors = () => {
         { name: "Kety", surname: "Giuliacci", image: "https://via.placeholder.com/80", role: "" },
         { name: "Helen", surname: "Glaves", image: "https://via.placeholder.com/80", role: "" },
         { name: "Claudio", surname: "Goffi", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Abdelkareem", surname: "Jebreel", image: "https://via.placeholder.com/80", role: "Frontend Developer"  , LinkldnHref:"https://www.google.com",
-            GithubHref:"https://www.facebook.com", intro:'As a Frontend Developer, I specialize in creating intuitive and visually engaging user interfaces for web applications. I translate design concepts into responsive, interactive, and accessible code using modern technologies like HTML, CSS, JavaScript, and frameworks like React or Angular.'},
+        { name: "Abdelkareem", surname: "Jebreel", image: "https://via.placeholder.com/80", role: ""  , LinkldnHref:"",
+            GithubHref:"", intro:''},
         { name: "Keith G.", surname: "Jeffery", image: "https://via.placeholder.com/80", role: "" },
         { name: "Janusz", surname: "Lavrnja-Czapski", image: "https://via.placeholder.com/80", role: "" },
         { name: "Mario", surname: "Malitesta", image: "https://via.placeholder.com/80", role: "" },

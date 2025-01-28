@@ -12,14 +12,6 @@ export const CardContainer = styled.div`
   
 `;
 
-export const CardsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Adjust alignment */
-  gap: 16px; /* Optional spacing between cards */
-  width: 100%;
-`;
-
 export const ProfileImage = styled.img`
   width: 80px;
   height: 80px;

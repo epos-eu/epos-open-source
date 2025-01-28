@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
+import { Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
@@ -12,15 +12,13 @@ import {
   CustomNavLinkSmall,
   Label,
   Outline,
-  Span,
   QuickLink
 } from "./styles";
 import SearchBar from "../Search";
-import Popup from "../../common/pop-up";
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
-  const [popUp , setPopUp] = useState(false);
+
  
   const toggleButton = () => {
     setVisibility(!visible);
@@ -145,10 +143,11 @@ const Header = () => {
       </Dropdown>
       </ul>
       <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">Data Access</QuickLink>
-    </div>
       <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex' , zIndex: 9999} }>
       <SearchBar />
+      </div>
     </div>
+   
   
   
 </>

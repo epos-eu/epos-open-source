@@ -1,7 +1,7 @@
 import { StyledTextArea, StyledContainer} from "./styles";
 import { InputProps } from "../types";
 
-const TextArea = ({ name, placeholder, onChange }: InputProps) => (
+const TextArea = ({ name, onChange }: InputProps) => (
   <StyledContainer>
     <StyledTextArea
       placeholder="your message"

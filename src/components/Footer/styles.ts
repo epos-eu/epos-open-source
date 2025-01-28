@@ -118,7 +118,7 @@ export const FooterContainer = styled("div")`
     width: auto;
 
     a:not(:last-child) {
-      display: none;
+      width: 60px;
     }
   }
 

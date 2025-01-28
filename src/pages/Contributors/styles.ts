@@ -30,28 +30,3 @@ export const Paragraph = styled.p`
  font-family: "OpenSans", sans-serif;
  color: black;
 `;
-
-export const List = styled.ul`
-  padding-left: 20px;
-  margin-bottom: 10px;
-`;
-
-export const ListItem = styled.li`
-  margin: 5px 0;
-  font-size: 16px;
-  text-align: left;
-  font-family: "OpenSans", sans-serif;
-  color: black;
-`;
-
-export const SubList = styled.ul`
-  padding-left: 20px;
-`;
-
-export const SubListItem = styled.li`
-  margin: 5px 0;
-  font-size: 16px;
-  text-align: left;
-  font-family: "OpenSans", sans-serif;
-  color: black;
-`;

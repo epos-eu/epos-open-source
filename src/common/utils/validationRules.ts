@@ -1,5 +1,3 @@
-import { validateProps } from "../../common/types";
-
 const validate = (values: { [key: string]: string }) => {
   const errors: { [key: string]: string } = {};
 
