@@ -1,21 +1,22 @@
-import { withTranslation, TFunction } from "react-i18next";
-import { Container, TextWrapper, Content } from "./styles";
+import { Container, TextWrapper, Content , Title } from "./styles";
 
 interface Props {
   title: string;
   content: string;
-  t: TFunction;
 }
 
-const Block = ({ title, content, t }: Props) => {
+const Block = ({ title, content}: Props) => {
   return (
     <Container>
-      <h6>{t(title)}</h6>
+      <Title>Contact Us</Title>
       <TextWrapper>
-        <Content>{t(content)}</Content>
+        <Content>
+        Have questions, feedback, or suggestions? We're here to help!
+        Reach out to the team behind EPOS open-source project!
+        </Content>
       </TextWrapper>
     </Container>
   );
 };
 
-export default withTranslation()(Block);
+export default Block;

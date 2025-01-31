@@ -1,15 +1,15 @@
-import React from 'react';
+import { lazy } from 'react';
 import {
-  SectionContainer,
   Title,
   Description,
   List,
   ListItem,
 } from './styles';
 
+const Container = lazy(() => import("../../common/Container"));
 const EPOSDataModel = () => {
   return (
-    <SectionContainer>
+    <Container>
       <Title>EPOS Data Model</Title>
       <Description>
         In order to guarantee that the concepts of interest in EPOS are well dealt with within the architecture, and to ensure that appropriate communication occurs among different modules, it was necessary to define an EPOS data model.
@@ -51,7 +51,7 @@ const EPOSDataModel = () => {
       <Description>
         <a href="https://github.com/epos-eu/epos-open-source/blob/main/documentation/EPOS_DATA_MODEL.pdf" target="_blank" rel="noopener noreferrer"><strong>EPOS Data Model PDF Description</strong></a>
       </Description>
-    </SectionContainer>
+    </Container>
   );
 };
 

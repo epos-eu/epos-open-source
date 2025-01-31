@@ -1,15 +1,8 @@
-import { TFunction } from "react-i18next";
 export interface ContainerProps {
   border?: boolean;
   children: React.ReactNode;
 }
 
-interface ItemProps {
-  title: string;
-  color?: string;
-  link: string; // Ensure `link` is always defined as a string
-  useWindowLocation?: boolean; // Optional property to control navigation method
-}
 
 export interface ButtonProps {
   color?: string;
@@ -28,8 +21,7 @@ export interface SvgIconProps {
 
 export interface InputProps {
   name: string;
-  placeholder: string;
-  t: TFunction;
+  placeholder?: string;
   type?: string;
   value?: string;
   onChange: (

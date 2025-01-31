@@ -2,7 +2,6 @@ import {lazy} from 'react';
 import {
   ReferencesContainer,
   ReferenceItem,
-  Citation,
   Link,
   RefrenceeDescription,
   Title

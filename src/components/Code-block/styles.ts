@@ -67,6 +67,13 @@ export const Demo = styled.div`
     font-size: 1.8px;
   }
 
+  @media (min-width: 2440px){
+  
+    width: 2400px;
+    height: 640px;
+    font-size: 20.5px;
+  }
+  }
 
 
 }

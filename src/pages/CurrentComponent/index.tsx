@@ -1,5 +1,5 @@
+import { lazy } from 'react';
 import {
-  TableContainer,
   Table,
   TableHeader,
   TableRow,
@@ -8,9 +8,10 @@ import {
   Title
 } from './styles';
 
+const Container = lazy(() => import("../../common/Container"));
 const CurrentComponent = () => {
   return (
-    <TableContainer>
+    <Container>
       <Title>User Interfaces</Title>
       <Table>
         <thead>
@@ -223,7 +224,7 @@ const CurrentComponent = () => {
           {/* Add more Database rows here */}
         </tbody>
       </Table>
-    </TableContainer>
+    </Container>
   );
 };
 

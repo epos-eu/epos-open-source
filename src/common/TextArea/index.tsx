@@ -1,12 +1,10 @@
-import { withTranslation } from "react-i18next";
-import { StyledTextArea, StyledContainer, Label } from "./styles";
+import { StyledTextArea, StyledContainer} from "./styles";
 import { InputProps } from "../types";
 
-const TextArea = ({ name, placeholder, onChange, t }: InputProps) => (
+const TextArea = ({ name, onChange }: InputProps) => (
   <StyledContainer>
-    <Label htmlFor={name}>{t(name)}</Label>
     <StyledTextArea
-      placeholder={t(placeholder)}
+      placeholder="your message"
       id={name}
       name={name}
       onChange={onChange}
@@ -14,4 +12,4 @@ const TextArea = ({ name, placeholder, onChange, t }: InputProps) => (
   </StyledContainer>
 );
 
-export default withTranslation()(TextArea);
+export default TextArea;

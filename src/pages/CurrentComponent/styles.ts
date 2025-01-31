@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-export const TableContainer = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-`;
-
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
@@ -53,10 +46,5 @@ export const Title = styled.h2`
   font-size:32px;
   font-family: "Lato", "OpenSans", sans-serif;
   color:  #152c15 ;
-`;
-export const Description = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
 `;
 

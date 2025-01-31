@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://epos-eu.github.io/epos-open-source",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@types/node": "^15.14.9",
@@ -19,6 +20,7 @@
     "react-awesome-reveal": "^3.8.1",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.6",
+    "react-icons": "^5.4.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.11",

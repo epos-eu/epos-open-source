@@ -3,6 +3,12 @@ import { Demo } from './styles';
 
 const Code: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>('');
+
+  function updateCopyrightYear(): string {
+    const currentYear = new Date().getFullYear();  // Get the current year
+    return `Copyright (C) ${currentYear} EPOS ERIC`;  // Return the updated copyright statement
+  }
+  const copyrightText = updateCopyrightYear();
   const text: string = `
     user@user ~ $ EPOS Open Source
     public class Developer {
@@ -30,10 +36,10 @@ const Code: React.FC = () => {
     e() { return Objects.hash(OPEN, conce  ntration, need                                        Coffee, numberOfBugFixed, numberOfCoffe                es); } public static void m
     ain(String[] args) { Developer hackat  honDeveloper =                                             new Developer(); hackathonDevelo                            per.start
                                                                                                         HackathonRoutine(); } }
-    Copyright (C) 2024  EPOS ERIC
+    ${copyrightText}
   `;
   
-  const speed: number = 1; // Speed for typing effect
+  const speed: number = 0.1; // Speed for typing effect
   let i: number = 0; // Index for the current character being displayed
 
   useEffect(() => {
