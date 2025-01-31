@@ -1,5 +1,5 @@
+import { lazy } from 'react';
 import {
-  SectionContainer,
   Title,
   RequirementTable,
   TableHeader,
@@ -28,9 +28,12 @@ const systemRequirements = [
   { term: '#6', description: 'The system needs to implement a rich metadata catalogue in order to store all the required information to manage the integrated assets.' },
 ];
 
+
+const Container = lazy(() => import("../../common/Container"));
+
 const Requirements: React.FC = () => {
   return (
-    <SectionContainer>
+    <Container>
       <Title>Architectural requirements</Title>
      <RequirementsDescription>
         The goal of this section is to establish the basis for a clear and detailed system architecture design by defining the core concepts and constraints derived from the requirements.
@@ -82,7 +85,7 @@ const Requirements: React.FC = () => {
         <RequirementsDescription>
         As a consequence of these Architectural Requirements, we can define goals and constraints to be considered in the architectural design.
         </RequirementsDescription>
-    </SectionContainer>
+    </Container>
   );
 };
 

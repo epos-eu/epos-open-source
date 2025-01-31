@@ -7,7 +7,7 @@ const routes = [
   {
     path: ["/install"],
     exact: true,
-    component: "Installation",
+    component: "Install",
   },
   {
     path: ["/glossary"],
@@ -68,6 +68,11 @@ const routes = [
     path: ["/epos-geo-json"],
     exact: true,
     component: "EposGeoJSON",
+  },
+  {
+    path: ["/contributors"],
+    exact: true,
+    component: "Contributors",
   },
 ];
 

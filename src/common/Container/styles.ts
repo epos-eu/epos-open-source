@@ -8,6 +8,7 @@ export const StyledContainer = styled("div")<{
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 30px;
   padding: 0 60px;
   border-top: ${(p) => (p.border ? "1px solid #CDD1D4" : "")};
 
@@ -25,4 +26,7 @@ export const StyledContainer = styled("div")<{
     max-width: 100%;
     padding: 0 18px;
   }
+    @media (min-width: 2440px) {
+    max-width: 2000px;
+}
 `;

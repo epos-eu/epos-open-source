@@ -1,6 +1,5 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
-import { withTranslation, TFunction } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
@@ -19,7 +18,6 @@ const ContentBlock = ({
   title,
   content,
   button,
-  t,
   id,
   direction,
 }: ContentBlockProps) => {
@@ -45,9 +43,9 @@ const ContentBlock = ({
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <Title>{t(title)}</Title>
+              <Title>{title}</Title>
               <Content 
-                dangerouslySetInnerHTML={{ __html: t(content) }}
+                dangerouslySetInnerHTML={{ __html: content }}
               ></Content>
               <ButtonWrapper>
                 {Array.isArray(button) &&
@@ -66,7 +64,7 @@ const ContentBlock = ({
                           }
                         }}
                       >
-                        {t(item.title)}
+                        {item.title}
                       </Button>
                     );
                   })}
@@ -79,4 +77,4 @@ const ContentBlock = ({
   );
 };
 
-export default withTranslation()(ContentBlock);
+export default ContentBlock;

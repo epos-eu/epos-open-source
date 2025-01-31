@@ -18,7 +18,7 @@ export const TableHeader = styled.th`
 `;
 
 export const TableCell = styled.td`
-  padding: 10px;
+   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;
   margin: 1.5rem 0 2rem 0;
@@ -27,21 +27,17 @@ export const TableCell = styled.td`
   font-size:16px;
 `;
 
-export const DownloadLink = styled.a`
+export const MavenLink = styled.a`
   display: inline-block;
 `;
 
 export const RepoLink = styled.a`
   display: inline-block;
 `;
-export const Title = styled.h2`
+export const Title = styled.h1`
   margin: 1.5rem 0 2rem 0;
   font-size:32px;
   font-family: "Lato", "OpenSans", sans-serif;
-  color:  #152c15 ;
+  color: #152c15;
 `;
-export const Description = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
-`;
+

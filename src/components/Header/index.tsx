@@ -1,148 +1,77 @@
 import { useState } from "react";
-import i18n from "i18next";
-import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
-import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
-import SearchBar from "../Search";
-import { DownOutlined } from '@ant-design/icons';
 import {
   HeaderSection,
-  LogoContainer,
   Burger,
   NotHidden,
   Menu,
   CustomNavLinkSmall,
   Label,
   Outline,
-  Span,
-  LanguageSwitch,
-  LanguageSwitchContainer,
-  DropdownMenuWrapper,
-  CustomHeaderLink
+  QuickLink
 } from "./styles";
+import SearchBar from "../Search";
 
-const Header = ({ t }: { t: TFunction }) => {
+const Header = () => {
   const [visible, setVisibility] = useState(false);
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  }
 
+ 
   const toggleButton = () => {
     setVisibility(!visible);
   };
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-    setVisibility(false);
-  };
-
   const learnMenu = (
-    <DropdownMenuWrapper>
     <AntMenu>
       <AntMenu.Item > 
-        <Link to="/goals">{t("Architectural design")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/goals">Architectural design</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/requirements-section">{t("Architectural requirements")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/requirements-section">Architectural requirements</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/references">{t("References")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/references">References</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/glossary">{t("Glossary")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/glossary">Glossary</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
-    </DropdownMenuWrapper>
   );
   const installMenu = (
-    <DropdownMenuWrapper>
     <AntMenu>
       <AntMenu.Item>
-        <Link to="/install">{t("Install")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/install">Install</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/current-component">{t("Components")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/current-component">Components</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/Libraries">{t("Libraries")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/Libraries">Libraries</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
-    </DropdownMenuWrapper>
   );
   const designMenu = (
     <AntMenu>
       <AntMenu.Item>
-        <Link to="/conceptual-design">{t("Conceptual Design")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/conceptual-design">Conceptual Design</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/technical-design">{t("Technical Design")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/technical-design">Technical Design</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/rest-api-definition">{t("RESTful API Definitions")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/rest-api-definition">RESTful API Definitions</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/epos-data-model">{t("EPOS Data Model")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/epos-data-model">EPOS Data Model</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
-        <Link to="/epos-geo-json">{t("EPOS GeoJSON")}</Link> {/* Navigate to Introduction page */}
+        <Link to="/epos-geo-json">EPOS GeoJSON</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
     </AntMenu>
   );
-  // const languageMenu = (
-  //   <LanguageSwitchContainer>
-  //     <AntMenu>
-  //       <AntMenu.Item key="en">
-  //         <LanguageSwitch onClick={() => handleChange("en")}>
-  //           <SvgIcon
-  //             src="united-states.svg"
-  //             aria-label="Switch to English"
-  //             width="30px"
-  //             height="30px"
-  //           />
-  //         </LanguageSwitch>
-  //       </AntMenu.Item>
-  //       <AntMenu.Item key="es">
-  //         <LanguageSwitch onClick={() => handleChange("es")}>
-  //           <SvgIcon
-  //             src="italy.png"
-  //             aria-label="Switch to Spanish"
-  //             width="30px"
-  //             height="30px"
-  //           />
-  //         </LanguageSwitch>
-  //       </AntMenu.Item>
-  //     </AntMenu>
-  //   </LanguageSwitchContainer>
-  // );
-  
-  // const homeMenu = (
-  //   <AntMenu >
-  //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("intro")}>{t("EPOS Platform)}
-  //     </AntMenu.Item>
-  //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("contribute")}>{t("Contributation")}
-  //     </AntMenu.Item>
-  //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("goals")}>{t("EPOS Goals")}
-  //     </AntMenu.Item>
-  //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("whoWeAre")}>{t("Who We Are")}
-  //     </AntMenu.Item>
-  //     <AntMenu.Item  style={{ width: "180px" }}
-  //         onClick={() => scrollTo("contact")}>{t("Contact us")}
-  //     </AntMenu.Item>
-  //   </AntMenu>
-  // );
-  
   const MenuItem = () => {
     const [openKeys, setOpenKeys] = useState<string[]>([]); // State to manage dropdown visibility
   
@@ -156,75 +85,84 @@ const Header = ({ t }: { t: TFunction }) => {
   
     return (
       <>
-        <Link to="/">
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+    {/* Left side: Logo and Menu items */}
+    <div>
+      <Link to="/">
         <CustomNavLinkSmall>
-          <Span>{t("Home")}</Span>
+          <SvgIcon src="logo.svg" width="90px" height="50px" />
         </CustomNavLinkSmall>
       </Link>
-      
+    </div>
+      <ul>
+      <Link to="/">
+        <CustomNavLinkSmall>
+          Home
+        </CustomNavLinkSmall>
+      </Link>
+      <Link to="/contributors">
+        <CustomNavLinkSmall>
+        Contributors
+        </CustomNavLinkSmall>
+      </Link>
       <Dropdown
         overlay={installMenu}
         trigger={['hover']}
         onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'install')}
       >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.2rem' }}>{t("Download")}</span>
-              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('install') ? 'arrow-active' : ''}`} />
+          <span style={{ marginRight: '0.2rem' }}>Download</span>
+          <FontAwesomeIcon
+            icon={faAnglesDown}
+            className={`arrow ${openKeys.includes('install') ? 'arrow-active' : ''}`}
+          />
         </CustomNavLinkSmall>
       </Dropdown>
       <Dropdown
         overlay={learnMenu}
         trigger={['hover']}
-        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
-      >
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}  >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.2rem' }}>{t("Approach")}</span>
-              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('learn') ? 'arrow-active' : ''}`} />
+          <span style={{ marginRight: '0.2rem' }}>Approach</span>
+          <FontAwesomeIcon
+            icon={faAnglesDown}
+            className={`arrow ${openKeys.includes('learn') ? 'arrow-active' : ''}`}
+          />
         </CustomNavLinkSmall>
       </Dropdown>
-
       <Dropdown
         overlay={designMenu}
         trigger={['hover']}
-        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
-      >
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')} >
         <CustomNavLinkSmall>
-        <span style={{ marginRight: '0.2rem' }}>{t("Documentation")}</span>
-              <FontAwesomeIcon icon={faAnglesDown} className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`} />
+          <span style={{ marginRight: '0.2rem' }}>Documentation</span>
+          <FontAwesomeIcon
+            icon={faAnglesDown}
+            className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`}/>
         </CustomNavLinkSmall>
-        </Dropdown>
-        {/* <Dropdown
-          overlay={languageMenu}
-          trigger={['hover']}
-          onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'language')}
-        >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Languages")}
-              <DownOutlined className={openKeys.includes('language') ? 'arrow-active' : ''} />
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown> */}
-        {/* <CustomNavLinkSmall>
-          <SearchBar />
-        </CustomNavLinkSmall> */}
-      </>
+      </Dropdown>
+      </ul>
+      <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">Data Access</QuickLink>
+      <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex' , zIndex: 9999} }>
+      <SearchBar />
+      </div>
+    </div>
+   
+  
+  
+</>
+
     );
   };
 
   return (
     <HeaderSection>
-        <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
-          </LogoContainer>
           <NotHidden>
             <MenuItem />
           </NotHidden>
           <Burger onClick={toggleButton}>
             <Outline />
           </Burger>
-        </Row>
         <Drawer closable={false} open={visible} onClose={toggleButton}>
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={toggleButton}>
@@ -242,4 +180,4 @@ const Header = ({ t }: { t: TFunction }) => {
   );
 };
 
-export default withTranslation()(Header);
+export default Header;

@@ -1,5 +1,6 @@
+import { lazy , useState } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import {
-  SectionContainer,
   Title,
   Image,
   AspectList,
@@ -9,14 +10,67 @@ import {
   TableRow,
   TableCell,
   TableDescription,
-  MessageHeader,
-  CodeBlock,
+  CodeBlock as StyledCodeBlock,
   Description
 } from './styles';
+import CodeBlock from '../../common/CodeBlock';
+
+// Lazy-load Container component
+const Container = lazy(() => import('../../common/Container'));
+
+// Sample code for demonstration
+const sampleCode = `
+2023-03-09 14:08:15:314: Message published
+
+Node:         rabbit@netrabbit-server-0.netrabbit-nodes.test
+Connection:   10.1.5.47:34160 -> 10.1.5.40:5672
+Virtual host: changeme
+User:         changeme
+Channel:      5
+Exchange:     metadataService
+Routing keys: [<<"resources.get.test.api.resources-service.v1.resources.search.fetch">>]
+Routed queues: [<<"fetch">>]
+Properties:   [{<<"timestamp">>,signedint,1678370895},
+               {<<"reply_to">>,longstr,<<"web-api">>},
+               {<<"correlation_id">>,longstr,<<"08122848-ebaf-15a6-34da-72b435d21c6e">>},
+               {<<"headers">>,table,
+                [{<<"x-request-id">>,longstr,<<"5cf17dc881b670c59b2345c8ec34a5c3">>},
+                 {<<"referer">>,longstr,<<"http://10.101.10.44/test/">>},
+                 {<<"epos_component-audit">>,array,[{longstr,<<"WEB_API">>}]},
+                 {<<"x-forwarded-proto">>,longstr,<<"http">>},
+                 {<<"accept-language">>,longstr,<<"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7">>},
+                 {<<"cookie">>,longstr,
+                  <<"_pk_id.241.d8d2=248ff2c9c692d01c.1677067197.; _pk_ses.241.d8d2=1">>},
+                 {<<"kind">>,longstr,
+                  <<"get.test.api.resources-service.v1.resources.search">>},
+                 {<<"x-forwarded-port">>,longstr,<<"80">>},
+                 {<<"epos_operation-type">>,longstr,<<"get">>},
+                 {<<"accept">>,longstr,
+                  <<"application/json, text/plain, */*">>},
+                 {<<"epos_request-type">>,longstr,
+                  <<"test.api.resources-service.v1.resources.search">>},
+                 {<<"x-real-ip">>,longstr,<<"192.168.65.4">>},
+                 {<<"x-forwarded-scheme">>,longstr,<<"http">>},
+                 {<<"x-forwarded-host">>,longstr,<<"10.101.10.44">>},
+                 {<<"epos_type-of-current-payload">>,longstr,<<"plain-text">>},
+                 {<<"host">>,longstr,<<"10.101.10.44">>},
+                 {<<"connection">>,longstr,<<"upgrade">>},
+                 {<<"epos_ttl-in-processor">>,long,10000},
+                 {<<"x-scheme">>,longstr,<<"http">>},
+                 {<<"accept-encoding">>,longstr,<<"gzip, deflate">>},
+                 {<<"user-agent">>,longstr,
+                  <<"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36">>}]}]
+`;
 
 const TechnicalDesign = () => {
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  const toggleNightMode = () => {
+    setIsNightMode((prev) => !prev);
+  };
+  <CodeBlock code={sampleCode} initialNightMode={isNightMode} />
   return (
-    <SectionContainer>
+    <Container>
       <Title>Architecture Implementation</Title>
       <Description>The diagram in this section represents the implementation of the conceptual architecture.</Description>
       <Image src="./img/graphs/architecture-diagram.png" alt="Architecture Diagram" />
@@ -113,52 +167,8 @@ const TechnicalDesign = () => {
       </AspectItem>
 
       <Title>Message Header Example</Title>
-      <CodeBlock>
-        {`2023-03-09 14:08:15:314: Message published
-
-Node:         rabbit@netrabbit-server-0.netrabbit-nodes.test
-Connection:   10.1.5.47:34160 -> 10.1.5.40:5672
-Virtual host: changeme
-User:         changeme
-Channel:      5
-Exchange:     metadataService
-Routing keys: [<<"resources.get.test.api.resources-service.v1.resources.search.fetch">>]
-Routed queues: [<<"fetch">>]
-Properties:   [{<<"timestamp">>,signedint,1678370895},
-               {<<"reply_to">>,longstr,<<"web-api">>},
-               {<<"correlation_id">>,longstr,
-                <<"08122848-ebaf-15a6-34da-72b435d21c6e">>},
-               {<<"headers">>,table,
-                [{<<"x-request-id">>,longstr,
-                  <<"5cf17dc881b670c59b2345c8ec34a5c3">>},
-                 {<<"referer">>,longstr,<<"http://10.101.10.44/test/">>},
-                 {<<"epos_component-audit">>,array,[{longstr,<<"WEB_API">>}]},
-                 {<<"x-forwarded-proto">>,longstr,<<"http">>},
-                 {<<"accept-language">>,longstr,
-                  <<"it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7">>},
-                 {<<"cookie">>,longstr,
-                  <<"_pk_id.241.d8d2=248ff2c9c692d01c.1677067197.; _pk_ses.241.d8d2=1">>},
-                 {<<"kind">>,longstr,
-                  <<"get.test.api.resources-service.v1.resources.search">>},
-                 {<<"x-forwarded-port">>,longstr,<<"80">>},
-                 {<<"epos_operation-type">>,longstr,<<"get">>},
-                 {<<"accept">>,longstr,
-                  <<"application/json, text/plain, */*">>},
-                 {<<"epos_request-type">>,longstr,
-                  <<"test.api.resources-service.v1.resources.search">>},
-                 {<<"x-real-ip">>,longstr,<<"192.168.65.4">>},
-                 {<<"x-forwarded-scheme">>,longstr,<<"http">>},
-                 {<<"x-forwarded-host">>,longstr,<<"10.101.10.44">>},
-                 {<<"epos_type-of-current-payload">>,longstr,<<"plain-text">>},
-                 {<<"host">>,longstr,<<"10.101.10.44">>},
-                 {<<"connection">>,longstr,<<"upgrade">>},
-                 {<<"epos_ttl-in-processor">>,long,10000},
-                 {<<"x-scheme">>,longstr,<<"http">>},
-                 {<<"accept-encoding">>,longstr,<<"gzip, deflate">>},
-                 {<<"user-agent">>,longstr,
-                  <<"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36">>}]}]`}
-      </CodeBlock>
-    </SectionContainer>
+      <CodeBlock code={sampleCode} initialNightMode={isNightMode} />
+    </Container>
   );
 };
 

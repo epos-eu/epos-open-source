@@ -1,5 +1,5 @@
+import { lazy } from "react";
 import {
-  Container,
   Section,
   SectionHeader,
   Paragraph,
@@ -9,7 +9,7 @@ import {
   SubListItem,
   MainHeader
 } from "./styles";
-
+const Container = lazy(() => import("../../common/Container"));
 const Goals = () => {
   return (
     <Container>

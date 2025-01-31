@@ -1,11 +1,8 @@
-import React, { lazy } from 'react';
+import React, { lazy , useState} from 'react';
 
 import {
-    Title,
     Section,
-    List,
     ListItem,
-    CodeBlock,
     Table,
     TableRow,
     TableCell,
@@ -13,12 +10,322 @@ import {
     Description,
     SubTitle,
     Maintitle,
-    TableHeader
-} from './styles'; // Adjust according to your actual styles.ts exports
+    TableHeader,
+} from './styles'; 
 
-const Container = lazy(() => import("../../common/Container"));
+import CodeBlock from '../../common/CodeBlock';
+
+// Lazy-load Container component
+const Container = lazy(() => import('../../common/Container'));
+
+// Sample code for demonstration
+const featureCollection = `{
+    "type": "FeatureCollection",
+    "@epos_style": {
+        ...
+    },
+    ...
+}`;
+
+const feature = `"features": [
+    {
+        "type": "Feature",
+        "properties": {
+            "@epos_type": "station",//used to lookup @epos_style attributes
+            ...
+        }
+    }
+]`
+
+const style = `"type": "FeatureCollection",
+    "@epos_style": {
+        //attribute names to match with @epos_type values  
+        "station": {
+            "label": "This is a station", //use for legend
+            "marker": {
+                "character": "S", //character type value               
+                "pin": true, //true|false
+                "clustering": true  //true|false
+                //"anchor":"C"  not needed when pin=true
+            }
+        },
+        ...`
+                
+const imageSamples = ` "thing": {
+            "label": "This is a thing", //use for legend
+            "marker": {
+                "href": "www.thing.com/thing.png", //image url type value
+                "pin": false, //true|false
+                "clustering": false, //true|false
+                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
+            }
+        }
+               `
+const fontAwsomeSample = `
+                "event": {
+            "label": "This is an event", //use for legend
+            "marker": {
+                "fontawesome_class": "fas fa-star", //fontawesome-class type value 
+                "pin": false, //true|false
+                "clustering": false, //true|false
+                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
+            }
+        },
+
+                `
+const charactorSample = `
+            "station": {
+            "label": "This is a station", //use for legend
+            "marker": {
+                "character": "S", //character type value               
+                "pin": true, //true|false
+                "clustering": true //true|false
+                //"anchor":"C"  not needed when pin=true
+            }
+        },
+                 `
+const imageOverlay = `{
+    "type": "Feature",
+    "properties": {
+        "@epos_type": "overlay",
+        ...
+    },
+    "@epos_image_overlay": {
+        "href": "https://sandbox.zenodo.org/2017062703_sd_era_4rlks.unw.png",
+        "bbox": [
+            -4.5184,
+            36.4027,
+            -3.2463,
+            37.7806
+        ],
+        "legend": {
+            "href": "www.abc.com/legend-image.png"
+        }
+    },
+    "geometry": null //NO GEOMETRY FOR OVERLA
+}`
+
+const labelKey = `
+                  "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                ...
+                "@epos_label_key": "Title", //used for things like tooltips
+                ...
+                "Title": "adasdasdd",
+                ...
+                  `
+const mapKey = `
+                "features": [
+        {
+            "type": "Feature",
+            "properties": {
+				...
+                "@epos_map_keys": [ //typically used for map popups
+                    "Title",
+                    "Description",
+                    "Summary",
+                    "@epos_links"
+                ],
+               ...
+                "Title": "adasdasdd",               
+                "Description": "Hellenic Seismic Network",
+                "Summary": "Properties can contain HTML <img src=\"smiley.gif\">",
+                "@epos_links": [...]
+
+                  ` 
+const dataKey =     `
+                "features": [
+                    {
+                "type": "Feature",
+                "properties": {
+                    ...
+                    "@epos_data_keys": [ //typically used for data visualisation columns
+                        "Title",
+                        "Elevation",
+                        "Description" 
+                    ],
+                    "Title": "my title", 
+                    "Elevation": "122",
+                    "Description": "Hellenic Seismic Network",
+                    ...
+                    `  
+const properties =  `
+"features": [
+{
+"type": "Feature",
+"properties": {
+...
+"@epos_map_keys": [ //typically used for map popups
+    "Title",
+    "@epos_links"
+],
+"@epos_data_keys": [ //typically used for data visualisation columns
+    "Title",
+    "@epos_links"
+],
+"Title": "my title",
+"@epos_links": [
+    {
+        "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
+        "label": "Download",
+        "type": "application/pdf",
+        "authenticatedDownload": true
+    },
+    {
+        "href": "https://sandbox.zenodo.org/20170703.unw.png",
+        "label": "Preview",
+        "type": "image/x-icon",
+        "authenticatedDownload": false
+    },
+    {
+        "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "label": "License",
+        "type": "text/html",
+        "authenticatedDownload": false
+    }
+]
+
+    `
+const fullExample =   `
+{ 
+    "type": "FeatureCollection",
+    "@epos_style": {
+        //attribute names to match with @epos_type values  
+        "station": {
+            "label": "This is a station", //use for legend
+            "marker": {
+                "character": "S", //character type value               
+                "pin": "true", //true|false"
+                "clustering": "true" //true|false"
+                //"anchor":"C"  not needed when pin=true
+            }
+        },
+        "event": {
+            "label": "This is an event", //use for legend
+            "marker": {
+                "fontawesome_class": "fas fa-star", //fontawesome-class type value 
+                "pin": "false", //true|false"
+                "clustering": "false", //true|false"
+                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
+            }
+        },
+        "thing": {
+            "label": "This is a thing", //use for legend
+            "marker": {
+                "href": "www.thing.com/thing.png", //image url type value
+                "pin": "false", //true|false"
+                "clustering": "false", //true|false"
+                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
+            }
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "@epos_type": "event", //used to lookup @epos_style attributes 
+                "@epos_label_key": "Title", //used for things like tooltips
+                "@epos_map_keys": [ //typically used for map popups
+                    "Title",
+                    "Description",
+                    "Summary",
+                    "@epos_links"
+                ],
+                "@epos_data_keys": [ //typically used for data visualisation columns
+                    "Title",
+                    "Description",
+                    "@epos_links"
+                ],
+                "Title": "my title",
+                "Institutions": [  // array of primitives
+                    "Insitution 1",
+                    "Insitution 2",
+                    "Insitution 3"
+                ],
+                "Elevation": "122",
+                "Description": "Hellenic Seismic Network",
+                "Summary": "Properties can contain HTML <img src=\"smiley.gif\">",
+                "@epos_links": [
+                    {
+                        "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
+                        "label": "Download",
+                        "type": "application/pdf",
+                        "authenticatedDownload": true
+                    },
+                    {
+                        "href": "https://sandbox.zenodo.org/20170703.unw.png",
+                        "label": "Preview",
+                        "type": "image/x-icon",
+                        "authenticatedDownload": false
+                    },
+                    {
+                        "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+                        "label": "License",
+                        "type": "text/html",
+                        "authenticatedDownload": false
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.38591,
+                    40.93704
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "@epos_type": "overlay",
+                
+                // for image overlays, used as label on sub layer & legend & tooltip 
+                "@epos_label_key": "Name",         
+                "@epos_map_keys": [
+                    "Name",
+                    "Description",
+                    "Elevation",
+                    "Preview"
+                ],
+                 "@epos_data_keys": [
+                    "Name",
+                    "Description",
+                    "Elevation" 
+                ],
+                "Name": "My layer Label",
+                "Elevation": "500",
+                "Description": "Hellenic Seismic Network",
+                "Preview": "some HTML <img src=\"smiley.png\">",
+            },
+            "@epos_image_overlay": // not supporting GeoTIFF - normal images only 
+            {
+                "href": "https://sandbox.zenodo.org/2017062703_sd_era_4rlks.unw.png",
+                "bbox": [  // position on map   
+                    -4.5184, // spatial reference for the bbox 
+                    36.4027, // is assumed to match the spatial 
+                    -3.2463, // reference for the GeoJSON object 
+                    37.7806  // the order is lat1, lon1, lat2, lon2
+                ],
+                "legend ": {
+                    "href": "www.abc.com/legend-image.png" //legend image 
+                }
+            },
+            "geometry": null //NO GEOMETRY FOR OVERLAY
+        }
+    ]
+}
+
+`
+
+//   <CodeBlock code={fullExample} initialNightMode={isNightMode} />
 
 const EposGeoJSON: React.FC = () => {
+    const [isNightMode, setIsNightMode] = useState(false);
+    const toggleNightMode = () => {
+        setIsNightMode((prev) => !prev);
+      };
     return (
         <Container>
             <Maintitle>EPOS GeoJSON Extensions</Maintitle>
@@ -72,15 +379,7 @@ const EposGeoJSON: React.FC = () => {
                 <Description>
                     All new root JSON objects introduced to support EPOS functionality will be accessible via attribute names that start with <code>@epos_</code>. This is to avoid name clashes and false positives parsing the GeoJSON for EPOS specific information. All EPOS specific JSON objects are optional; if any are missing, sensible default behaviour will be followed, ensuring the raw GeoJSON can still be rendered.
                 </Description>
-                <CodeBlock>
-                    {`{
-    "type": "FeatureCollection",
-    "@epos_style": {
-        ...
-    },
-    ...
-}`}
-                </CodeBlock>
+                <CodeBlock code={featureCollection} initialNightMode={isNightMode} />
             </Section>
 
             <Section>
@@ -96,36 +395,9 @@ const EposGeoJSON: React.FC = () => {
                 <Description>A corresponding legend would be generated, looking something like:</Description>
                 <Image src="./img/graphs//1562842126236.png" alt="Font Awesome marker with pin"/> 
                 <p>feature:</p>
-                <CodeBlock>
-                    {`"features": [
-    {
-        "type": "Feature",
-        "properties": {
-            "@epos_type": "station",//used to lookup @epos_style attributes
-            ...
-        }
-    }
-]`}
-                </CodeBlock>
+                <CodeBlock code={feature} initialNightMode={isNightMode} />
                 <SubTitle>style:</SubTitle>
-
-                <CodeBlock>
-                {
-    `"type": "FeatureCollection",
-    "@epos_style": {
-        //attribute names to match with @epos_type values  
-        "station": {
-            "label": "This is a station", //use for legend
-            "marker": {
-                "character": "S", //character type value               
-                "pin": true, //true|false
-                "clustering": true  //true|false
-                //"anchor":"C"  not needed when pin=true
-            }
-        },
-        ...
-                `}
-                </CodeBlock>
+                <CodeBlock code={style} initialNightMode={isNightMode} />
             </Section>
 
             <Section>
@@ -212,52 +484,11 @@ const EposGeoJSON: React.FC = () => {
                 </Table>
             </Section>
             <SubTitle>Image Example</SubTitle>
-            <CodeBlock>
-                {
-                   ` "thing": {
-            "label": "This is a thing", //use for legend
-            "marker": {
-                "href": "www.thing.com/thing.png", //image url type value
-                "pin": false, //true|false
-                "clustering": false, //true|false
-                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
-            }
-        }
-               ` }
-            </CodeBlock>
+            <CodeBlock code={imageSamples} initialNightMode={isNightMode} />
             <SubTitle>Font Awesome Example</SubTitle>
-        <CodeBlock>
-            {
-                `
-                "event": {
-            "label": "This is an event", //use for legend
-            "marker": {
-                "fontawesome_class": "fas fa-star", //fontawesome-class type value 
-                "pin": false, //true|false
-                "clustering": false, //true|false
-                "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
-            }
-        },
-
-                `
-            }
-        </CodeBlock>
+            <CodeBlock code={fontAwsomeSample} initialNightMode={isNightMode} />
         <SubTitle>Character Example</SubTitle>
-        <CodeBlock>
-            {
-                `
-            "station": {
-            "label": "This is a station", //use for legend
-            "marker": {
-                "character": "S", //character type value               
-                "pin": true, //true|false
-                "clustering": true //true|false
-                //"anchor":"C"  not needed when pin=true
-            }
-        },
-                 `
-            }
-        </CodeBlock>
+        <CodeBlock code={charactorSample} initialNightMode={isNightMode} />
         <SubTitle> Symbol Logic</SubTitle>
         <Image src="./img/graphs/marker%20flow.png" alt="Font Awesome marker with pin"/>
         <SubTitle>Colour</SubTitle>
@@ -270,34 +501,13 @@ const EposGeoJSON: React.FC = () => {
         <Image src="./img/graphs/1562842126236.png" alt="Character marker without pin"/>
         <SubTitle>Legend Logic </SubTitle>
         <Image src="./img/graphs/legend%20flow.png" alt="Character marker without pin"/>
-      <Section>
+        <Section>
                 <SubTitle>Image Overlays</SubTitle>
-              
                 <Description>
                     Image overlays (geo-referenced images) are supported by adding an <code>@epos_image_overlay</code> object to a GeoJSON feature. There is a 1:1 mapping between the feature and the overlay - that way, the <code>properties</code> for the feature can be used for the image overlay.
                 </Description>
                 <SubTitle>Example</SubTitle>
-                <CodeBlock>
-                    {`{
-    "type": "Feature",
-    "properties": {
-        "@epos_type": "overlay",
-        ...
-    },
-    "@epos_image_overlay": {
-        "href": "https://sandbox.zenodo.org/2017062703_sd_era_4rlks.unw.png",
-        "bbox": [
-            -4.5184,
-            36.4027,
-            -3.2463,
-            37.7806
-        ],
-        "legend": {
-            "href": "www.abc.com/legend-image.png"
-        }
-    },
-    "geometry": null //NO GEOMETRY FOR OVERLA
-}`}
+                <CodeBlock code={imageOverlay} initialNightMode={isNightMode} />
     <Section>
                 <SubTitle>Image Overlay Attributes</SubTitle>
                 <SubTitle>Each @epos_image_overlay object defined should have the following:</SubTitle>
@@ -328,7 +538,6 @@ const EposGeoJSON: React.FC = () => {
                     </tbody>
                 </Table>
             </Section>
-                </CodeBlock>
     </Section>
         <SubTitle>Image Types</SubTitle>
         <Description>A conscious decision has been made to not support GeoTIFF in this iteration of 
@@ -358,73 +567,18 @@ const EposGeoJSON: React.FC = () => {
         <SubTitle>@epos_label_key</SubTitle>
         <Description>The value for the @epos_label_key attribute should be the name of one true attribute of theproperties object that is 
             to be used when ever a label, title, tool-tip etc. is needed within the EPOS GUI.</Description>
-            <CodeBlock>
-                {
-                  `
-                  "features": [
-        {
-            "type": "Feature",
-            "properties": {
-                ...
-                "@epos_label_key": "Title", //used for things like tooltips
-                ...
-                "Title": "adasdasdd",
-                ...
-                  `  
-                }
-            </CodeBlock>
+            <CodeBlock code={labelKey} initialNightMode={isNightMode} />
             <SubTitle>@epos_map_keys</SubTitle>
             <Description>The value for the @epos_map_keys attribute should be the ordered names of one or more true 
                 attributes of the properties object that are to be used in the map context within the EPOS GUI, for 
                 example to define the properties display in the map popup.</Description>
-            <CodeBlock>
-                {
-                  `
-                "features": [
-        {
-            "type": "Feature",
-            "properties": {
-				...
-                "@epos_map_keys": [ //typically used for map popups
-                    "Title",
-                    "Description",
-                    "Summary",
-                    "@epos_links"
-                ],
-               ...
-                "Title": "adasdasdd",               
-                "Description": "Hellenic Seismic Network",
-                "Summary": "Properties can contain HTML <img src=\"smiley.gif\">",
-                "@epos_links": [...]
-
-                  `  
-                }
-            </CodeBlock>
+                <CodeBlock code={mapKey} initialNightMode={isNightMode} />
             <SubTitle>@epos_data_keys</SubTitle>
             <Description>The value for the @epos_data_keys attribute should be the ordered names of one or more true 
                 attributes of the properties object that are to be used in the data-visualisation context within the EPOS GUI,
                  for example to define the columns to display in the data table.</Description>
-            <CodeBlock>
-                {
-                  `
-            "features": [
-                {
-            "type": "Feature",
-            "properties": {
-                ...
-                "@epos_data_keys": [ //typically used for data visualisation columns
-                    "Title",
-                    "Elevation",
-                    "Description" 
-                ],
-                "Title": "my title", 
-                "Elevation": "122",
-                "Description": "Hellenic Seismic Network",
-                ...
-                  `  
-                }
-            </CodeBlock>
-      
+                 <CodeBlock code={dataKey} initialNightMode={isNightMode} />
+
             <Section>
                 <SubTitle>Default Behaviour</SubTitle>
                 <Description>If the relevant @epos_ attribute for the context is missing or empty the EPOS GUI will revert to a default behaviour:</Description>
@@ -464,46 +618,7 @@ const EposGeoJSON: React.FC = () => {
                 individual object per link to capture the href, label, type and authenticatedDownload (whether the link should be called
                  with authentication headers set, including the EPOS authentication token)</Description>
             <SubTitle>properties:</SubTitle>
-             <CodeBlock>
-                    {`
-"features": [
-        {
-            "type": "Feature",
-            "properties": {
-                ...
-                "@epos_map_keys": [ //typically used for map popups
-                    "Title",
-                    "@epos_links"
-                ],
-                "@epos_data_keys": [ //typically used for data visualisation columns
-                    "Title",
-                    "@epos_links"
-                ],
-                "Title": "my title",
-                "@epos_links": [
-                    {
-                        "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
-                        "label": "Download",
-                        "type": "application/pdf",
-                        "authenticatedDownload": true
-                    },
-                    {
-                        "href": "https://sandbox.zenodo.org/20170703.unw.png",
-                        "label": "Preview",
-                        "type": "image/x-icon",
-                        "authenticatedDownload": false
-                    },
-                    {
-                        "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-                        "label": "License",
-                        "type": "text/html",
-                        "authenticatedDownload": false
-                    }
-                ]
-
-                    `}
-                    </CodeBlock>
-
+            <CodeBlock code={properties} initialNightMode={isNightMode} />
          <Section>
          <SubTitle>Summary</SubTitle>
                 <Table>
@@ -556,138 +671,7 @@ const EposGeoJSON: React.FC = () => {
 
             <Section>
                 <SubTitle>Full Sample</SubTitle>
-                <CodeBlock>
-                    { `
-                    { 
-                        "type": "FeatureCollection",
-                        "@epos_style": {
-                            //attribute names to match with @epos_type values  
-                            "station": {
-                                "label": "This is a station", //use for legend
-                                "marker": {
-                                    "character": "S", //character type value               
-                                    "pin": "true", //true|false"
-                                    "clustering": "true" //true|false"
-                                    //"anchor":"C"  not needed when pin=true
-                                }
-                            },
-                            "event": {
-                                "label": "This is an event", //use for legend
-                                "marker": {
-                                    "fontawesome_class": "fas fa-star", //fontawesome-class type value 
-                                    "pin": "false", //true|false"
-                                    "clustering": "false", //true|false"
-                                    "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
-                                }
-                            },
-                            "thing": {
-                                "label": "This is a thing", //use for legend
-                                "marker": {
-                                    "href": "www.thing.com/thing.png", //image url type value
-                                    "pin": "false", //true|false"
-                                    "clustering": "false", //true|false"
-                                    "anchor": "C" // N|NE|E|SE|S|SW|W|NW|C (default: C) used when pin=false
-                                }
-                            }
-                        },
-                        "features": [
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "@epos_type": "event", //used to lookup @epos_style attributes 
-                                    "@epos_label_key": "Title", //used for things like tooltips
-                                    "@epos_map_keys": [ //typically used for map popups
-                                        "Title",
-                                        "Description",
-                                        "Summary",
-                                        "@epos_links"
-                                    ],
-                                    "@epos_data_keys": [ //typically used for data visualisation columns
-                                        "Title",
-                                        "Description",
-                                        "@epos_links"
-                                    ],
-                                    "Title": "my title",
-                                    "Institutions": [  // array of primitives
-                                        "Insitution 1",
-                                        "Insitution 2",
-                                        "Insitution 3"
-                                    ],
-                                    "Elevation": "122",
-                                    "Description": "Hellenic Seismic Network",
-                                    "Summary": "Properties can contain HTML <img src=\"smiley.gif\">",
-                                    "@epos_links": [
-                                        {
-                                            "href": "http://volobsis.ipgp.fr/volcano-bullexcep.pdf",
-                                            "label": "Download",
-                                            "type": "application/pdf",
-                                            "authenticatedDownload": true
-                                        },
-                                        {
-                                            "href": "https://sandbox.zenodo.org/20170703.unw.png",
-                                            "label": "Preview",
-                                            "type": "image/x-icon",
-                                            "authenticatedDownload": false
-                                        },
-                                        {
-                                            "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-                                            "label": "License",
-                                            "type": "text/html",
-                                            "authenticatedDownload": false
-                                        }
-                                    ]
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [
-                                        24.38591,
-                                        40.93704
-                                    ]
-                                }
-                            },
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "@epos_type": "overlay",
-                                    
-                                    // for image overlays, used as label on sub layer & legend & tooltip 
-                                    "@epos_label_key": "Name",         
-                                    "@epos_map_keys": [
-                                        "Name",
-                                        "Description",
-                                        "Elevation",
-                                        "Preview"
-                                    ],
-                                     "@epos_data_keys": [
-                                        "Name",
-                                        "Description",
-                                        "Elevation" 
-                                    ],
-                                    "Name": "My layer Label",
-                                    "Elevation": "500",
-                                    "Description": "Hellenic Seismic Network",
-                                    "Preview": "some HTML <img src=\"smiley.png\">",
-                                },
-                                "@epos_image_overlay": // not supporting GeoTIFF - normal images only 
-                                {
-                                    "href": "https://sandbox.zenodo.org/2017062703_sd_era_4rlks.unw.png",
-                                    "bbox": [  // position on map   
-                                        -4.5184, // spatial reference for the bbox 
-                                        36.4027, // is assumed to match the spatial 
-                                        -3.2463, // reference for the GeoJSON object 
-                                        37.7806  // the order is lat1, lon1, lat2, lon2
-                                    ],
-                                    "legend ": {
-                                        "href": "www.abc.com/legend-image.png" //legend image 
-                                    }
-                                },
-                                "geometry": null //NO GEOMETRY FOR OVERLAY
-                            }
-                        ]
-                    }
-                    
-                    `}
-                </CodeBlock>
+                <CodeBlock code={fullExample} initialNightMode={isNightMode} />
             </Section>
         </Container>
     );

@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
-import { I18nextProvider } from "react-i18next";
 import "antd/dist/antd.css";
 import "./App.css"; // Import your custom CSS file
 
 import Router from "./router";
-import i18n from "./translation";
 
 const App: React.FC = () => {
   // const [isFakeDark, setIsFakeDark] = useState<boolean>(false);
@@ -18,9 +15,7 @@ const App: React.FC = () => {
   return (
     <div>
       <BrowserRouter  basename='/epos-open-source'>
-        <I18nextProvider i18n={i18n}>
           <Router />
-        </I18nextProvider>
       </BrowserRouter>
 
       {/* <button

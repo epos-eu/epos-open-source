@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-export const SectionContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-`;
 
 export const Title = styled.h1`
   margin: 1.5rem 0 2rem 0;
@@ -75,17 +69,10 @@ export const TableDescription = styled.td`
   vertical-align: top;
 `;
 
-export const MessageHeader = styled.h3`
-  margin-top: 20px;
-`;
-
 export const CodeBlock = styled.pre`
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  padding: 10px;
-  overflow: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+   backgroundColor: isNightMode ? '#2d2d2d' : '#f5f5f5',
+   color: isNightMode ? '#ffffff' : '#000000',
+    borderColor: isNightMode ? '#444' : '#ddd',
 `;
 
 
@@ -101,20 +88,3 @@ export const Description = styled.p`
   font-size:16px;
 `;
 
-
-
-
-
-export const BulletList = styled.ul`
-  margin: 10px 0;
-  padding-left: 20px;
-  list-style-type: disc;
-
-  li {
-  margin: 5px 0;
-  font-size: 16px;
-  text-align: left;
-  font-family: "OpenSans", sans-serif;
-  color: black;
-  }
-`;

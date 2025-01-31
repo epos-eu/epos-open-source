@@ -11,6 +11,8 @@ export const ContactContainer = styled("div")`
 export const FormGroup = styled("form")`
   width: 100%;
   max-width: 520px;
+  border: 0.1px solid black;
+  padding: 30px;
 
   @media only screen and (max-width: 1045px) {
     max-width: 100%;
@@ -26,11 +28,40 @@ export const Span = styled("span")`
   padding: 0 0.675rem;
 `;
 
+export const Label = styled("label")`
+  font-size:16px;
+  font-weight:bold;
+  margin-top : 10px;
+`;
+
 export const ButtonContainer = styled("div")`
-  text-align: end;
+  text-align: center;
   position: relative;
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
   }
 `;
+
+export const FormInput = styled("input")`
+border: 0.1px solid black;
+border-radius: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+`;
+
+export const SubmitInput = styled("input")`
+border: 0.1px solid black;
+margin-top: 20px;
+cursor: pointer;
+border-radius: 30px;
+ &:hover{
+    color: white;
+    text-underline-position: under;
+    background:   #457945;
+}
+
+`;
+
+
+

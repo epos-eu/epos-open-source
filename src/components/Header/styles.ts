@@ -1,23 +1,15 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
 // Existing styles...
 
 export const HeaderSection = styled("header")`
-  padding: 1rem 0.5rem;
-
-  .ant-row-space-between {
-    align-items: center;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  padding: 0.7rem 0.3rem;
+  border-Bottom: 0.5px solid #cccc;
+  display:flex;
+  
 `;
 
-export const LogoContainer = styled(Link)`
-  display: flex;
-`;
 
 export const NavLink = styled("div")`
   display: inline-block;
@@ -62,10 +54,11 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1.4rem;
+  font-size: 17px;
   transition: color 0.2s ease-in;
   cursor: pointer;
-  margin: 0.5rem 2rem;
+  margin: 0.5rem 15px;
+  gap:10px;
   font-family: "Lato", "OpenSans", sans-serif;
   color:  #457945 ;
   &:hover, &:focus {
@@ -131,20 +124,42 @@ export const LanguageSwitch = styled("div")`
   }
 `;
 
-export const LanguageSwitchContainer = styled("div")`
+
+
+export const QuickLink = styled.a`
+  font-size: 14px;
+  width: 120px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  height: 36px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
   display: flex;
-  justify-content: space-between;
-  width: 85px;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color: black;
+  margin-left:460px;
+  margin-bottom:12.5px;
+   &:hover{
+    color: white;
+    text-underline-position: under;
+    background:   #457945;
+  }
+      /* Media query for monitor-sized screens */
+  @media (min-width: 2440px) {
+    width: 150px; /* Increase width for larger screens */
+    height: 40px; /* Increase height for larger screens */
+    font-size: 16px; /* Increase font size for better readability */
+    margin-left: 1300px; /* Adjust margin for larger screens */
+    margin-bottom: 15px; /* Adjust margin for larger screens */
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
 `;
-
-
-
-
-export const DropdownMenuWrapper = styled.div`
- 
-
-`;
-
 
 
 

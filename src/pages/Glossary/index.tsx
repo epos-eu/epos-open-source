@@ -1,4 +1,5 @@
-import { GlossaryContainer, GlossaryTable, GlossaryRow, GlossaryCellTerm, GlossaryCellDefinition,GlossaryDescription,GlossaryHeader} from './styles';
+import { lazy } from 'react';
+import { GlossaryTable, GlossaryRow, GlossaryCellTerm, GlossaryCellDefinition,GlossaryDescription,GlossaryHeader} from './styles';
 
 const glossaryData = [
   { term: 'AAAI', definition: 'Authentication, Authorisation, and Accounting.' },
@@ -34,9 +35,10 @@ const glossaryData = [
   { term: 'Data Provider', definition: 'An organisation which produces data or metadata.' },
 ];
 
+const Container = lazy(() => import("../../common/Container"));
 const Glossary = () => {
   return (
-    <GlossaryContainer>
+    <Container>
      <GlossaryHeader>Glossary</GlossaryHeader>
       <GlossaryDescription>
         Below is a glossary of terms related to the EPOS project and its software architecture. It includes key technical terms and abbreviations used throughout the documentation.
@@ -49,7 +51,7 @@ const Glossary = () => {
           </GlossaryRow>
         ))}
       </GlossaryTable>
-    </GlossaryContainer>
+    </Container>
   );
 };
 

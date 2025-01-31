@@ -40,10 +40,4 @@ export const Title = styled.h1`
   font-family: "Lato", "OpenSans", sans-serif;
   color: #152c15;
 `;
-export const Description = styled.p`
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
-`;
-
 
