@@ -23,10 +23,10 @@ const Contact:React.FC<ContactProps> = () => {
     if (form.current) {
       try {
         await emailjs.sendForm(
-          "service_itz1cbm",
-          "template_j2one7g",
+          "service_rooidig",
+          "template_h9q5ysi",
           form.current,{
-            publicKey: '7alzx7b_fOqjB30Aa',
+            publicKey: '2SdTrWiRdpJxdw5uT',
           });
         console.log("SUCCESS!");
         // Reset form and state after successful submission

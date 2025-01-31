@@ -47,7 +47,7 @@ export const SearchIcon = styled.div`
 `;
 
 export const PopSerachInput = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 `;
 export const SerachButtonInput = styled.input`
 font-size: 0.875rem;

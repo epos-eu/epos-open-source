@@ -148,6 +148,17 @@ export const QuickLink = styled.a`
     text-underline-position: under;
     background:   #457945;
   }
+      /* Media query for monitor-sized screens */
+  @media (min-width: 2440px) {
+    width: 150px; /* Increase width for larger screens */
+    height: 40px; /* Increase height for larger screens */
+    font-size: 16px; /* Increase font size for better readability */
+    margin-left: 1300px; /* Adjust margin for larger screens */
+    margin-bottom: 15px; /* Adjust margin for larger screens */
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 

@@ -26,4 +26,7 @@ export const StyledContainer = styled("div")<{
     max-width: 100%;
     padding: 0 18px;
   }
+    @media (min-width: 2440px) {
+    max-width: 2000px;
+}
 `;
