@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./App.css"; // Import your custom CSS file
@@ -14,9 +14,9 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
           <Router />
-      </BrowserRouter>
+      </HashRouter>
 
       {/* <button
         onClick={() => setIsFakeDark((prev) => !prev)}
