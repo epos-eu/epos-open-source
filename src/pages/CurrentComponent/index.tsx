@@ -151,18 +151,39 @@ const CurrentComponent = () => {
   <TableRow>
     <TableCell>Converter Service</TableCell>
     <TableCell>
-      <BadgeLink href="https://hub.docker.com/r/epos/converter-service">
-        <img src="https://img.shields.io/docker/v/epos/converter-service" alt="Docker Version" />
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-service-go">
+        <img src="https://img.shields.io/docker/v/epos/converter-service-go" alt="Docker Version" />
       </BadgeLink>
-      <BadgeLink href="https://hub.docker.com/r/epos/converter-service">
-        <img src="https://img.shields.io/docker/image-size/epos/converter-service" alt="Docker Image Size" />
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-service-go">
+        <img src="https://img.shields.io/docker/image-size/epos/converter-service-go" alt="Docker Image Size" />
       </BadgeLink>
-      <BadgeLink href="https://hub.docker.com/r/epos/converter-service">
-        <img src="https://img.shields.io/docker/pulls/epos/converter-service" alt="Docker Pulls" />
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-service-go">
+        <img src="https://img.shields.io/docker/pulls/epos/converter-service-go" alt="Docker Pulls" />
       </BadgeLink>
     </TableCell>
     <TableCell>
-      <BadgeLink href="https://github.com/epos-eu/converter-service">
+      <BadgeLink href="https://github.com/epos-eu/converter-service-go">
+        <img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat" alt="Git Repository" />
+      </BadgeLink>
+    </TableCell>
+  </TableRow>
+
+  {/* Converter Service */}
+  <TableRow>
+    <TableCell>Converter Routine Service</TableCell>
+    <TableCell>
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-routine-go">
+        <img src="https://img.shields.io/docker/v/epos/converter-routine-go" alt="Docker Version" />
+      </BadgeLink>
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-routine-go">
+        <img src="https://img.shields.io/docker/image-size/epos/converter-routine-go" alt="Docker Image Size" />
+      </BadgeLink>
+      <BadgeLink href="https://hub.docker.com/r/epos/converter-routine-go">
+        <img src="https://img.shields.io/docker/pulls/epos/converter-routine-go" alt="Docker Pulls" />
+      </BadgeLink>
+    </TableCell>
+    <TableCell>
+      <BadgeLink href="https://github.com/epos-eu/converter-routine-go">
         <img src="https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat" alt="Git Repository" />
       </BadgeLink>
     </TableCell>
