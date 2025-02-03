@@ -52,7 +52,7 @@ const SearchBar: React.FC = () => {
         <PopSerachInput>
         <SearchInput onChangeCallback={filterItems} />
         </PopSerachInput>
-        {filteredPages.length > 0 && <SearchResults items={filteredPages} />}
+        {filteredPages.length > 0 && <SearchResults items={filteredPages} setTrigger={setPopUp} />}
       </Popup>
     </DropdownContainer>
   );

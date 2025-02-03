@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
-import { PopupContainer, PopupInnerContainer, PopupCloseBtn } from "./styles"; // Adjust import paths as necessary
+import { PopupContainer, PopupInnerContainer } from "./styles"; // Adjust import paths as necessary
+
 
 interface PopupProps {
   trigger: boolean; // Determines if the popup is shown
@@ -40,10 +41,14 @@ const Popup: React.FC<PopupProps> = ({ trigger, setTrigger, children }) => {
   return (
     <PopupContainer data-popup-background onClick={handleBackgroundClick}>
       <PopupInnerContainer onClick={(e) => e.stopPropagation()}>
-        {children}
+        {React.isValidElement(children)
+          ? React.cloneElement(children) // Pass setTrigger to children
+          : children}
       </PopupInnerContainer>
     </PopupContainer>
   );
 };
 
 export default Popup;
+
+
