@@ -14,11 +14,11 @@ const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
     <div>
       <SearchResult>
         {items.map((item) => (
-          <ResultItems key={item.id}>
-            <LinkItems href={item.path}>
-               {item.content}
-            </LinkItems>
-          </ResultItems>
+          <LinkItems key={item.id} href={item.path}>
+            <ResultItems>
+              {item.content}
+            </ResultItems>
+          </LinkItems>
         ))}
       </SearchResult>
     </div>
