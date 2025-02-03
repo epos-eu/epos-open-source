@@ -14,7 +14,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <HashRouter   basename='/epos-open-source'>
+      <HashRouter>
           <Router />
       </HashRouter >
 
