@@ -15,8 +15,8 @@ const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
       <SearchResult>
         {items.map((item) => (
           <ResultItems key={item.id}>
-            <LinkItems href={item.path}>
-               {item.content}
+            <LinkItems href={`#${item.path}`}>
+              {item.content}
             </LinkItems>
           </ResultItems>
         ))}

@@ -391,9 +391,9 @@ const EposGeoJSON: React.FC = () => {
                 <Description>In the example below there is a feature with an @epos_type = station, 
                     this matches the attribute station within the the @epos_style object, hence in
                      this case stations would be rendered on the map as pins with an 's'</Description>
-                <Image src="./epos-open-source/img/graphs/1562841807572.png" alt="Font Awesome marker with pin"/>
+                <Image src="./img/graphs/1562841807572.png" alt="Font Awesome marker with pin"/>
                 <Description>A corresponding legend would be generated, looking something like:</Description>
-                <Image src="./epos-open-source/img/graphs/1562842126236.png" alt="Font Awesome marker with pin"/> 
+                <Image src="./img/graphs/1562842126236.png" alt="Font Awesome marker with pin"/> 
                 <p>feature:</p>
                 <CodeBlock code={feature} initialNightMode={isNightMode} />
                 <SubTitle>style:</SubTitle>
@@ -454,30 +454,30 @@ const EposGeoJSON: React.FC = () => {
                             <TableCell>marker.href</TableCell>
                             <TableCell>“www.thing.com/thing.png”</TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562843584966.png" alt="Marker href without pin"/>
+                                <Image src="./img/graphs/1562843584966.png" alt="Marker href without pin"/>
                             </TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562843563562.png" alt="Marker href with pin"/>
+                                <Image src="./img/graphs/1562843563562.png" alt="Marker href with pin"/>
                             </TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>marker.fontawesome_class</TableCell>
                             <TableCell>“fas fa-star”</TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562843684005.png" alt="Font Awesome marker without pin"/>
+                                <Image src="./img/graphs/1562843684005.png" alt="Font Awesome marker without pin"/>
                             </TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562843500758.png" alt="Font Awesome marker with pin"/>
+                                <Image src="./img/graphs/1562843500758.png" alt="Font Awesome marker with pin"/>
                             </TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>marker.character</TableCell>
                             <TableCell>“S”</TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562843284469.png" alt="Character marker without pin"/>
+                                <Image src="./img/graphs/1562843284469.png" alt="Character marker without pin"/>
                             </TableCell>
                             <TableCell>
-                                <Image src="./epos-open-source/img/graphs/1562842713389.png" alt="Character marker with pin"/>
+                                <Image src="./img/graphs/1562842713389.png" alt="Character marker with pin"/>
                             </TableCell>
                         </TableRow>
                     </tbody>
@@ -490,7 +490,7 @@ const EposGeoJSON: React.FC = () => {
         <SubTitle>Character Example</SubTitle>
         <CodeBlock code={charactorSample} initialNightMode={isNightMode} />
         <SubTitle> Symbol Logic</SubTitle>
-        <Image src="./epos-open-source/img/graphs/marker%20flow.png" alt="Font Awesome marker with pin"/>
+        <Image src="./img/graphs/marker%20flow.png" alt="Font Awesome marker with pin"/>
         <SubTitle>Colour</SubTitle>
         <Description>A note on colour, to prevent accidental reuse of the same colour
          by multiple map layers in the EPOS GUI, colours will be automatically assigned.
@@ -498,9 +498,9 @@ const EposGeoJSON: React.FC = () => {
         <SubTitle>Legends</SubTitle>
         <Description>Legends are constructed by combining the map marker and label from the corresponding
              @epos_type within the the @epos_style object.</Description>
-        <Image src="./epos-open-source/img/graphs/1562842126236.png" alt="Character marker without pin"/>
+        <Image src="./img/graphs/1562842126236.png" alt="Character marker without pin"/>
         <SubTitle>Legend Logic </SubTitle>
-        <Image src="./epos-open-source/img/graphs/legend%20flow.png" alt="Character marker without pin"/>
+        <Image src="./img/graphs/legend%20flow.png" alt="Character marker without pin"/>
         <Section>
                 <SubTitle>Image Overlays</SubTitle>
                 <Description>

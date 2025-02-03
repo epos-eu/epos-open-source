@@ -15,7 +15,7 @@ const ConceptualDesign = () => {
   return (
     <Container>
       <Title>Conceptual Services of the Architecture</Title>
-      <img src="./epos-open-source/img/graphs/conceptual-design.png" alt="Conceptual Design" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
+      <img src="./img/graphs/conceptual-design.png" alt="Conceptual Design" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
 
       <Description>The driving concepts can be summarized by the following statements:</Description>
       <BulletList>

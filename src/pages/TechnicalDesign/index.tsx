@@ -73,7 +73,7 @@ const TechnicalDesign = () => {
     <Container>
       <Title>Architecture Implementation</Title>
       <Description>The diagram in this section represents the implementation of the conceptual architecture.</Description>
-      <Image src="./epos-open-source/img/graphs/architecture-diagram.png" alt="Architecture Diagram" />
+      <Image src="./img/graphs/architecture-diagram.png" alt="Architecture Diagram" />
 
       <AspectList>
         <AspectItem>
