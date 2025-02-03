@@ -49,7 +49,7 @@ const EPOSDataModel = () => {
       </Description>
 
       <Description>
-      <a href="/Documents/EPOS_DATA_MODEL.pdf" download="EPOS_DATA_MODEL.pdf"><strong>Download EPOS Data Model PDF</strong></a>
+      <a href="/epos-open-source/Documents/EPOS_DATA_MODEL.pdf" download="EPOS_DATA_MODEL.pdf"><strong>Download EPOS Data Model PDF</strong></a>
       </Description>
     </Container>
   );
