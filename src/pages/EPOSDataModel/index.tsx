@@ -49,7 +49,9 @@ const EPOSDataModel = () => {
       </Description>
 
       <Description>
-        <a href="https://github.com/epos-eu/epos-open-source/blob/main/documentation/EPOS_DATA_MODEL.pdf" target="_blank" rel="noopener noreferrer"><strong>EPOS Data Model PDF Description</strong></a>
+      <a href="/Documents/EPOS_DATA_MODEL.pdf" download="EPOS_DATA_MODEL.pdf">
+                <strong>Download EPOS Data Model PDF</strong>
+      </a>
       </Description>
     </Container>
   );
