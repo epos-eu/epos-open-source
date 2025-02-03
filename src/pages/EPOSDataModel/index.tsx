@@ -27,7 +27,7 @@ const EPOSDataModel = () => {
       <Description>
         The EPOS data model was discussed and defined in EPOS-IP as of 2018 in the document “Second (Final) Report on EPOS-ICS Architecture” and is here reported for reader’s convenience in the following class diagram.
       </Description>
-      <img src="./img/graphs/epos-data-model.png" alt="EPOS Data Model" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
+      <img src="../epos-open-source/img/graphs/epos-data-model.png" alt="EPOS Data Model" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
       
       <Description>
         The EPOS Data model includes the following concepts:
