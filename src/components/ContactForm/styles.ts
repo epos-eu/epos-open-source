@@ -2,10 +2,16 @@ import styled from "styled-components";
 
 export const ContactContainer = styled("div")`
   padding: 5rem 0;
+  height: auto; /* Adjusts height based on content */
 
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0;
   }
+      @media (min-width: 2440px) {
+    
+  padding: 5rem 0;
+   height: auto; /* Adjusts height based on content */
+
 `;
 
 export const FormGroup = styled("form")`
@@ -18,6 +24,11 @@ export const FormGroup = styled("form")`
     max-width: 100%;
     margin-top: 2rem;
   }
+      @media (min-width: 2440px) {
+    max-width: 700px;
+    height: 500px;
+    margin-right:110px;
+}
 `;
 
 export const Span = styled("span")`

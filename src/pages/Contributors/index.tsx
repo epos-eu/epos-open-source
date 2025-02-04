@@ -67,7 +67,7 @@ const Contributors = () => {
         <MainHeader>EPOS Open Source Contribution</MainHeader>
         <Paragraph>
         EPOS open source projects thrive on collaboration and the collective efforts of diverse individuals
-         from around the world. Contributors bring their unique skills, perspectives, and expertise to create , build, improve, 
+         from around the world. Contributors bring their unique skills, perspectives, and expertise to create, build, improve, 
          and maintain software that benefits the broader community. These contributions can range from writing code, fixing bugs, 
          and improving documentation to designing user interfaces, testing features, and providing feedback. By participating 
          in EPOS open source, people not only help create accessible, innovative, and sustainable solutions but also gain valuable experience, 
