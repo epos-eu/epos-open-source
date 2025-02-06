@@ -20,6 +20,7 @@ const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
 
 const Contributors = () => {
     const people = [
+        { name: "Carmela", surname: "Freda", image: "https://via.placeholder.com/80", role: "" },
         { name: "Kuvvet", surname: "Atakan", image: "https://via.placeholder.com/80", role: "" },
         { name: "Philip", surname: "Atkinson", image: "https://via.placeholder.com/80", role: "" },
         { name: "Daniele", surname: "Bailo", image: "https://via.placeholder.com/80", role: "" },
