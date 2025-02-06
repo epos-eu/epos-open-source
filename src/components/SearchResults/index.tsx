@@ -7,18 +7,24 @@ type Page = {
 
 interface ItemsListProps {
   items: Page[];  // `items` should be an array of `Page`
+  setTrigger: (value: boolean) => void;
 }
 
-const SearchResults: React.FC<ItemsListProps> = ({ items }) => {
+const SearchResults: React.FC<ItemsListProps> = ({ items , setTrigger }) => {
+  const handleLinkClick = () => {
+    if (setTrigger) {
+      setTrigger(false); // Close the popup
+    }
+  };
   return (
     <div>
       <SearchResult>
         {items.map((item) => (
-          <ResultItems key={item.id}>
-            <LinkItems href={`#${item.path}`}>
+          <LinkItems key={item.id} href={item.path} onClick={handleLinkClick}>
+            <ResultItems>
               {item.content}
-            </LinkItems>
-          </ResultItems>
+            </ResultItems>
+          </LinkItems>
         ))}
       </SearchResult>
     </div>
