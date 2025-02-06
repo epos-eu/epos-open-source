@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect } from "react";
-import { PopupContainer, PopupInnerContainer, PopupCloseBtn } from "./styles"; // Adjust import paths as necessary
+import { PopupContainer, PopupInnerContainer } from "./styles"; // Adjust import paths as necessary
 
 interface PopupProps {
   trigger: boolean; // Determines if the popup is shown
