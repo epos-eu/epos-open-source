@@ -1,0 +1,18 @@
+name: BuildAndDeploy
+
+on:
+  push:
+    branches:
+      - 'main'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    name: Build and deploy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bahmutov/npm-install@v1
+      - run: npm deploy

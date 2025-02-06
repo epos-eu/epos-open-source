@@ -20,7 +20,7 @@ const SearchResults: React.FC<ItemsListProps> = ({ items , setTrigger }) => {
     <div>
       <SearchResult>
         {items.map((item) => (
-          <LinkItems key={item.id} href={item.path} onClick={handleLinkClick}>
+          <LinkItems key={item.id} href={`#${item.path}`} onClick={handleLinkClick}>
             <ResultItems>
               {item.content}
             </ResultItems>
