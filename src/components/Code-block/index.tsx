@@ -1,6 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , lazy } from 'react';
 import { Demo } from './styles'; 
 
+
+
+
+
+const Container = lazy(() => import("../../common/Container"));
 const Code: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>('');
 
