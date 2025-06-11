@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const DropdownContainer = styled.div`
-  position: relative; /* Positioning context for the dropdown */
+  position: relative;
+  display: inline-block;
+  z-index:1000;
 `;
 
 export const SearchBarContainer = styled.div`
-  display: flex; /* Align input and button in a row */
-  align-items: center; /* Center items vertically */
-  margin-top: 10px; /* Space below the icon if needed */ 
+  position: relative;
+  display: inline-block;
+  width: 100%; /* or fixed width if needed */
 `;
 
 export const SearchInput = styled.input`
@@ -25,13 +27,11 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  padding: 8px 12px; /* Padding for the button */
-  margin-left: 5px; /* Space between input and button */
-  border: none; /* Remove border */
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Cursor change on hover */
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* left padding for icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 
   &:hover {
     background-color: #0056b3; /* Darker shade on hover */
@@ -69,4 +69,12 @@ export const IconWrapper = styled.div`
   top: 62%;
   transform: translateY(-50%);
   pointer-events: none; /* Prevents the icon from interfering with input */
+`;
+export const SearchIconWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none; /* allow clicks to pass through */
 `;
