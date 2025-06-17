@@ -4,7 +4,7 @@ export const StyledContainer = styled("div")<{
   border?: boolean;
 }>`
   position: relative;
-  width: 100%;
+  width: 1200px;
   max-width: auto;
   margin-right: auto;
   margin-left: auto;
