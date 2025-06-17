@@ -7,7 +7,7 @@ import {
   RepoLink,
   Title
 } from './styles'; // Adjust the path as needed
-
+import { Paragraph } from '../Contributors/styles';
 const Container = lazy(() => import("../../common/Container"));
 
 const installers = [
@@ -32,6 +32,13 @@ const Install: React.FC = () => {
   return (
     <Container>
       <Title>Install EPOS Open Source</Title>
+      <Paragraph>
+      Download the binary files to install the EPOS Open Source environment as a user-friendly desktop application 
+      or as Docker/Kubernetes images. The Git repositories contain the README files with the step-by-step instructions to deploy the system
+      and populate it.
+      <br></br>
+      Contact us at info@epos-eric.eu if you need further assistance. 
+      </Paragraph>
     <Table>
       <thead>
         <tr>

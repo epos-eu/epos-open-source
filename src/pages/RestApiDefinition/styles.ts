@@ -18,6 +18,7 @@ export const ServiceTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 40px;
+  table-layout: fixed;
 `;
 
 export const TableRow = styled.tr`

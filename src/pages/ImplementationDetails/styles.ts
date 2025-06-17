@@ -88,3 +88,19 @@ export const Description = styled.p`
   font-size:16px;
 `;
 
+
+
+
+export const BulletList = styled.ul`
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+
+  li {
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  }
+`;

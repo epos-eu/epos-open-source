@@ -40,14 +40,14 @@ const routes = [
     component: "References",
   },
   {
-    path: ["/requirements-section"],
+    path: ["/system-architecture"],
     exact: true,
-    component: "Requirements",
+    component: "SystemArchitecture",
   },
   {
-    path: ["/technical-design"],
+    path: ["/implementation-details"],
     exact: true,
-    component: "TechnicalDesign",
+    component: "ImplementationDetails",
   },
   {
     path: ["/rest-api-definition"],
@@ -55,7 +55,7 @@ const routes = [
     component: "RestApiDefinition",
   },
   {
-    path: ["/conceptual-design"],
+    path: ["/implementation-Details"],
     exact: true,
     component: "ConceptualDesign",
   },

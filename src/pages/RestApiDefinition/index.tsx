@@ -6,13 +6,16 @@ import {
   TableCell,
   Maintitle
 } from './styles';
+import { Description } from '../EPOSDataModel/styles';
 
 const Container = lazy(() => import("../../common/Container"));
 const RestApiDefinition = () => {
   return (
     <Container>
       <Maintitle>RESTful API Definition</Maintitle>
-
+      <Description>
+      Here we list the main categories of APIs provided in the EPOS Open Source platform. For a complete list of methods, see the Swagger page.
+      </Description>
       <Title>Resources Service</Title>
       <ServiceTable>
         <tbody>

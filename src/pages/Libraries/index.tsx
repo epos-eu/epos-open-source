@@ -7,6 +7,7 @@ import {
   RepoLink,
   Title
 } from './styles'; // Adjust the path as needed
+import { Paragraph } from '../Contributors/styles';
 
 const Container = lazy(() => import("../../common/Container"));
 
@@ -42,6 +43,13 @@ const Libraries: React.FC = () => {
   return (
     <Container>
       <Title>Available Libraries</Title>
+      <Paragraph>
+      Follow the links below to download the binary files of the libraries used within the EPOS Open Source environment. 
+      Go to “Install” page if you want to deploy the whole environment at once. The relative Git repositories contain the 
+      README files with detailed information, in case you need to customize them or use them in different projects.
+      <br></br>
+      Contact us at info@epos-eric.eu if you need further assistance. 
+      </Paragraph>
     <Table>
       <thead>
         <tr>

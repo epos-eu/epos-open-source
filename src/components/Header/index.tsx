@@ -27,10 +27,7 @@ const Header = () => {
   const learnMenu = (
     <AntMenu>
       <AntMenu.Item > 
-        <Link to="/goals">Architectural design</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
-      <AntMenu.Item > 
-        <Link to="/requirements-section">Architectural requirements</Link> {/* Navigate to Introduction page */}
+        <Link to="/system-architecture">System Architecture</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/references">References</Link> {/* Navigate to Introduction page */}
@@ -56,10 +53,7 @@ const Header = () => {
   const designMenu = (
     <AntMenu>
       <AntMenu.Item>
-        <Link to="/conceptual-design">Conceptual Design</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
-      <AntMenu.Item > 
-        <Link to="/technical-design">Technical Design</Link> {/* Navigate to Introduction page */}
+        <Link to="/implementation-details">Implementation Details</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/rest-api-definition">RESTful API Definitions</Link> {/* Navigate to Introduction page */}
@@ -142,7 +136,7 @@ const Header = () => {
         </CustomNavLinkSmall>
       </Dropdown>
       </ul>
-      <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">Data Access</QuickLink>
+      <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">EPOS platform</QuickLink>
       <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex' , zIndex: 9999} }>
       <SearchBar />
       </div>
