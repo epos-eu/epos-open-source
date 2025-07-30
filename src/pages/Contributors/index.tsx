@@ -28,11 +28,8 @@ const Contributors = () => {
         const data = await response.json();
        
         const finalData = data.description;
-        console.log('finalData' , finalData);
-        
-        const chunked = chunkArray(finalData, 4);
-        setPeople(chunked);
-        console.log('chuncked' , chunked);
+    
+        setPeople(finalData);
         
       } catch (error) {
         console.error("Error fetching people data:", error);
@@ -41,6 +38,9 @@ const Contributors = () => {
 
     fetchPeopleData();
   }, []);
+
+  const chunkedPeople = chunkArray(people, 4); // Group people into chunks of 4
+  
 
   return (
     <Container>
@@ -60,7 +60,7 @@ const Contributors = () => {
       <Section>
         <Header>Meet The Team</Header>
         <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-         {/* {people.map((chunk, chunkIndex) => (
+         {people.map((chunk, chunkIndex) => (
             <React.Fragment key={chunkIndex}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center" }}>
                 {chunk.map((person, personIndex) => (
@@ -80,7 +80,7 @@ const Contributors = () => {
                 <hr style={{ border: "1px solid #ddd", width: "100%" }} />
               )}
             </React.Fragment>
-          ))} */}
+          ))}
         </div>
       </Section>
     </Container>
