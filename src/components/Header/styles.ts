@@ -126,8 +126,9 @@ export const LanguageSwitch = styled("div")`
 
 
 
-export const QuickLink = styled.a`
-  font-size: 14px;
+export const QuickLink = styled.button`
+  font-size: 12px;
+  font-weight:12px;
   width: 120px;
   border-radius: 30px;
   border: 1px solid #ccc;
@@ -140,26 +141,35 @@ export const QuickLink = styled.a`
   justify-content: center;
   background: white;
   font-family: "Lato", "OpenSans", sans-serif;
-  color: black;
-  margin-left:460px;
-  margin-bottom:12.5px;
-   &:hover{
-    color: white;
-    text-underline-position: under;
-    background:   #457945;
-  }
-      /* Media query for monitor-sized screens */
-  @media (min-width: 2440px) {
-    width: 150px; /* Increase width for larger screens */
-    height: 40px; /* Increase height for larger screens */
-    font-size: 16px; /* Increase font size for better readability */
-    margin-left: 1300px; /* Adjust margin for larger screens */
-    margin-bottom: 15px; /* Adjust margin for larger screens */
-    text-align: center;
-    display: flex;
-    align-items: center;
+  cursor: pointer; /* Important for buttons */
+  outline: none; /* Removes default button outline */
+  
+  &:hover {
+  color: white;
+  background: #457945;
+  * {
+      color: inherit;
+    }
+}
+
+
+`;
+export const SearchDataAcess = styled.div`
+ display: flex;
+  align-items: center;
+    @media only screen and (max-width: 768px) {
+    margin-left:700px
   }
 `;
 
-
-
+export const HeaderWrapper = styled.div`
+ display: flex;
+ justify-content: space-around;
+ width:100%;
+ gap:280px;
+  align-items: center;
+    @media only screen and (min-width: 2500px) {
+    gap:700px;
+  }
+    
+`;
