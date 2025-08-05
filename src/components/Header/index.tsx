@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import { Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +12,12 @@ import {
   CustomNavLinkSmall,
   Label,
   Outline,
-  QuickLink
+  QuickLink,
+  SearchDataAcess,
+  HeaderWrapper
 } from "./styles";
 import SearchBar from "../Search";
+const Container = lazy(() => import("../../common/Container"));
 
 const Header = () => {
   const [visible, setVisibility] = useState(false);
@@ -79,25 +82,20 @@ const Header = () => {
   
     return (
       <>
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-    {/* Left side: Logo and Menu items */}
-    <div>
+    <HeaderWrapper>
+  {/* Left side: Logo and menu */}
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <Link to="/">
+      <CustomNavLinkSmall>
+        <SvgIcon src="logo.svg" width="90px" height="50px" />
+      </CustomNavLinkSmall>
+    </Link>
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
       <Link to="/">
-        <CustomNavLinkSmall>
-          <SvgIcon src="logo.svg" width="90px" height="50px" />
-        </CustomNavLinkSmall>
-      </Link>
-    </div>
-      <ul>
-      <Link to="/">
-        <CustomNavLinkSmall>
-          Home
-        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>Home</CustomNavLinkSmall>
       </Link>
       <Link to="/contributors">
-        <CustomNavLinkSmall>
-        Contributors
-        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>Contributors</CustomNavLinkSmall>
       </Link>
       <Dropdown
         overlay={installMenu}
@@ -115,7 +113,8 @@ const Header = () => {
       <Dropdown
         overlay={learnMenu}
         trigger={['hover']}
-        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}  >
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'learn')}
+      >
         <CustomNavLinkSmall>
           <span style={{ marginRight: '0.2rem' }}>Approach</span>
           <FontAwesomeIcon
@@ -127,29 +126,32 @@ const Header = () => {
       <Dropdown
         overlay={designMenu}
         trigger={['hover']}
-        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')} >
+        onVisibleChange={(visible) => handleDropdownVisibleChange(visible, 'design')}
+      >
         <CustomNavLinkSmall>
           <span style={{ marginRight: '0.2rem' }}>Documentation</span>
           <FontAwesomeIcon
             icon={faAnglesDown}
-            className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`}/>
+            className={`arrow ${openKeys.includes('design') ? 'arrow-active' : ''}`}
+          />
         </CustomNavLinkSmall>
       </Dropdown>
-      </ul>
-      <QuickLink href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">EPOS platform</QuickLink>
-      <div style={{ position: 'absolute', top: '10px', right: '10px' , marginRight:'30px' , alignItems: 'center'  , display:'flex' , zIndex: 9999} }>
-      <SearchBar />
-      </div>
-    </div>
-   
-  
-  
+    </ul>
+  </div>
+  <SearchDataAcess>
+    <QuickLink style={{ marginRight: '10px' }}>
+      <a href="https://www.ics-c.epos-eu.org/" target="_blank" rel="noopener noreferrer">EPOS platform</a>
+    </QuickLink>
+    <SearchBar />
+  </SearchDataAcess>
+</HeaderWrapper>
 </>
 
     );
   };
 
   return (
+    <Container>
     <HeaderSection>
           <NotHidden>
             <MenuItem />
@@ -171,6 +173,7 @@ const Header = () => {
           <MenuItem />
         </Drawer>
     </HeaderSection>
+    </Container>
   );
 };
 

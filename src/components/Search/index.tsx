@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SearchBarContainer, IconWrapper, DropdownContainer , PopSerachInput , SerachButtonInput} from "./styles"; // Adjust import as necessary
+import { SearchBarContainer, IconWrapper, DropdownContainer , PopSerachInput , SerachButtonInput ,SearchIconWrapper} from "./styles"; // Adjust import as necessary
 import SearchResults from "../SearchResults";
 import SearchInput from "../../common/InputSearch";
 import Popup from "../../common/pop-up";
@@ -35,16 +35,16 @@ const SearchBar: React.FC = () => {
 
   return (
     <DropdownContainer>
-      <button
+    <button
         onClick={() => setPopUp(true)}
         aria-label="Open search popup"
         style={{ all: "unset", cursor: "pointer" }}
       >
         <SearchBarContainer>
-          <SerachButtonInput placeholder="Type to search"/>
-           <IconWrapper>
+          <SerachButtonInput placeholder="Type to search " />
+          <SearchIconWrapper>
             <FontAwesomeIcon icon={faSearch} />
-            </IconWrapper>
+            </SearchIconWrapper>
         </SearchBarContainer>
       </button>
       {searchItem && filteredPages.length === 0 && <p>No results found</p>}
