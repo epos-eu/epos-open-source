@@ -1,0 +1,62 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[68,862,926],{3068:(e,s,r)=>{r.r(s),r.d(s,{Header:()=>t,MainHeader:()=>l,Paragraph:()=>c,Section:()=>o,SectionHeader:()=>a});var i=r(9);const o=i.Ay.div`
+  margin-bottom: 30px;
+`,l=i.Ay.h1`
+  font-size: 32px;
+  margin: 2rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color:  #152c15 ;
+`,t=i.Ay.h1`
+  font-size: 32px;
+  margin: 7rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color:  #152c15 ;
+  text-align:center;
+`,a=i.Ay.h1`
+  font-size: 18px;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color:  #152c15 ;
+`,c=i.Ay.p`
+ font-size:16px;
+ margin: 1rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+ color: black;
+`},5862:(e,s,r)=>{r.r(s),r.d(s,{default:()=>c});var i=r(5043),o=r(6926),l=r(3068),t=r(579);const a=(0,i.lazy)(()=>Promise.resolve().then(r.bind(r,1766))),c=()=>(0,t.jsxs)(a,{children:[(0,t.jsxs)(l.Paragraph,{children:["Follow the links below to download the binary files of each component/service of the EPOS Open Source environment. Go to \u201cInstall\u201d page if you want to deploy all of them at the same time. The relative Git repositories contain the README files with the step-by-step instructions to deploy the components and customize them if needed.more information, in case you need to customize them.",(0,t.jsx)("br",{}),"Contact us at info@epos-eric.eu if you need further assistance."]}),(0,t.jsx)(o.Title,{children:"User Interfaces"}),(0,t.jsxs)(o.Table,{children:[(0,t.jsx)("thead",{children:(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableHeader,{children:"User Interface Name"}),(0,t.jsx)(o.TableHeader,{children:"DockerHub"}),(0,t.jsx)(o.TableHeader,{children:"Git Repository"})]})}),(0,t.jsxs)("tbody",{children:[(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"EPOS Platform"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/data-portal",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/data-portal",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/data-portal",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/data-portal",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/data-portal",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/data-portal",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/data-portal",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"EPOS Backoffice"}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-Available%20Soon-red",alt:"Not Available"})}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-Available%20Soon-red",alt:"Not Available"})})]})]})]}),(0,t.jsx)(o.Title,{children:"Microservices"}),(0,t.jsxs)(o.Table,{children:[(0,t.jsx)("thead",{children:(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableHeader,{children:"Microservice Name"}),(0,t.jsx)(o.TableHeader,{children:"DockerHub"}),(0,t.jsx)(o.TableHeader,{children:"Git Repository"})]})}),(0,t.jsxs)("tbody",{children:[(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"API Gateway"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/epos-api-gateway",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/epos-api-gateway",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/epos-api-gateway",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/epos-api-gateway",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/epos-api-gateway",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/epos-api-gateway",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/epos-api-gateway",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Resources Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/resources-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/resources-service",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/resources-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/resources-service",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/resources-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/resources-service",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/resources-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"External Access Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/external-access-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/external-access-service",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/external-access-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/external-access-service",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/external-access-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/external-access-service",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/external-access-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Ingestor Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/ingestor-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/ingestor-service",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/ingestor-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/ingestor-service",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/ingestor-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/ingestor-service",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/ingestor-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Converter Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-service-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/converter-service-go",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-service-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/converter-service-go",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-service-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/converter-service-go",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/converter-service-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Converter Routine Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-routine-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/converter-routine-go",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-routine-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/converter-routine-go",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/converter-routine-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/converter-routine-go",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/converter-routine-go",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]}),(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Backoffice Service"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/backoffice-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/backoffice-service",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/backoffice-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/backoffice-service",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/backoffice-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/backoffice-service",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/backoffice-service",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]})]})]}),(0,t.jsx)(o.Title,{children:"Databases"}),(0,t.jsxs)(o.Table,{children:[(0,t.jsx)("thead",{children:(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableHeader,{children:"Database Name"}),(0,t.jsx)(o.TableHeader,{children:"DockerHub"}),(0,t.jsx)(o.TableHeader,{children:"Git Repository"})]})}),(0,t.jsx)("tbody",{children:(0,t.jsxs)(o.TableRow,{children:[(0,t.jsx)(o.TableCell,{children:"Metadata Database"}),(0,t.jsxs)(o.TableCell,{children:[(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/metadata-database-deploy",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/v/epos/metadata-database-deploy",alt:"Docker Version"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/metadata-database-deploy",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/image-size/epos/metadata-database-deploy",alt:"Docker Image Size"})}),(0,t.jsx)(o.BadgeLink,{href:"https://hub.docker.com/r/epos/metadata-database-deploy",children:(0,t.jsx)("img",{src:"https://img.shields.io/docker/pulls/epos/metadata-database-deploy",alt:"Docker Pulls"})})]}),(0,t.jsx)(o.TableCell,{children:(0,t.jsx)(o.BadgeLink,{href:"https://github.com/epos-eu/metadata-database",children:(0,t.jsx)("img",{src:"https://img.shields.io/badge/Git-open%20repository-white?logoColor=fff&style=flat",alt:"Git Repository"})})})]})})]})]})},6926:(e,s,r)=>{r.r(s),r.d(s,{BadgeLink:()=>c,Table:()=>o,TableCell:()=>a,TableHeader:()=>t,TableRow:()=>l,Title:()=>h});var i=r(9);const o=i.Ay.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+`,l=i.Ay.tr`
+  &:nth-child(even) {
+    background-color: #f4f4f4;
+  }
+`,t=i.Ay.th`
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  margin: 1.5rem 0 2rem 0;
+  font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:18px;
+`,a=i.Ay.td`
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  margin: 1.5rem 0 2rem 0;
+ font-family: "OpenSans", sans-serif;
+  color: black;
+  font-size:16px;
+`,c=i.Ay.a`
+  display: inline-block;
+  margin-right: 10px;
+
+  img {
+    height: 20px;
+  }
+`,h=i.Ay.h2`
+   margin: 1.5rem 0 2rem 0;
+  font-size:32px;
+  font-family: "Lato", "OpenSans", sans-serif;
+  color:  #152c15 ;
+`}}]);
+//# sourceMappingURL=862.24093899.chunk.js.map
