@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01dea7ae-f307-432f-a513-6eb0772fa504" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/release.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Documents/EPOS_DATA_MODEL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/Documents/EPOS_DATA_MODEL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/_redirects" beforeDir="false" afterPath="$PROJECT_DIR$/public/_redirects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-Thin.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-Thin.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Lato-ThinItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Lato-ThinItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Motiva-Sans-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Motiva-Sans-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/Motiva-Sans-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Motiva-Sans-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/OpenSans-VariableFont_wdth,wght.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/OpenSans-VariableFont_wdth,wght.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562841807572.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562841807572.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562842126236.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562842126236.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562842713389.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562842713389.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562842809217.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562842809217.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843284469.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843284469.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843500758.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843500758.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843563562.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843563562.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843584966 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843584966 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843584966 4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843584966 4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843584966 5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843584966 5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843584966.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843584966.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/1562843684005.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/1562843684005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/architecture-diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/architecture-diagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/conceptual-design.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/conceptual-design.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/epos-data-model.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/epos-data-model.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/legend flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/legend flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/graphs/marker flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/graphs/marker flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/benefit.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/benefit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/contribute.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/contribute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/developer.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/developer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/flickr.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/flickr.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/github.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/github.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/italy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/italy.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/linkedin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/linkedin.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/medium.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/medium.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/notes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/notes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/scroll-top.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/scroll-top.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/twitter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/twitter.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/x.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/x.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/svg/youtube.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/svg/youtube.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562841807572.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562841807572.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562842126236.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562842126236.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562842713389.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562842713389.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562842809217.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562842809217.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562843284469.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562843284469.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562843500758.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562843500758.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562843563562.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562843563562.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562843584966.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562843584966.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/1562843684005.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/1562843684005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/AAAI.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/AAAI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/EPOS_DATA_MODEL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/EPOS_DATA_MODEL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/Epos_Architetture_Cube.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/Epos_Architetture_Cube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/Epos_Logo_30.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/Epos_Logo_30.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/MACRO PROCESS.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/MACRO PROCESS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/METADATA  INTEGRITY CHECK.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/METADATA  INTEGRITY CHECK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/METADATA IMPORT.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/METADATA IMPORT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/METADATA REVISION.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/METADATA REVISION.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/METADATA VERSION MANAGEMENT.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/METADATA VERSION MANAGEMENT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/ONLINE METADATA MANAGEMENT.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/ONLINE METADATA MANAGEMENT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/USE CASE.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/USE CASE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/architecture-diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/architecture-diagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/conceptual-design.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/conceptual-design.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/conceptual-design.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/conceptual-design.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/current_stack.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/current_stack.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/download-flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/download-flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/download-restricted-flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/download-restricted-flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/epos-data-model.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/epos-data-model.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/epos-data-model.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/epos-data-model.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/epos-geojson.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/epos-geojson.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/explore-flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/explore-flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/focal.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/focal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/focal25.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/focal25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/focal50.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/focal50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/glossary.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/glossary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/goals-and-costraints.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/goals-and-costraints.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/installers.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/installers.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/introduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/introduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/legend flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/legend flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/libraries.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/libraries.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/login-flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/login-flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/macroprocess.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/macroprocess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/marker flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/marker flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/overlay-results.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/overlay-results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/requirements-definition.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/requirements-definition.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/scientific-use-case.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/scientific-use-case.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/search-flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/search-flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/technical-design.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/technical-design.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/usecases.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/usecases.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/warning25.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/warning25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tr/warning50.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/tr/warning50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Button/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Button/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/CodeBlock/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/CodeBlock/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/CodeBlock/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/CodeBlock/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Container/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Container/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Container/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Container/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Input/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Input/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/InputSearch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/InputSearch/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/InputSearch/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/InputSearch/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/ScrollToTop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/ScrollToTop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/ScrollToTop/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/ScrollToTop/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/SocialLink/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SocialLink/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/SocialLink/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SocialLink/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/SvgIcon/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SvgIcon/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/SvgIcon/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/SvgIcon/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/TextArea/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/TextArea/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/TextArea/styles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/TextArea/styles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/pop-up/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/pop-up/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/pop-up/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/pop-up/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/useForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/useForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/utils/validationRules.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils/validationRules.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Block/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Block/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Code-block/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Code-block/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Code-block/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Code-block/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactForm/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentBlock/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentBlock/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentBlock/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentBlock/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContentBlock/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContentBlock/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContributorCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContributorCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContributorCard/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContributorCard/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchResults/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResults/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchResults/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResults/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/AboutContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/AboutContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/ContactContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/ContactContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/IntroContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/IntroContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MiddleBlockContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MiddleBlockContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/MissionContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/MissionContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/ProductContent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/ProductContent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/SearchContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/SearchContent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ConceptualDesign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ConceptualDesign/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ConceptualDesign/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ConceptualDesign/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contributors/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contributors/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contributors/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contributors/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CurrentComponent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CurrentComponent/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CurrentComponent/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CurrentComponent/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EPOSDataModel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EPOSDataModel/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EPOSDataModel/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EPOSDataModel/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EposGeoJSON/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EposGeoJSON/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EposGeoJSON/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EposGeoJSON/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Glossary/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Glossary/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Glossary/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Glossary/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Goals/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Goals/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Goals/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Install/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Install/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Install/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Install/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Libraries/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Libraries/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Libraries/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Libraries/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/References/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/References/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/References/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/References/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Requirements/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Requirements/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Requirements/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Requirements/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RestApiDefinition/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RestApiDefinition/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RestApiDefinition/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RestApiDefinition/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SearchResultPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SearchResultPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TechnicalDesign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TechnicalDesign/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/TechnicalDesign/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/TechnicalDesign/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.json" beforeDir="false" afterPath="$PROJECT_DIR$/template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/lib/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2yv4lIUvc3bvyv738NKMbsf4IfI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboarding": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "update-deploy",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/home/valerio/Documenti/epos-open-source",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-3b128438d3f6-4b567d62c776-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-251.26094.127" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-GO-251.26094.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01dea7ae-f307-432f-a513-6eb0772fa504" name="Changes" comment="" />
+      <created>1750701863401</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750701863401</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
