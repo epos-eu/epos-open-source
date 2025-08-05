@@ -7,11 +7,19 @@ import {
   BadgeLink,
   Title
 } from './styles';
-
+import { Paragraph } from '../Contributors/styles';
 const Container = lazy(() => import("../../common/Container"));
 const CurrentComponent = () => {
   return (
     <Container>
+      <Paragraph>
+      Follow the links below to download the binary files of each component/service of the EPOS Open Source environment. 
+      Go to “Install” page if you want to deploy all of them at the same time. The relative Git repositories contain the README
+       files with the step-by-step instructions to deploy the components and customize them if needed.more information, in case
+        you need to customize them.
+         <br></br>
+         Contact us at info@epos-eric.eu if you need further assistance. 
+      </Paragraph>
       <Title>User Interfaces</Title>
       <Table>
         <thead>

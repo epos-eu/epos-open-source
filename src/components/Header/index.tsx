@@ -30,10 +30,7 @@ const Header = () => {
   const learnMenu = (
     <AntMenu>
       <AntMenu.Item > 
-        <Link to="/goals">Architectural design</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
-      <AntMenu.Item > 
-        <Link to="/requirements-section">Architectural requirements</Link> {/* Navigate to Introduction page */}
+        <Link to="/system-architecture">System Architecture</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/references">References</Link> {/* Navigate to Introduction page */}
@@ -59,10 +56,7 @@ const Header = () => {
   const designMenu = (
     <AntMenu>
       <AntMenu.Item>
-        <Link to="/conceptual-design">Conceptual Design</Link> {/* Navigate to Introduction page */}
-      </AntMenu.Item>
-      <AntMenu.Item > 
-        <Link to="/technical-design">Technical Design</Link> {/* Navigate to Introduction page */}
+        <Link to="/implementation-details">Implementation Details</Link> {/* Navigate to Introduction page */}
       </AntMenu.Item>
       <AntMenu.Item > 
         <Link to="/rest-api-definition">RESTful API Definitions</Link> {/* Navigate to Introduction page */}

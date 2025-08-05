@@ -13,7 +13,7 @@ const Container = lazy(() => import("../../common/Container"));
 
 const ConceptualDesign = () => {
   return (
-    <Container>
+    <Container> 
       <Title>Conceptual Services of the Architecture</Title>
       <img src="./img/graphs/conceptual-design.png" alt="Conceptual Design" style={{ width: '100%', height: 'auto', marginBottom: '20px' }} />
 
