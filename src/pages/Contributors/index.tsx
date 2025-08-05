@@ -1,66 +1,77 @@
-import React from 'react';
-import { lazy } from "react";
+import React, { useEffect, useState, lazy } from 'react';
 import {
   Section,
   Paragraph,
   Header,
   MainHeader
 } from "./styles";
+
 import Card from "../../components/ContributorCard";
 const Container = lazy(() => import("../../common/Container"));
+
+
+// Define the props interface
+interface TeamMember {
+  name: string;
+  surname: string;
+  image: string;
+  role?: string;
+  LinkldnHref?: string;
+  GithubHref?: string;
+  GitLabHref?: string;
+  intro?: string;
+}
+
+
 // Utility function to chunk the array
 const chunkArray = <T,>(array: T[], chunkSize: number): T[][] => {
-    const chunks: T[][] = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-      chunks.push(array.slice(i, i + chunkSize));
-    }
-    return chunks;
-  };
-  
+  const chunks: T[][] = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    chunks.push(array.slice(i, i + chunkSize));
+  }
+  return chunks;
+};
 
 const Contributors = () => {
-    const people = [
-        { name: "Carmela", surname: "Freda", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Kuvvet", surname: "Atakan", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Philip", surname: "Atkinson", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Daniele", surname: "Bailo", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Patrick", surname: "Bell", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Sara", surname: "Capotosti", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Chris", surname: "Card", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Martin", surname: "Carrere", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Massimo", surname: "Fares", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Lorenzo", surname: "Fenoglio", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Kety", surname: "Giuliacci", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Helen", surname: "Glaves", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Claudio", surname: "Goffi", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Abdelkareem", surname: "Jebreel", image: "https://via.placeholder.com/80", role: ""  , LinkldnHref:"",
-            GithubHref:"", intro:''},
-        { name: "Keith G.", surname: "Jeffery", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Janusz", surname: "Lavrnja-Czapski", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Mario", surname: "Malitesta", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Jan", surname: "Michalek", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Jakob", surname: "Molander", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Harald", surname: "Nedrebø", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Andrea", surname: "Orfino", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Rossana", surname: "Paciello", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Viktor S.", surname: "Rasmussen", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Yann", surname: "Retout", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Christian", surname: "Rønnevik", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Jean-Baptiste", surname: "Roquencourt", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Marco", surname: "Salvi", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Manuela", surname: "Sbarra", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Daniel", surname: "Warren", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Wayne", surname: "Shelley", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Alessandro", surname: "Spinuso", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Jon", surname: "Stuteley", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Luca", surname: "Trani", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Alessandro", surname: "Turco", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Damian", surname: "Ulbricht", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Valerio", surname: "Vinciarelli", image: "https://via.placeholder.com/80", role: "" },
-        { name: "Xiaoliang", surname: "Wang", image: "https://via.placeholder.com/80", role: "" },
+  const [people, setPeople] = useState<TeamMember[]>([]);
 
-      ];
-      const chunkedPeople = chunkArray(people, 4); // Group people into chunks of 4
+  useEffect(() => {
+    async function fetchPeopleData() {
+      try {
+        const response = await fetch("https://epos-ci.brgm.fr/api/v4/projects/epos-public%2Fissuetracker/issues/19500");
+        if (!response.ok) throw new Error("Failed to fetch people data");
+  
+        const data = await response.json();
+  
+        let finalData: TeamMember[] = [];
+        try {
+          const parsed = JSON.parse(data.description);
+          if (Array.isArray(parsed)) {
+            finalData = parsed;
+          } else {
+            console.error("Parsed data is not an array:", parsed);
+          }
+        } catch (e) {
+          console.error("Failed to parse people data from description:", e);
+        }
+  
+        setPeople(finalData);
+        console.log('final data' , finalData);
+        
+      } catch (error) {
+        console.error("Error fetching people data:", error);
+      }
+    }
+  
+    fetchPeopleData();
+  }, []);
+  
+
+  const chunkedPeople = chunkArray(people, 4); // Group people into chunks of 4
+
+  console.log('people ' , people);
+  
+  
 
   return (
     <Container>
@@ -88,9 +99,10 @@ const Contributors = () => {
                 key={`${chunkIndex}-${personIndex}`}
                 name={person.name}
                 surname={person.surname}
-                image={person.image || "https://upload.wikimedia.org/wikipedia/commons/6/6b/UserAvatar.png"} // Default icon if no image
+                image={person.image}
                 role={person.role}
                 GithubHref={person.GithubHref}
+                GitLabHref={person.GitLabHref}
                 LinkldnHref={person.LinkldnHref}
                 intro={person.intro}
               />

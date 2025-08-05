@@ -1,25 +1,25 @@
 import React from "react";
 import {
   CardContainer,
-  ProfileImage,
   Name,
   Role,
   Introduction,
   SocialCardContainer,
 } from "./styles";
 import { SocialLink } from "../../common/SocialLink";
-
+import { ProfileImage } from "../../common/profilePicture";
 // Define the props interface
-interface CardProps {
-  name: string;
-  surname: string;
-  image?: string; // Optional property
+export interface CardProps {
+  name?: string;
+  surname?: string;
+  image: string; // Optional property
   role?: string;
   src?: string;
   width?: string;
   height?: string;
   LinkldnHref?: string;
   GithubHref?: string;
+  GitLabHref?: string;
   intro?:string
 }
 
@@ -33,36 +33,44 @@ const Card: React.FC<CardProps> = ({
   height = "80px", // Default height
   LinkldnHref,
   GithubHref,
+  GitLabHref,
   intro
 }) => {
   return (
     <CardContainer>
       <ProfileImage
-        src={
-         //  image ||
-          // src ||
-          "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
-        }
-        alt={`${name}'s profile`}
-        width={width}
-        height={height}
-      />
+          src={image}
+          alt={ name}
+          width={120}
+          height={120}
+        />
+
       <Name>
         {name} {surname}
       </Name>
       <Role>{role}</Role>
       <Introduction>{intro}</Introduction>
       <SocialCardContainer>
-        {LinkldnHref && (
-          <SocialLink href={LinkldnHref} src="linkedin.svg" />
-        )}
-        {GithubHref && <SocialLink href={GithubHref} src="github.svg" />}
-        {LinkldnHref && (
-          <SocialLink href={LinkldnHref} src="linkedin.svg" />
-        )}
-        {GithubHref && <SocialLink href={GithubHref} src="github.svg" />}
-        
-      </SocialCardContainer>
+  {LinkldnHref && (
+    <SocialLink
+      href={LinkldnHref}
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+    />
+  )}
+  {GithubHref && (
+    <SocialLink
+      href={GithubHref}
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    />
+  )}
+  {GitLabHref && (
+    <SocialLink
+      href={GitLabHref}
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+    />
+  )}
+</SocialCardContainer>
+
     </CardContainer>
   );
 };
