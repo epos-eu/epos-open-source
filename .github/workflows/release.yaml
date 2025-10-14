@@ -1,10 +1,8 @@
 name: BuildAndDeploy
-
 on:
   push:
     branches:
       - 'main'
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -17,6 +15,8 @@ jobs:
           node-version: 24.x
       - name: Install dependencies
         run: npm install
+      - name: Build project
+        run: npm run build
       - name: Install gh-pages
         run: npm install gh-pages --save-dev
       - name: Deploy application
