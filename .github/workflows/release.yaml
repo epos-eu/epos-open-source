@@ -17,6 +17,8 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+        env:
+          CI: false
       - name: Install gh-pages
         run: npm install gh-pages --save-dev
       - name: Deploy application
