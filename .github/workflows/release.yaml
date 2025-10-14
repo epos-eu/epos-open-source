@@ -13,13 +13,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24.x
+          cache: 'npm'
+      
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+      
       - name: Build project
         run: npm run build
         env:
           CI: false
-      - name: Install gh-pages
-        run: npm install gh-pages --save-dev
-      - name: Deploy application
+      
+      - name: Deploy to GitHub Pages
         run: npx gh-pages -d build
