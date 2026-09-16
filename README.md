@@ -1,6 +1,15 @@
-# EPOS Data Portal Open Source
+# EPOS Platform Open Source
 
-Head to the main page here https://epos-eu.github.io/epos-open-source/
+> [!IMPORTANT]
+> This repository is no longer actively maintained.
+>
+> The EPOS Platform Open Source documentation has moved to:
+> **https://epos-eu.github.io/epos-open-source/**
+>
+> Source code for the documentation is now maintained at:
+> **https://github.com/EPOS-ERIC/opensource-docs**
+>
+> Please submit documentation changes and contributions to the new repository. This repository is retained only to preserve the previous GitHub Pages URL and redirect visitors to the new site.
 
 ## References
 
